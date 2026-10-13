@@ -9,6 +9,7 @@
 | [AVGO 案例：Bull Put 与长期看涨期权](babybusfl-avgo-bull-put-and-leaps.md) | 基本面判断 → 看涨表达方式选择 → 收益上限与风险预算 | 用户手工摘录；原帖链接待补；期权机制有独立来源 |
 | [QQQ LEAPS：急跌分批买入与分层止盈](babybusfl-qqq-leaps.md) | 急跌触发 → 长期期权 → 时间/周线位置决定退出 | 两条原帖正文已核对；其余手工摘录待补来源；规则存在版本差异 |
 | [按主观胜率判断分配仓位](babybusfl-qualitative-position-sizing.md) | 判断胜率较高则投入较多，较低则较少；作者称此决策不看波动 | 原帖正文已核验；胜率估计、仓位公式与风险上限未说明 |
+| [低 PE 与股价位置的判断](babybusfl-low-pe-and-price-position.md) | 作者断言低 PE 说明股价在高位；中间推理待补 | 公开主页正文已核对；详情页受登录提示限制；口径、条件与结论有效性未验证 |
 
 ## 收集边界
 
