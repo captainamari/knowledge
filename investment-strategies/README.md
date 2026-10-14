@@ -11,7 +11,7 @@
 | [按主观胜率判断分配仓位](babybusfl-qualitative-position-sizing.md) | 判断胜率较高则投入较多，较低则较少；作者称此决策不看波动 | 原帖正文已核验；胜率估计、仓位公式与风险上限未说明 |
 | [低 PE 与股价位置的判断](babybusfl-low-pe-and-price-position.md) | 作者断言低 PE 说明股价在高位；中间推理待补 | 公开主页正文已核对；详情页受登录提示限制；口径、条件与结论有效性未验证 |
 | [债息与股价“便宜”的判断](babybusfl-bond-yield-and-equity-price.md) | 作者将债息更高与股价更便宜联系起来；定义与中间推理待补 | 原帖正文已核验；仅有方向性表述，不构成低估结论或买入信号 |
-| [预设价格再买与工具选择](babybusfl-price-trigger-and-instrument-selection.md) | 条件式再买与预留资金；区分观察价格与所选工具的入场条件 | 三条公开主页正文已核对；资金阶段与工具选择的区分为整理者归纳，分配比例、触发组合及风控未说明 |
+| [预设价格再买与工具选择](babybusfl-price-trigger-and-instrument-selection.md) | 条件式再买、预留资金与最后一次追加边界；区分观察价格与工具入场条件 | 六条公开主页正文已核对；新旧触发关系、金额与退出未明；资金再配置仅为作者行为线索 |
 
 ## 收集边界
 
