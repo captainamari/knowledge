@@ -14,6 +14,7 @@
 | [利率判断与 AI 悲观叙事](babybusfl-rates-and-ai-narrative.md) | 作者以“利率太低”反驳 AI 悲观叙事；中间推理待补 | 公开主页正文已核对；利率口径、适用范围与结论有效性未验证 |
 | [预设价格再买与工具选择](babybusfl-price-trigger-and-instrument-selection.md) | 条件式再买、预留资金与最后一次追加边界；区分观察价格与工具入场条件 | 六条公开主页正文已核对；新旧触发关系、金额与退出未明；资金再配置仅为作者行为线索 |
 | [有色价格路径与降息条件](babybusfl-metals-cycle-and-rate-cuts.md) | 作者设想底部后再造前高或次高、随后双顶，并将降息与有色热度联系 | 正文与引用语境已核对；对象、时间、判据与因果机制未明，属于待核验假说 |
+| [VIX 到期时间窗与区间突破确认](labubu-trader-vix-expiry-and-range-confirmation.md) | labubu_trader：事件时间窗安排观察，区间突破前暂缓多空判断 | 三条公开主页来源串联；较早 Put 意向与后来 NQ 中性等待关系未明，非完整策略 |
 
 ## 收集边界
 
