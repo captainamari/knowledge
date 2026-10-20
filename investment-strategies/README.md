@@ -16,7 +16,7 @@
 | [有色价格路径与降息条件](babybusfl-metals-cycle-and-rate-cuts.md) | 作者设想底部后再造前高或次高、随后双顶，并将降息与有色热度联系 | 正文与引用语境已核对；对象、时间、判据与因果机制未明，属于待核验假说 |
 | [VIX 到期时间窗与区间突破确认](labubu-trader-vix-expiry-and-range-confirmation.md) | labubu_trader：事件时间窗安排观察，区间突破前暂缓多空判断 | 三条公开主页来源串联；较早 Put 意向与后来 NQ 中性等待关系未明，非完整策略 |
 | [阻力位等待关键均线回测](labubu-trader-resistance-and-ma-retest.md) | labubu_trader：看好形态但等待降温及关键均线回测再考虑入场 | 两条自引来源串联；旧图标的未知，新图为 CORD，条件执行及20%表述未验证 |
-| [AI 股票短期方向与产业长期判断](labubu-trader-ai-equity-and-adoption-horizons.md) | labubu_trader：区分股票短期偏空与 AI 产业维度的较长期判断 | 原帖正文已核验；引用图片未核验，依据与行动条件未说明，不能移植为旧卡触发规则 |
+| [AI 股票短期方向与产业长期判断](labubu-trader-ai-equity-and-adoption-horizons.md) | labubu_trader：区分股票短期方向与 AI 产业认知，补充产业信念与顺势交易双系统 | 新旧来源串联；双系统原则已核对，优势未验证，趋势及行动条件未说明，不能移植为旧卡触发规则 |
 
 ## 收集边界
 
