@@ -1,6 +1,6 @@
 # 接雨水练习测试记录
 
-- 来源：[Nextify 原帖 B，第 1 题](https://x.com/nextify2024/status/1782053153875415371)。算法与测试为整理者补充。
+- 对应练习：[后端基础B1：接雨水](../topics/backend-systems.md#b1)。算法与测试为学习整理。
 - 运行日期：2026-10-22 UTC。
 - 解释器：Python 3.12.14。
 - 运行命令：`python interview/practice/trapping_rainwater.py`（仓库根目录）；也可在 practice 目录运行 `python trapping_rainwater.py`。
