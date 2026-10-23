@@ -60,8 +60,8 @@
 
 ## 项目证据与胜任度自测
 
-- [公开项目证据卡](practice/public-project-interview-evidence.md)：XAT 公开页面、notification-hub 与 ai-research-copilot；区分公开实现、本人贡献与待验证能力。
-- [从会讲项目到能胜任](practice/project-interview-readiness.md)：优秀候选人目标、证据差距自测、六个有验收条件的补强练习。不以资料缺失推断个人不会，也不保证面试满分。
+- [公开项目证据卡](practice/public-project-interview-evidence.md)：XAT 0.5.0 授权核验的通用设计、notification-hub 与 ai-research-copilot；区分当前实现、历史报告、本人贡献与待验证能力。
+- [从会讲项目到能胜任](practice/project-interview-readiness.md)：优秀候选人目标、证据差距自测、六个基础练习与 XAT 0.5.0 专项验收。不以资料缺失推断个人不会，也不保证面试满分。
 
 ## 日常积累方法
 
@@ -78,4 +78,5 @@
 - 技术结论注明实现和版本；事实核验使用一手资料，来源就近，实验环境另列。
 - 背景不完整时只记录已知条件。面试回忆、评论和客观事实分开，不强行补齐所谓完整题库。
 - 新问题优先补已有主题并保留背景、修正与冲突。保留原题顺序的入口，但答案正文只维护一份。
+
 
