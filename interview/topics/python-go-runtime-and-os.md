@@ -148,7 +148,7 @@ print("GIL currently enabled:", check() if check else "API unavailable")
 
 ### 用 xat 把 Python 机制讲到实现和代价
 
-本节是 2026-10-23 新增的个人项目备考扩展，不改变原题含义。基线、代码链接与验证范围统一见 [xat 项目证据卡](../practice/xat-project-evidence.md)。以下解释针对 0.4.0 实现；不要把建议改进写成已实现能力。
+本节是 2026-10-23 新增的个人项目备考扩展，不改变原题含义。基线、代码链接与验证范围统一见 [xat 项目证据卡](../practice/xat-project-evidence.md)。以下解释针对 0.4.0 固定历史实现；其中“当前”均指该基线。最新 0.5.0 的运行结果、可选 HTTP 客户端与日志扩展见[当前项目答案](project-depth-and-tradeoffs.md#interviewer-three-questions)。保留本节语言机制深挖，不把建议改进写成已实现能力。
 
 #### 追问 1：缓存装饰器为什么不直接用 args 作为 key？
 
@@ -449,4 +449,5 @@ strace -f -e trace=process,openat,read,write,mmap python3 main.py
 - CPython 3.13/3.14 的 free-threading 状态是文档核验，不冒充本环境实测；未把 GC 的代数、默认进程启动方式写成跨版本恒定规则。
 - Go 示例依据官方规范与工具文档编写；当前环境没有确认可用的 Go 语言工具链，因此未实际编译执行。
 - strace 在当前环境因 ptrace 权限受限未能运行；上文将其作为在允许追踪的 Linux 环境中自行验证的练习，不提供虚构的追踪输出。
+
 

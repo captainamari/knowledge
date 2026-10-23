@@ -1,6 +1,8 @@
-# xat：把 Python 机制讲成可验证的测试工程设计
+# XAT 0.4.0 历史证据：Python 机制与测试工程设计
 
-核验日期：2026-10-23。代码基线为 xat `main` 的固定提交 [`2f471b32667658704de6a2a28576638a0e43305f`](https://github.com/captainamari/xat/tree/2f471b32667658704de6a2a28576638a0e43305f)，版本 0.4.0。本文是项目备考证据卡，不是某家公司的原始面试题。
+核验日期：2026-10-23。代码基线为 xat `main` 的固定提交 [`2f471b32667658704de6a2a28576638a0e43305f`](https://github.com/captainamari/xat/tree/2f471b32667658704de6a2a28576638a0e43305f)，版本 0.4.0。本文是固定旧版本的历史证据卡，不是当前版本能力清单或某家公司的原始面试题。
+
+**版本阅读规则：** 下文“当前”“尚未实现”等描述均指上述 0.4.0 固定基线。0.5.0 已加入结构化方法/运行结果、JSON 报告及可选 HTTP 客户端；最新能力与未重跑边界见[当前证据卡](public-project-interview-evidence.md)和[当前答案](../topics/project-depth-and-tradeoffs.md#interviewer-three-questions)。旧版 80 项实际复验保留，不改写为新版 111 项的本轮复测。
 
 用户已确认这是与 AI 协作重构的个人项目。以下能证明代码存在及机制可解释，不能自动证明每行由本人独立编写、个人已熟练掌握，或已在公司生产环境取得收益。面试前应自己演示、解释关键路径，并补充真实决策过程。xat 当前是私有仓库，受现有许可证约束，不称“开源项目”；代码链接需要相应仓库权限。本文只总结机制，不转载私有源码。
 
@@ -52,7 +54,7 @@
 
 - **已核验代码：** 上述固定提交的模块和测试。实现行为与限制分别见 [RUNNER](https://github.com/captainamari/xat/blob/2f471b32667658704de6a2a28576638a0e43305f/docs/RUNNER.md)、[CASE_LOG_CACHE](https://github.com/captainamari/xat/blob/2f471b32667658704de6a2a28576638a0e43305f/docs/CASE_LOG_CACHE.md)、[NAMING_JSON_LOGGING](https://github.com/captainamari/xat/blob/2f471b32667658704de6a2a28576638a0e43305f/docs/NAMING_JSON_LOGGING.md)。
 - **仓库既有验证记录：** Linux / Python 3.12.14 / requests 2.34.2 下，源码和独立安装 wheel 各 80 项通过，业务 demo 10 场景及错误总价检出、并发重叠、崩溃和中断验证。这里保留为仓库报告，不能写成个人现场独立复验。
-- **本轮整理复验（2026-10-23）：** Linux / Python 3.12.14 下，editable 安装运行 80 项测试，13.413 秒，全部通过；构建并安装 wheel 后，在源码目录外清除 PYTHONPATH、确认从 site-packages 导入，再运行同一套 80 项，13.460 秒，全部通过。wheel 的 10 个包内 .py 文件与固定提交逐字节一致，未打包 tests/demo。这是整理时的环境结果，不代表本人已现场独立完成；这 80 项包含本地订单服务的 10 场景集成验证：正常/错误总价注入分别在串行 1、并发 3 下运行，错误总价能被检出，结束后订单资源清空；不能再把 10 场景额外加成 90 项测试。
+- **此前 0.4.0 整理复验（2026-10-23，非此次整合重跑）：** Linux / Python 3.12.14 下，editable 安装运行 80 项测试，13.413 秒，全部通过；构建并安装 wheel 后，在源码目录外清除 PYTHONPATH、确认从 site-packages 导入，再运行同一套 80 项，13.460 秒，全部通过。wheel 的 10 个包内 .py 文件与固定提交逐字节一致，未打包 tests/demo。这是整理时的环境结果，不代表本人已现场独立完成；这 80 项包含本地订单服务的 10 场景集成验证：正常/错误总价注入分别在串行 1、并发 3 下运行，错误总价能被检出，结束后订单资源清空；不能再把 10 场景额外加成 90 项测试。
 - **未覆盖：** Windows/macOS、其他 Python 运行时、真实公司服务、生产容量及远程 CI。Python 3.11 语法解析不能替代运行时验收。
 - **尚未实现：** 单文件超时、强制终止后的业务补偿、子用例派生进程树管理、远程后端切换、逐用例持久化报告、自动重试、分布式资源锁。
 
@@ -63,3 +65,4 @@
 - [Python 机制中的 xat 专项追问](../topics/python-go-runtime-and-os.md#xat-python)
 - [项目介绍与设计取舍中的 xat 回答](../topics/project-depth-and-tradeoffs.md#xat-project)
 - [AI 代码与测试可信度中的 xat 示例](../topics/ai-assisted-development-and-testing.md#xat-validation)
+
