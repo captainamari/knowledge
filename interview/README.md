@@ -13,7 +13,7 @@
 
 ## 主题入口
 
-- [项目表达、开源贡献与设计取舍](topics/project-depth-and-tradeoffs.md)
+- [项目表达、开源贡献与设计取舍](topics/project-depth-and-tradeoffs.md)：新增面试官三问、公开项目目标答案与深入追问。
 - [AI辅助开发与测试可信度](topics/ai-assisted-development-and-testing.md)
 - [AI应用工程：业务适配、工具、评测与文档处理](topics/ai-application-engineering.md)
 - [Python、Go与操作系统运行机制](topics/python-go-runtime-and-os.md)
@@ -32,6 +32,8 @@
 - [宝玉：AI运用能力讨论与精选回复](sources/dotey-ai-ability-discussion.md)
 
 前两组已整理的37题保留，背景不完整的Agent讨论只列学习线索。测试开发新增材料只明确4个主题，不是逐字题单；扩展问法和答案由本库整理。宝玉回复区仍区分直接读取与二手精选。
+
+- [面试官视角：架构、主动推动与复杂问题三问](cases/interviewer-project-evidence.md)：原帖观点与整理者扩展分开，答案按主题维护。
 
 ## 三条岗位阅读路线
 
@@ -56,6 +58,11 @@
 - [接雨水Python实现与测试](practice/trapping_rainwater.py)：9个具名案例、21,845个穷举数组、1,000个固定种子随机数组及变形检查已执行通过；[测试记录](practice/trapping-rainwater-test-report.md)。
 - [运行时实测范围与个人证据模板](practice/evidence-and-study-log.md)：区分实测、文档核验与尚未执行的练习。
 
+## 项目证据与胜任度自测
+
+- [公开项目证据卡](practice/public-project-interview-evidence.md)：XAT 公开页面、notification-hub 与 ai-research-copilot；区分公开实现、本人贡献与待验证能力。
+- [从会讲项目到能胜任](practice/project-interview-readiness.md)：优秀候选人目标、证据差距自测、六个有验收条件的补强练习。不以资料缺失推断个人不会，也不保证面试满分。
+
 ## 日常积累方法
 
 1. 读岗位题目，标记“能举真实例子 / 只会概念 / 不会”。不从一篇面经推断所有岗位的题目分布。
@@ -71,3 +78,4 @@
 - 技术结论注明实现和版本；事实核验使用一手资料，来源就近，实验环境另列。
 - 背景不完整时只记录已知条件。面试回忆、评论和客观事实分开，不强行补齐所谓完整题库。
 - 新问题优先补已有主题并保留背景、修正与冲突。保留原题顺序的入口，但答案正文只维护一份。
+
