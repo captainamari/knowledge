@@ -23,6 +23,7 @@
 
 - [测试开发：RAG评测、WebSocket与HTTP](topics/test-engineering-rag-and-protocols.md)
 - [三数之和：算法与测试验证](topics/three-sum-and-algorithm-validation.md)
+- [AI 算法手写练习：Softmax、Attention、K-Means、Adam 与 Beam Search](topics/ai-algorithms-from-scratch.md)：原理、实现边界与待练习清单，区分作者建议与一手核验。
 
 ## 岗位与面试背景入口
 
