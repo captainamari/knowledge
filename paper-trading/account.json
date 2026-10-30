@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "account_id": "arch-paper-usd-10000-v1",
+  "mode": "SIMULATION_ONLY",
+  "protocol_version": "1",
+  "currency": "USD",
+  "started_at": "2026-10-30T17:59:13Z",
+  "as_of": "2026-10-30T17:59:13Z",
+  "valuation_type": "initialization",
+  "valuation_status": "complete_cash_only",
+  "market_timezone": "America/New_York",
+  "display_timezone": "Asia/Shanghai",
+  "initial_capital": "10000.00",
+  "net_contributions": "10000.00",
+  "settled_cash": "10000.00",
+  "unsettled_cash": "0.00",
+  "dividend_receivable": "0.00",
+  "securities_market_value": "0.00",
+  "equity": "10000.00",
+  "realized_trading_pnl": "0.00",
+  "unrealized_pnl": "0.00",
+  "dividend_income": "0.00",
+  "total_pnl": "0.00",
+  "fees_paid": "0.00",
+  "cumulative_return_pct": "0.0000",
+  "peak_equity": "10000.00",
+  "drawdown_pct": "0.0000",
+  "max_drawdown_pct": "0.0000",
+  "estimated_liquidation_equity": "10000.00",
+  "positions": [],
+  "orders": [],
+  "fills": [],
+  "cash_receivables": [],
+  "corporate_actions": [],
+  "events": [
+    {
+      "event_id": "INIT-20261030-175913",
+      "type": "INITIAL_CONTRIBUTION",
+      "recorded_at": "2026-10-30T17:59:13Z",
+      "amount": "10000.00",
+      "currency": "USD",
+      "description": "模拟初始本金，无真实入金。"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "D-20261030-INIT",
+      "decision_at": "2026-10-30T17:59:13Z",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-10-30.md",
+      "reason": "公开观点不等于经过独立验证的交易优势；当前未取得符合执行协议的报价。"
+    }
+  ],
+  "nav_history": [
+    {
+      "as_of": "2026-10-30T17:59:13Z",
+      "type": "initialization",
+      "equity": "10000.00",
+      "total_pnl": "0.00",
+      "return_pct": "0.0000",
+      "valuation_status": "complete_cash_only",
+      "source": "initial simulation contribution",
+      "daily_return_pct": null
+    }
+  ],
+  "benchmark": {
+    "cash": {
+      "return_pct": "0.0000",
+      "interest_rate_pct": "0.0000"
+    },
+    "spy": {
+      "status": "pending_precommitted_baseline",
+      "baseline_session": "2026-11-02",
+      "baseline_field": "official_regular_session_open",
+      "baseline_price": null,
+      "baseline_source": null,
+      "units": null,
+      "dividend_cash": "0.00",
+      "equity": null,
+      "return_pct": null,
+      "comparison_start": null,
+      "fees_assumption": "0.00",
+      "note": "休市或停牌顺延到下一实际正常开盘；共同窗口比较，不含10月30日部分日，不可事后重选。"
+    }
+  },
+  "data_gates": {
+    "live_equity_quote": "not_verified",
+    "live_option_quote": "not_verified",
+    "fills_enabled_when_protocol_gates_pass": true,
+    "next_open_fallback_enabled": false
+  },
+  "last_reconciliation": {
+    "as_of": "2026-10-30T17:59:13Z",
+    "cash_plus_assets_equals_equity": true,
+    "equity_less_contributions_equals_pnl": true,
+    "pnl_components_reconcile": true,
+    "position_lots_match_fills": true,
+    "fees_double_counted": false,
+    "notes": "初始现金账户，无成交；非行情执行回测。"
+  }
+}
