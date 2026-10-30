@@ -5,8 +5,8 @@
   "protocol_version": "1.1",
   "currency": "USD",
   "started_at": "2026-10-30T17:59:13Z",
-  "as_of": "2026-10-30T17:59:13Z",
-  "valuation_type": "initialization",
+  "as_of": "2026-10-30T21:27:41Z",
+  "valuation_type": "eod",
   "valuation_status": "complete_cash_only",
   "market_timezone": "America/New_York",
   "display_timezone": "Asia/Shanghai",
@@ -49,6 +49,13 @@
       "to": "1.1",
       "protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
       "description": "仅前瞻启用事前承诺次日开盘股票模型；期权保持实时门槛。此时无订单、持仓或成交，不追填今日交易。"
+    },
+    {
+      "event_id": "EOD-20261030",
+      "type": "EOD_RECONCILIATION",
+      "recorded_at": "2026-10-30T21:27:41Z",
+      "session_date": "2026-10-30",
+      "description": "首日日终实际于17:27:41 EDT完成决策；继续全现金，无订单/成交。未倒填计划执行时间。"
     }
   ],
   "decisions": [
@@ -59,6 +66,15 @@
       "order_ids": [],
       "journal": "journal/2026-10-30.md",
       "reason": "公开观点不等于经过独立验证的交易优势；当前未取得符合执行协议的报价。"
+    },
+    {
+      "decision_id": "D-20261030-EOD",
+      "decision_at": "2026-10-30T21:27:41Z",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-10-30.md",
+      "reason": "已纳入Corsica错杀/杠杆去化新解释与labubu条件性回补预期；仍缺独立优势、明确退出及符合v1.1的主报价路线，不提交下周开盘订单。",
+      "next_review_session": "2026-11-02"
     }
   ],
   "nav_history": [
@@ -71,6 +87,20 @@
       "valuation_status": "complete_cash_only",
       "source": "initial simulation contribution",
       "daily_return_pct": null
+    },
+    {
+      "as_of": "2026-10-30T21:27:41Z",
+      "session_date": "2026-10-30",
+      "session_close_at": "2026-10-30T20:00:00Z",
+      "type": "eod",
+      "equity": "10000.00",
+      "total_pnl": "0.00",
+      "return_pct": "0.0000",
+      "valuation_status": "complete_cash_only",
+      "source": "Cash ledger reconciliation; no securities or accrued cash events",
+      "daily_return_pct": null,
+      "inception_to_eod_return_pct": "0.0000",
+      "note": "首个有效日终，没有前一日终；不把初始化到收盘期间收益称为完整单日收益。"
     }
   ],
   "benchmark": {
@@ -129,19 +159,66 @@
     "next_open_fallback_enabled": true,
     "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
     "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
-    "equity_open_route_status": "partially_verified_no_order"
+    "equity_open_route_status": "not_qualified_no_order",
+    "last_checked_at": "2026-10-30T21:27:41Z",
+    "detail": "Nasdaq无历史数据；发行人只有NAV/基金信息非Open；Yahoo429；Stooq浏览器验证未绕过；MarketWatch可读但只是交叉源，Daily表截至10/29。无合格主源和完整容量核验；无证券持仓，现金净值仍完整。"
   },
   "last_reconciliation": {
-    "as_of": "2026-10-30T17:59:13Z",
+    "as_of": "2026-10-30T21:27:41Z",
     "cash_plus_assets_equals_equity": true,
     "equity_less_contributions_equals_pnl": true,
     "pnl_components_reconcile": true,
     "position_lots_match_fills": true,
     "fees_double_counted": false,
-    "notes": "初始现金账户，无成交；非行情执行回测。"
+    "notes": "10000已结算现金+0未结算+0证券+0股息应收=10000净值；净值减初始本金=0，已实现+未实现+股息=0。订单、成交、持仓、公司行动、结算与期权到期均为空。",
+    "session_date": "2026-10-30",
+    "open_order_count": 0,
+    "fill_count": 0,
+    "position_count": 0
   },
   "protocol_effective_at": "2026-10-30T18:04:52Z",
   "protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
   "reserved_cash": "0.00",
-  "available_settled_cash": "10000.00"
+  "available_settled_cash": "10000.00",
+  "valuation_session": "2026-10-30",
+  "valuation_recorded_at": "2026-10-30T21:27:41Z",
+  "session_close_at": "2026-10-30T20:00:00Z",
+  "review_evidence": [
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "observed_at": "2026-10-30T21:25:40Z",
+      "purpose": "Normal session 09:30–16:00 ET; October 30 and November 2 not listed holidays."
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "observed_at": "2026-10-30T21:25:40Z",
+      "purpose": "Provider page labels Oct 30 close 755.72, -1.77%; after-hours timestamp 16:59 EDT; daily table only through Oct 29. Research context, not a fill or benchmark baseline."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "observed_at": "2026-10-30T21:25:59Z",
+      "purpose": "Official Oct 28 statement: 3.75–4% target unchanged; elevated inflation/geopolitical uncertainty. No inference of imminent easing."
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "observed_at": "2026-10-30T21:25:59Z",
+      "purpose": "Upcoming JOLTS Nov 3 10:00 ET; productivity Nov 5 08:30 ET; employment Nov 6 08:30 ET. Recheck before action."
+    },
+    {
+      "url": "https://investor.illumina.com/news-releases/news-release-details/illumina-reports-financial-results-third-quarter-fiscal-year-8",
+      "observed_at": "2026-10-30T21:25:45Z",
+      "purpose": "Original Q3 release rechecked, revenue +4.2%, raised guidance; not proof of attractive valuation or market-expectation beat."
+    }
+  ],
+  "next_session_plan": {
+    "session_date": "2026-11-02",
+    "orders_submitted": false,
+    "action": "RESEARCH_BEFORE_RISK",
+    "conditions": [
+      "恢复协议固定主价格源与交叉核验路线",
+      "核验宏观/公司事件与候选价格结构",
+      "任何开仓须明确持有期、退出阈值及风险预算"
+    ],
+    "note": "没有周五事前订单，不得周一盘中追填周一开盘成交；SPY基准仍按预定11月2日Open等待核验。"
+  }
 }
