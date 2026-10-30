@@ -2,7 +2,7 @@
   "schema_version": 1,
   "account_id": "arch-paper-usd-10000-v1",
   "mode": "SIMULATION_ONLY",
-  "protocol_version": "1",
+  "protocol_version": "1.1",
   "currency": "USD",
   "started_at": "2026-10-30T17:59:13Z",
   "as_of": "2026-10-30T17:59:13Z",
@@ -40,6 +40,15 @@
       "amount": "10000.00",
       "currency": "USD",
       "description": "模拟初始本金，无真实入金。"
+    },
+    {
+      "event_id": "RULE-20261030-V11",
+      "type": "PROTOCOL_CHANGE",
+      "recorded_at": "2026-10-30T18:04:52Z",
+      "from": "1",
+      "to": "1.1",
+      "protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
+      "description": "仅前瞻启用事前承诺次日开盘股票模型；期权保持实时门槛。此时无订单、持仓或成交，不追填今日交易。"
     }
   ],
   "decisions": [
@@ -72,7 +81,7 @@
     "spy": {
       "status": "pending_precommitted_baseline",
       "baseline_session": "2026-11-02",
-      "baseline_field": "official_regular_session_open",
+      "baseline_field": "regular_session_daily_open_fixed_source_hierarchy",
       "baseline_price": null,
       "baseline_source": null,
       "units": null,
@@ -81,14 +90,46 @@
       "return_pct": null,
       "comparison_start": null,
       "fees_assumption": "0.00",
-      "note": "休市或停牌顺延到下一实际正常开盘；共同窗口比较，不含10月30日部分日，不可事后重选。"
+      "note": "目标日预定2026-11-02；休市/停牌顺延到下一实际正常开盘，仅数据缺失不得换日。共同窗口比较，不含10月30日部分日。",
+      "source_priority": [
+        {
+          "rank": "A",
+          "provider": "Nasdaq",
+          "url": "https://www.nasdaq.com/market-activity/etf/spy/historical"
+        },
+        {
+          "rank": "B",
+          "provider": "SPY issuer official IR historical Open",
+          "url": null,
+          "status": "not_located_skip_unless_specific_applicable_url_verified_before_baseline"
+        },
+        {
+          "rank": "C",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SPY/history/"
+        }
+      ],
+      "cross_check_priority": [
+        {
+          "provider": "MarketWatch",
+          "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+        },
+        {
+          "provider": "Stooq",
+          "url": "https://stooq.com/q/d/?s=spy.us"
+        }
+      ],
+      "source_policy": "PROTOCOL.md §4.1; use first applicable available source, disclose vendor daily-open model; no favorable-price selection; C needs independent matching daily Open within max($0.02,0.05%)."
     }
   },
   "data_gates": {
     "live_equity_quote": "not_verified",
     "live_option_quote": "not_verified",
     "fills_enabled_when_protocol_gates_pass": true,
-    "next_open_fallback_enabled": false
+    "next_open_fallback_enabled": true,
+    "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
+    "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
+    "equity_open_route_status": "partially_verified_no_order"
   },
   "last_reconciliation": {
     "as_of": "2026-10-30T17:59:13Z",
@@ -98,5 +139,9 @@
     "position_lots_match_fills": true,
     "fees_double_counted": false,
     "notes": "初始现金账户，无成交；非行情执行回测。"
-  }
+  },
+  "protocol_effective_at": "2026-10-30T18:04:52Z",
+  "protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
+  "reserved_cash": "0.00",
+  "available_settled_cash": "10000.00"
 }
