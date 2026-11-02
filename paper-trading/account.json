@@ -56,6 +56,13 @@
       "recorded_at": "2026-10-30T21:27:41Z",
       "session_date": "2026-10-30",
       "description": "首日日终实际于17:27:41 EDT完成决策；继续全现金，无订单/成交。未倒填计划执行时间。"
+    },
+    {
+      "event_id": "REVIEW-20261101-WEEKEND",
+      "type": "NON_TRADING_DAY_REVIEW",
+      "recorded_at": "2026-11-02T02:17:09Z",
+      "market_date": "2026-11-01",
+      "description": "实际纽约周日21:17:09 EST进行研究与账本检查；不生成交易日日终，不追填周一开盘订单。"
     }
   ],
   "decisions": [
@@ -74,6 +81,15 @@
       "order_ids": [],
       "journal": "journal/2026-10-30.md",
       "reason": "已纳入Corsica错杀/杠杆去化新解释与labubu条件性回补预期；仍缺独立优势、明确退出及符合v1.1的主报价路线，不提交下周开盘订单。",
+      "next_review_session": "2026-11-02"
+    },
+    {
+      "decision_id": "D-20261101-WEEKEND",
+      "decision_at": "2026-11-02T02:17:09Z",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-11-01.md",
+      "reason": "非交易日且无周五承诺订单；NQ条件分支不能映射为QQQ交易，安全板块估值假说未形成独立优势。维持现金，未调整风险规则。",
       "next_review_session": "2026-11-02"
     }
   ],
@@ -160,8 +176,8 @@
     "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
     "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
     "equity_open_route_status": "not_qualified_no_order",
-    "last_checked_at": "2026-10-30T21:27:41Z",
-    "detail": "Nasdaq无历史数据；发行人只有NAV/基金信息非Open；Yahoo429；Stooq浏览器验证未绕过；MarketWatch可读但只是交叉源，Daily表截至10/29。无合格主源和完整容量核验；无证券持仓，现金净值仍完整。"
+    "last_checked_at": "2026-11-02T02:17:09Z",
+    "detail": "本轮非正常交易时段。Nasdaq SPY历史仍无数据；发行人页面未找到历史Open；Yahoo429；Stooq浏览器验证未绕过。MarketWatch Daily已含10/30 Open761.38/Close755.72，但仅为协议交叉源，不作成交。11/2基准Open尚未发生，继续待定，不换日。"
   },
   "last_reconciliation": {
     "as_of": "2026-10-30T21:27:41Z",
@@ -208,6 +224,26 @@
       "url": "https://investor.illumina.com/news-releases/news-release-details/illumina-reports-financial-results-third-quarter-fiscal-year-8",
       "observed_at": "2026-10-30T21:25:45Z",
       "purpose": "Original Q3 release rechecked, revenue +4.2%, raised guidance; not proof of attractive valuation or market-expectation beat."
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "observed_at": "2026-11-02T02:16:53Z",
+      "purpose": "本轮核实正常09:30–16:00 ET，11月2日不在节假日/早收盘列表；实际纽约11月1日周日晚。"
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "observed_at": "2026-11-02T02:16:44Z",
+      "purpose": "日历仍列11/3 JOLTS 10:00、11/5生产率08:30、11/6就业08:30 ET。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_at": "2026-11-02T02:16:36Z",
+      "purpose": "下一次常规会议列12/8–9，未推断临时行动。"
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "observed_at": "2026-11-02T02:16:53Z",
+      "purpose": "Daily 10/30 Open761.38 High761.46 Low750.36 Close755.72 Volume77696477；过去会话研究，不作本轮成交或基准。"
     }
   ],
   "next_session_plan": {
