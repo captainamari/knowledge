@@ -63,6 +63,13 @@
       "recorded_at": "2026-11-02T02:17:09Z",
       "market_date": "2026-11-01",
       "description": "实际纽约周日21:17:09 EST进行研究与账本检查；不生成交易日日终，不追填周一开盘订单。"
+    },
+    {
+      "event_id": "REVIEW-20261102-PREMARKET",
+      "type": "PREMARKET_REVIEW",
+      "recorded_at": "2026-11-02T08:45:52Z",
+      "market_date": "2026-11-02",
+      "description": "实际纽约03:45:52 EST，正常开盘前复核；维持全现金，不提交或追填周一开盘订单，不生成盘后净值。"
     }
   ],
   "decisions": [
@@ -90,6 +97,15 @@
       "order_ids": [],
       "journal": "journal/2026-11-01.md",
       "reason": "非交易日且无周五承诺订单；NQ条件分支不能映射为QQQ交易，安全板块估值假说未形成独立优势。维持现金，未调整风险规则。",
+      "next_review_session": "2026-11-02"
+    },
+    {
+      "decision_id": "D-20261102-PREMARKET",
+      "decision_at": "2026-11-02T08:45:52Z",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-11-02.md",
+      "reason": "盘前无周五事前承诺订单；新增Robotaxi扩张与地区资金/资本开支叙事尚不足独立估值和可执行退出条件。固定主报价路线仍不合格，保持现金而非自动跟单；未改变风险规则。",
       "next_review_session": "2026-11-02"
     }
   ],
@@ -176,8 +192,8 @@
     "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
     "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
     "equity_open_route_status": "not_qualified_no_order",
-    "last_checked_at": "2026-11-02T02:17:09Z",
-    "detail": "本轮非正常交易时段。Nasdaq SPY历史仍无数据；发行人页面未找到历史Open；Yahoo429；Stooq浏览器验证未绕过。MarketWatch Daily已含10/30 Open761.38/Close755.72，但仅为协议交叉源，不作成交。11/2基准Open尚未发生，继续待定，不换日。"
+    "last_checked_at": "2026-11-02T08:45:52Z",
+    "detail": "本轮纽约03:45:52 EST、正常开盘前。Nasdaq SPY历史无数据，发行人未找到合格历史Open，Yahoo429；MarketWatch Daily 10/30 Open761.38仅交叉研究来源。固定主路线未通过，不升格交叉源。11/2正常开盘14:30UTC尚未发生，基准继续待定，不换日。"
   },
   "last_reconciliation": {
     "as_of": "2026-10-30T21:27:41Z",
@@ -244,6 +260,36 @@
       "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
       "observed_at": "2026-11-02T02:16:53Z",
       "purpose": "Daily 10/30 Open761.38 High761.46 Low750.36 Close755.72 Volume77696477；过去会话研究，不作本轮成交或基准。"
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:42–08:43 UTC读取：正常09:30–16:00 ET；11/2非所列休市或早收盘日，本轮仍盘前。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:42–08:43 UTC读取：下次常规FOMC会议12/8–9，不推断政策结果。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:42–08:43 UTC读取：11/3 JOLTS 10:00，11/5生产率08:30，11/6就业08:30，均ET。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:42–08:43 UTC读取：Daily 10/30 Open761.38、Close755.72；过去会话研究及交叉来源，不作本轮成交或基准。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
+    },
+    {
+      "url": "https://investor.illumina.com/news-releases/news-release-details/illumina-reports-financial-results-third-quarter-fiscal-year-8",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:42–08:43 UTC本轮原始Q3披露已可读，营收同比+4.2%；不把财报增长等同估值吸引力。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
+    },
+    {
+      "url": "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments",
+      "observed_at": "2026-11-02T08:45:52Z",
+      "purpose": "08:45 UTC读取10/2公司披露：Q3交付486532辆、储能部署13.7GWh；不是Robotaxi盈利或全公司季度利润证明。 observed_at为本轮证据整理核验时刻，原页面读取窗口如前。"
     }
   ],
   "next_session_plan": {
@@ -255,6 +301,6 @@
       "核验宏观/公司事件与候选价格结构",
       "任何开仓须明确持有期、退出阈值及风险预算"
     ],
-    "note": "没有周五事前订单，不得周一盘中追填周一开盘成交；SPY基准仍按预定11月2日Open等待核验。"
+    "note": "本轮盘前复核未提交订单，没有周五事前订单，不得追填周一开盘成交。股票新订单只能在下一合格正常交易日实际收盘后至23:59ET窗口决定及远端承诺；SPY基准仍待11/2正常Open。"
   }
 }
