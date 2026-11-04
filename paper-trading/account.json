@@ -98,6 +98,13 @@
       "recorded_at": "2026-11-04T00:06:21Z",
       "session_date": "2026-11-03",
       "description": "实际纽约19:06:21 EST盘后补做日终核算；无订单、成交或持仓，维持全现金。不倒填16:20调度窗口。"
+    },
+    {
+      "event_id": "REVIEW-20261103-POSTEOD-021656",
+      "type": "POST_EOD_REVIEW",
+      "recorded_at": "2026-11-04T02:16:56Z",
+      "market_date": "2026-11-03",
+      "description": "实际纽约21:16:56 EST盘后复查，原日终已存在，不重复日终快照；保持现金，无新订单或成交。"
     }
   ],
   "decisions": [
@@ -170,6 +177,15 @@
       "order_ids": [],
       "journal": "journal/2026-11-03.md",
       "reason": "历史保证金机制和作者退出/选举情景未形成当前可量化交易优势；固定主报价路线仍不合格。维持现金，不提交11/4开盘单，不修改风险限额。",
+      "next_review_session": "2026-11-04"
+    },
+    {
+      "decision_id": "D-20261103-POSTEOD-021656",
+      "decision_at": "2026-11-04T02:16:56Z",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-11-03.md",
+      "reason": "新读SHOP原始披露但没有独立估值/一致预期差；作者选举与地缘推测仍未证实。固定股票主价格路线尚不合格，期权非正常时段，保持现金，不提交11/4开盘单。",
       "next_review_session": "2026-11-04"
     }
   ],
@@ -282,17 +298,17 @@
     "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
     "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
     "equity_open_route_status": "not_qualified_no_order",
-    "last_checked_at": "2026-11-04T00:06:21Z",
-    "detail": "实际纽约11/3 19:06:21 EST盘后。00:05–00:06 UTC Nasdaq历史无数据、Yahoo429，B无事前锁定合格Open；MarketWatch的11/2 Daily仍仅交叉，11/3页头Close754.35未提升为主源，盘后756.37不当正常收盘或成交。无前日承诺订单，不追填11/3开盘。期权不在正常交易时段且无独立方案/合格报价；不提交11/4新单。固定11/2 SPY基准仍null。"
+    "last_checked_at": "2026-11-04T02:16:56Z",
+    "detail": "纽约11/3 21:16:56 EST盘后复查。Nasdaq无数据，Yahoo429，B仍无事前锁定合格Open；MarketWatch仅交叉源，不提升主源。固定11/2 SPY基准仍null，无订单。期权非正常时段。"
   },
   "last_reconciliation": {
-    "as_of": "2026-11-04T00:06:21Z",
+    "as_of": "2026-11-04T02:16:56Z",
     "cash_plus_assets_equals_equity": true,
     "equity_less_contributions_equals_pnl": true,
     "pnl_components_reconcile": true,
     "position_lots_match_fills": true,
     "fees_double_counted": false,
-    "notes": "日终核对：10000已结算现金+0未结算+0证券+0股息应收=10000净值；盈亏与费用0。订单、成交、持仓、结算和到期事项均空。追加11/3日终，旧事件/决策/净值前缀保留，唯一ID无重复。",
+    "notes": "盘后复查恒等式：10000现金+0资产=10000净值，盈亏0；所有订单/成交/持仓及结算事项为空。保留00:06:21 UTC日终及所有净值历史，不重复EOD。",
     "session_date": "2026-11-03",
     "open_order_count": 0,
     "fill_count": 0,
@@ -535,6 +551,46 @@
       "url": "https://www.shopify.com/investors/press-releases/shopify-sustains-rapid-growth-revenue-32-and-free-cash-flow",
       "observed_at": "2026-11-04T00:06:21Z",
       "purpose": "已知官方路径仍不可读取，不将作者GMV miss判断确认为事实。 本轮读取00:05–00:06 UTC，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.nyse.com/markets/hours-calendars",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "11/3、11/4非所列休市/早收盘日，正常09:30–16:00 ET；当前11/3盘后。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "下一常规FOMC12/8–9。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "11/5生产率、11/6就业均08:30 ET，尚待发布。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "Data is currently not available，固定A源无Open。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/SPY/history/",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "429，无C源Open，尊重限制。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "Daily仍最新11/2 Open759.45；页头11/3 Close754.35，18:06 EST盘后756.37陈旧，仅交叉/研究。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://investors.palantir.com/files/Palantir%20-%20Q3%202026%20Business%20Update.pdf",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "重读公司披露与非GAAP限制；不由增长推导当前价格优势。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
+    },
+    {
+      "url": "https://www.shopify.com/investors/press-releases/shopify-sustains-rapid-growth-revenue-32-and-free-cash-flow",
+      "observed_at": "2026-11-04T02:16:56Z",
+      "purpose": "本轮正文恢复可读：Q3收入3742百万美元、GMV119145百万美元、FCF816百万美元/22%；FCF为非GAAP。未核验一致预期，不确认GMV miss。 本轮02:16 UTC读取，observed_at为整理核验时刻。"
     }
   ],
   "next_session_plan": {
@@ -547,5 +603,6 @@
       "明确本盘持有期、量化触发与失效/退出，再核验20日容量、限价、费用滑点及风险预算"
     ],
     "note": "11/3盘后未提交11/4订单，因此次日不能追填开盘买入。11/4按实际时段检查，股票新计划只能在合格盘后窗口前瞻承诺；期权须正常交易时段及事前承诺后的合格双边报价。无优势继续现金。"
-  }
+  },
+  "last_review_at": "2026-11-04T02:16:56Z"
 }
