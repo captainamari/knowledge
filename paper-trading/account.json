@@ -134,9 +134,53 @@
       "recorded_at": "2026-11-05T01:29:26Z",
       "from": "1.1",
       "to": "2.0",
-      "status": "pending_remote_verification",
-      "effective_at": null,
-      "description": "前瞻高风险实验迁移已登记，待本次提交全文远端核验满足生效条件。无订单/成交，原本金、峰值、日终及旧基准不变；新版阶段比较另列。"
+      "status": "active",
+      "effective_at": "2026-11-05T01:34:56Z",
+      "description": "已登记迁移提交的6个文件完成全文远端核验后，于真实观察时刻前瞻生效；本次迟后确认记录该事实。原账户、净值与旧SPY历史不变，无订单/成交。",
+      "activation_commit": "cae1ad6fcca773093c6aca5f8c3b19cea953a8e2",
+      "protocol_commit": "cae1ad6fcca773093c6aca5f8c3b19cea953a8e2",
+      "remote_verified_at": "2026-11-05T01:34:56Z",
+      "confirmation_recorded_at": "2026-11-05T01:35:30Z"
+    },
+    {
+      "event_id": "VERIFY-20261105-V20",
+      "type": "REMOTE_VERIFICATION_CONFIRMATION",
+      "recorded_at": "2026-11-05T01:35:30Z",
+      "verified_at": "2026-11-05T01:34:56Z",
+      "verified_commit": "cae1ad6fcca773093c6aca5f8c3b19cea953a8e2",
+      "files": [
+        {
+          "path": "paper-trading/PROTOCOL.md",
+          "blob_sha": "d6c1218336c76a4a1fbad2bc2a71ed6d8bbc66cf"
+        },
+        {
+          "path": "paper-trading/account.json",
+          "blob_sha": "9760a4d243c398409cd38a6b48a2c7f27e8c1869"
+        },
+        {
+          "path": "paper-trading/journal/2026-11-04.md",
+          "blob_sha": "9ba9eb622f089ad5c156314caf634acfa407a22a"
+        },
+        {
+          "path": "paper-trading/README.md",
+          "blob_sha": "2a7e3c9fa29ef381f3020c3e87bf33703847d442"
+        },
+        {
+          "path": "paper-trading/research/2026-11-04-high-risk-independent-review.md",
+          "blob_sha": "20c9a3c06d395eafdd92db7f5f28b9918c300a3e"
+        },
+        {
+          "path": "paper-trading/data/2026-11-04-marketwatch-daily.json",
+          "blob_sha": "15cb07ad56527ee803cca1bfcdf58de756237424"
+        }
+      ],
+      "description": "迁移提交6文件全文与本地批准内容一致，main指向被验证提交。本确认提交也须全文核验后才接受新订单。"
+    },
+    {
+      "event_id": "OPS-20261105-PROMPT-ALIGN-V20",
+      "type": "OPERATIONAL_REPAIR",
+      "recorded_at": "2026-11-05T01:35:09.653470Z",
+      "description": "现有模拟盘任务正文已对齐v2、独立判断、固定数据路线、期权禁用、新旧基准、去重与真实时刻规则；只改正文，未新建或立即运行。返回启用=true、America/New_York工作日10:20/16:20弹性窗口不变；next_run_time仍null、last_run仍11/4 08:23:39UTC，因此下一实际触发及旧遗漏根因仍未验证。"
     }
   ],
   "decisions": [
@@ -384,22 +428,23 @@
       "return_pct": null,
       "portfolio_baseline_equity": "10000.00",
       "portfolio_phase_return_pct": null,
-      "phase_effective_at": null,
+      "phase_effective_at": "2026-11-05T01:34:56Z",
       "fees_assumption": "0.00",
       "dividend_reinvestment": false,
-      "note": "未来固定11/5正常会话Open；尚未发生，价格/收益不预填。独立v2阶段对照，不能代替10/30起全历史、11/2旧SPY基准或三个月保证。"
+      "note": "未来固定11/5正常会话Open；尚未发生，价格/收益不预填。独立v2阶段对照，不能代替10/30起全历史、11/2旧SPY基准或三个月保证。 规则生效01:34:56UTC与11/5预定14:30UTC正常Open比较起点不同；阶段正式收益从后者建立，不把生效前后现金时段混为新的日终。",
+      "baseline_expected_open_at": "2026-11-05T14:30:00Z"
     }
   },
   "data_gates": {
     "live_equity_quote": "not_verified",
     "live_option_quote": "not_verified",
-    "fills_enabled_when_protocol_gates_pass": false,
+    "fills_enabled_when_protocol_gates_pass": true,
     "next_open_fallback_enabled": false,
     "equity_execution_model": "PRECOMMITTED_MARKETWATCH_NEXT_REGULAR_SESSION_DAILY_OPEN",
     "option_execution_model": "DISABLED_PENDING_CAPABILITY_VERIFICATION",
     "equity_open_route_status": "qualified_historical_route_IWM_QQQ_GLD_future_order_gates_still_required",
     "last_checked_at": "2026-11-05T01:29:26Z",
-    "detail": "v2迁移待全文远端核验，暂不接新单。MarketWatch IWM/QQQ/GLD可读最新11/4完整Daily及20行历史，证据保存于data/2026-11-04-marketwatch-daily.json。不是实时行情/官方竞价；不得用旧SPY缺口概括所有股票不能交易。期权实时双边数量与收盘前有效bid流程尚未证明，禁开新单。",
+    "detail": "v2迁移提交已全文远端核验并登记生效；本确认提交亦须读回后，才可接受满足全部门槛的未来股票/ETF订单。MarketWatch IWM/QQQ/GLD可读最新11/4完整Daily及20行历史，证据保存于data/2026-11-04-marketwatch-daily.json。不是实时行情/官方竞价；不得用旧SPY缺口概括所有股票不能交易。期权实时双边数量与收盘前有效bid流程尚未证明，禁开新单。",
     "options_new_orders_enabled": false,
     "fixed_provider": "MarketWatch",
     "fixed_field": "Daily Open",
@@ -423,8 +468,8 @@
     "fill_count": 0,
     "position_count": 0
   },
-  "protocol_effective_at": null,
-  "protocol_commit": null,
+  "protocol_effective_at": "2026-11-05T01:34:56Z",
+  "protocol_commit": "cae1ad6fcca773093c6aca5f8c3b19cea953a8e2",
   "reserved_cash": "0.00",
   "available_settled_cash": "10000.00",
   "valuation_session": "2026-11-04",
@@ -838,22 +883,24 @@
     ],
     "note": "期权新单仍禁用；无真实交易；不因挑战目标强迫开仓。"
   },
-  "last_review_at": "2026-11-05T01:29:26Z",
+  "last_review_at": "2026-11-05T01:35:30Z",
   "protocol_activation": {
-    "status": "pending_remote_verification",
+    "status": "active",
     "prepared_at": "2026-11-05T01:29:26Z",
     "from_version": "1.1",
     "previous_protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
     "draft_protocol_commit": "ec2d646ebd58be478dd1826752fc1c1afea241dc",
-    "effective_at": null,
-    "activation_commit": null,
-    "remote_verified_at": null,
-    "new_orders_enabled": false,
-    "condition": "本次迁移事件已登记；只有包含协议、账户、日志及研究的本次提交全部远端全文验证成功，v2才于该真实验证时刻生效；随后确认提交记录该事实。在确认提交也全文核验完成前仍不得提交新订单。"
+    "effective_at": "2026-11-05T01:34:56Z",
+    "activation_commit": "cae1ad6fcca773093c6aca5f8c3b19cea953a8e2",
+    "remote_verified_at": "2026-11-05T01:34:56Z",
+    "new_orders_enabled": true,
+    "condition": "待验证迁移已于所列activation_commit登记；该提交的协议、账户、日志、研究、原始字段与README已逐字读回，实际完成核验观察时刻为remote_verified_at。此确认只记录该生效事实，不冒充本确认提交自身的验证时刻。后续接单前仍须本确认提交全文核验。",
+    "confirmation_recorded_at": "2026-11-05T01:35:30Z",
+    "new_order_gate": "equity_only; this confirmation commit must itself be fully read back before any new order; options remain disabled"
   },
   "risk_profile": {
     "version": "2.0",
-    "status": "pending_remote_verification",
+    "status": "active",
     "single_underlying_cost_pct": "35.00",
     "correlated_theme_cost_pct": "70.00",
     "total_committed_cost_pct": "95.00",
@@ -916,5 +963,20 @@
         "daily_close": 372.49
       }
     }
+  },
+  "operational_status": {
+    "configured_timezone": "America/New_York",
+    "configured_windows": [
+      "10:20",
+      "16:20"
+    ],
+    "timing_mode": "flexible_schedule",
+    "enabled": true,
+    "prompt_updated_at": "2026-11-05T01:35:09.653470Z",
+    "last_run_time_reported": "2026-11-04T08:23:39.100492Z",
+    "next_run_time_reported": null,
+    "future_trigger_verified": false,
+    "old_missed_eod_root_cause": "unknown",
+    "note": "只验证返回配置，不据此推断运行正在执行、下一触发时间或外部行情可用。"
   }
 }
