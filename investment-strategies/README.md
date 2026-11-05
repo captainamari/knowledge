@@ -18,7 +18,7 @@
 | [阻力位等待关键均线回测](labubu-trader-resistance-and-ma-retest.md) | labubu_trader：看好形态但等待降温及关键均线回测再考虑入场 | 两条自引来源串联；旧图标的未知，新图为 CORD，条件执行及20%表述未验证 |
 | [AI 股票短期方向与产业长期判断](labubu-trader-ai-equity-and-adoption-horizons.md) | labubu_trader：产业信念与价格交易分离，继续串联资本开支增速、估值重估与交付瓶颈筛选 | 来源链追加利润率与 S1 催化预期的明确修正；间接财务消息及优势未验证，行动与失效条件不全 |
 | [能源、黄金与 NQ 的跨市场反馈假说](corsica267-energy-gold-nq-reflexivity.md) | Corsica267：能源主线 → 欧盘相对变化与配对表达 → 周末风险与随后平仓表态 | 四条作者来源正文已读；资金流因果、配比和绩效未验证，后续平仓不等于当前仍做空 |
-| [抛售末段观察与盈利／估值情景推演](acemoney21-capitulation-and-earnings-scenarios.md) | acemoney21：融资与 EPS 情景、估值先行变化、权重股与波动／成交量观察 | 指定历史长线程与后续自引正文已读；图表受登录墙限制，阈值、退出及有效性未验证 |
+| [抛售末段观察与盈利／估值情景推演](acemoney21-capitulation-and-earnings-scenarios.md) | acemoney21：融资与 EPS 情景、抛售末段观察、波动扩张时缩小仓位 | 追加1日量／30日 ADV 与未见底的谨慎修正；图表、P/C 口径、风险预算及有效性仍待核验 |
 
 ## 收集边界
 
