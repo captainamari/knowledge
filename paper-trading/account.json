@@ -2,7 +2,7 @@
   "schema_version": 1,
   "account_id": "arch-paper-usd-10000-v1",
   "mode": "SIMULATION_ONLY",
-  "protocol_version": "1.1",
+  "protocol_version": "2.0",
   "currency": "USD",
   "started_at": "2026-10-30T17:59:13Z",
   "as_of": "2026-11-05T01:04:51Z",
@@ -127,6 +127,16 @@
       "type": "OPERATIONAL_REPAIR",
       "recorded_at": "2026-11-05T01:00:38Z",
       "description": "现有任务重新保存America/New_York工作日10:20/16:20弹性窗口，启用状态及原正文保留。更新已确认，服务未返回下一运行时间；后续触发尚未验证，不宣称已确定旧遗漏根因。"
+    },
+    {
+      "event_id": "RULE-20261105-V20",
+      "type": "PROTOCOL_CHANGE",
+      "recorded_at": "2026-11-05T01:29:26Z",
+      "from": "1.1",
+      "to": "2.0",
+      "status": "pending_remote_verification",
+      "effective_at": null,
+      "description": "前瞻高风险实验迁移已登记，待本次提交全文远端核验满足生效条件。无订单/成交，原本金、峰值、日终及旧基准不变；新版阶段比较另列。"
     }
   ],
   "decisions": [
@@ -226,6 +236,17 @@
       "order_ids": [],
       "journal": "journal/2026-11-04.md",
       "reason": "新读QRA与MRVL/LITE合并原始披露，但尚无可量化价格优势、明确持有期与退出方案；作者行动/政策推测不自动跟单。11/5生产率、11/6就业在即，继续现金；SPY固定主行情及其他执行门槛仍未完成，不提交11/5开盘单。",
+      "next_review_session": "2026-11-05"
+    },
+    {
+      "decision_id": "D-20261104-V20-RESEARCH",
+      "decision_at": "2026-11-05T01:29:26Z",
+      "action": "HOLD_CASH",
+      "protocol_context": "v2 prospective parameters pending activation; no order created under either version",
+      "order_ids": [],
+      "journal": "journal/2026-11-04.md",
+      "research": "research/2026-11-04-high-risk-independent-review.md",
+      "reason": "IWM相对强但按284.50买价上限/276.75失效/291.75目标的净示例回报风险比约0.77，不追；GLD单日急涨进入372–374区域，不追；半导体弱势尚未确认修复。数据路线和容量已具备可复核样本，现金主要是投资判断，不是SPY旧基准阻塞。",
       "next_review_session": "2026-11-05"
     }
   ],
@@ -347,19 +368,47 @@
           "url": "https://stooq.com/q/d/?s=spy.us"
         }
       ],
-      "source_policy": "PROTOCOL.md §4.1; use first applicable available source, disclose vendor daily-open model; no favorable-price selection; C needs independent matching daily Open within max($0.02,0.05%)."
+      "source_policy": "PROTOCOL-v1.1.md §4.1 (archived original policy); use first applicable available source, disclose vendor daily-open model; no favorable-price selection; C needs independent matching daily Open within max($0.02,0.05%)."
+    },
+    "v2_phase": {
+      "status": "awaiting_future_baseline",
+      "baseline_session": "2026-11-05",
+      "baseline_field": "MarketWatch Daily Open",
+      "baseline_source": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "valuation_field": "MarketWatch Daily Close",
+      "baseline_price": null,
+      "units": null,
+      "initial_comparison_capital": "10000.00",
+      "dividend_cash": "0.00",
+      "equity": null,
+      "return_pct": null,
+      "portfolio_baseline_equity": "10000.00",
+      "portfolio_phase_return_pct": null,
+      "phase_effective_at": null,
+      "fees_assumption": "0.00",
+      "dividend_reinvestment": false,
+      "note": "未来固定11/5正常会话Open；尚未发生，价格/收益不预填。独立v2阶段对照，不能代替10/30起全历史、11/2旧SPY基准或三个月保证。"
     }
   },
   "data_gates": {
     "live_equity_quote": "not_verified",
     "live_option_quote": "not_verified",
-    "fills_enabled_when_protocol_gates_pass": true,
-    "next_open_fallback_enabled": true,
-    "equity_execution_model": "PRECOMMITTED_NEXT_REGULAR_SESSION_OPEN",
-    "option_execution_model": "POST_COMMIT_FRESH_BID_ASK",
-    "equity_open_route_status": "not_qualified_no_order",
-    "last_checked_at": "2026-11-05T01:04:51Z",
-    "detail": "本轮11/5 00:59:46–01:01:13 UTC复核：Nasdaq无数据，Yahoo429后停止，发行人历史Open未核验合格。MarketWatch 11/4 Daily Close766.81仅提供商研究/交叉数据；不是官方收盘验证，不升格主源。无11/4订单或持仓；固定11/2 SPY基准保持null，无新单。 官方pdhist XLSX于01:02:28–01:03:32UTC下载检查，只有Date/Premium/Discount，无Open且最新11/3，字段不适用。"
+    "fills_enabled_when_protocol_gates_pass": false,
+    "next_open_fallback_enabled": false,
+    "equity_execution_model": "PRECOMMITTED_MARKETWATCH_NEXT_REGULAR_SESSION_DAILY_OPEN",
+    "option_execution_model": "DISABLED_PENDING_CAPABILITY_VERIFICATION",
+    "equity_open_route_status": "qualified_historical_route_IWM_QQQ_GLD_future_order_gates_still_required",
+    "last_checked_at": "2026-11-05T01:29:26Z",
+    "detail": "v2迁移待全文远端核验，暂不接新单。MarketWatch IWM/QQQ/GLD可读最新11/4完整Daily及20行历史，证据保存于data/2026-11-04-marketwatch-daily.json。不是实时行情/官方竞价；不得用旧SPY缺口概括所有股票不能交易。期权实时双边数量与收盘前有效bid流程尚未证明，禁开新单。",
+    "options_new_orders_enabled": false,
+    "fixed_provider": "MarketWatch",
+    "fixed_field": "Daily Open",
+    "source_limitations": [
+      "完整复权算法未公开核验；已知公司行动/单位疑点须先冻结",
+      "页面更新延迟可发生，目标未来Open不保证及时出现",
+      "独立站点小额价格与成交量差保留，固定源不替换；价格超协议阈值则阻塞"
+    ],
+    "next_open_model_enabled": true
   },
   "last_reconciliation": {
     "as_of": "2026-11-05T01:04:51Z",
@@ -374,8 +423,8 @@
     "fill_count": 0,
     "position_count": 0
   },
-  "protocol_effective_at": "2026-10-30T18:04:52Z",
-  "protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
+  "protocol_effective_at": null,
+  "protocol_commit": null,
   "reserved_cash": "0.00",
   "available_settled_cash": "10000.00",
   "valuation_session": "2026-11-04",
@@ -746,18 +795,126 @@
       "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/pdhist-us-en-spy.xlsx",
       "observed_at": "2026-11-05T01:03:31.819Z",
       "purpose": "HTTP200下载01:02:28.151513–01:02:34.148164UTC；只读检查唯一pdhist工作表A1:F612，Date/Premium/Discount，无Open，无11/4；最新11/3。数值为溢折价而非价格，不作B源。"
+    },
+    {
+      "url": "data/2026-11-04-marketwatch-daily.json",
+      "observed_at": "2026-11-05T01:17:08Z",
+      "purpose": "IWM/QQQ/GLD共60条完整Daily OHLCV字段及页面行文字，20日成交量与成交额代理可重算；不是原始CSV或完整HTML。"
+    },
+    {
+      "url": "research/2026-11-04-high-risk-independent-review.md",
+      "observed_at": "2026-11-05T01:29:26Z",
+      "purpose": "独立比较IWM/GLD/QQQ/SMH、原始公司/宏观披露，选择现金，示例不是订单。"
     }
   ],
   "next_session_plan": {
     "session_date": "2026-11-05",
     "orders_submitted": false,
     "action": "RESEARCH_BEFORE_RISK",
-    "conditions": [
-      "继续按冻结A→B→C顺位核验11/2SPY基准，不能仅因缺数据换起点或把交叉源升格",
-      "核对11/5生产率实际发布及11/6就业事件风险，不用作者情景代替原始结果",
-      "明确独立持有期、量化触发/退出，核验具体行情路线、20日容量、限价及全部费用/风险预算"
+    "research_candidates_only": [
+      {
+        "symbol": "IWM",
+        "entry_cap_example": "281.75",
+        "invalidation_example": "276.75",
+        "target_example": "291.75",
+        "quantity_example": 12,
+        "status": "NOT_AN_ORDER"
+      },
+      {
+        "symbol": "GLD",
+        "entry_cap_example": "371.00",
+        "invalidation_example": "365.25",
+        "target_example": "382.50",
+        "quantity_example": 9,
+        "status": "NOT_AN_ORDER"
+      }
     ],
-    "note": "11/4本次盘后决定不提交11/5开盘订单；不得后补11/5开盘交易。11/5盘中研究与核对，期权须正常时段及事前承诺后的合格报价；无优势继续现金。后续股票新订单只在下一符合协议的前瞻盘后窗口提交。"
+    "conditions": [
+      "核实11/5生产率实际发布；重新评估11/6就业与11/10CPI，而非预判结果",
+      "11/5盘中只研究与核对；本轮没有11/5开盘单，不能补单",
+      "11/5收盘后如独立方案达到可接受收益风险且全部门槛通过，前瞻决定11/6开盘订单，并明确是否承受08:30就业跳空",
+      "如价格/论点未改善继续现金；研究示例不是已承诺条件订单，必须新决策、明确持有期、退出及风险",
+      "保留11/2旧SPY缺口；v2阶段只等待预定11/5Open，不移动起点"
+    ],
+    "note": "期权新单仍禁用；无真实交易；不因挑战目标强迫开仓。"
   },
-  "last_review_at": "2026-11-05T01:04:51Z"
+  "last_review_at": "2026-11-05T01:29:26Z",
+  "protocol_activation": {
+    "status": "pending_remote_verification",
+    "prepared_at": "2026-11-05T01:29:26Z",
+    "from_version": "1.1",
+    "previous_protocol_commit": "a61cbc7f14c2d09156d1f45a30646ed0aadb9742",
+    "draft_protocol_commit": "ec2d646ebd58be478dd1826752fc1c1afea241dc",
+    "effective_at": null,
+    "activation_commit": null,
+    "remote_verified_at": null,
+    "new_orders_enabled": false,
+    "condition": "本次迁移事件已登记；只有包含协议、账户、日志及研究的本次提交全部远端全文验证成功，v2才于该真实验证时刻生效；随后确认提交记录该事实。在确认提交也全文核验完成前仍不得提交新订单。"
+  },
+  "risk_profile": {
+    "version": "2.0",
+    "status": "pending_remote_verification",
+    "single_underlying_cost_pct": "35.00",
+    "correlated_theme_cost_pct": "70.00",
+    "total_committed_cost_pct": "95.00",
+    "min_cash_pct": "5.00",
+    "single_equity_planned_risk_pct": "5.00",
+    "aggregate_planned_risk_pct": "12.00",
+    "single_option_premium_fees_pct": "5.00",
+    "total_option_premium_fees_pct": "10.00",
+    "decline_from_previous_valid_eod_pause_pct": "6.00",
+    "peak_drawdown_pause_pct": "25.00",
+    "note": "计划风险不是最大损失；下一开盘退出可跳空。所有已有持仓和待单同时计入，期权全额权利金及费用计入总风险，不作对冲抵减。",
+    "earnings_within_two_sessions": {
+      "single_underlying_cost_pct": "20.00",
+      "equity_planned_risk_pct": "2.50",
+      "option_premium_fees_pct": "2.50"
+    },
+    "options_dte": {
+      "min_calendar_days": 14,
+      "max_calendar_days": 180,
+      "planned_exit_trading_days_before_expiry": 5
+    }
+  },
+  "market_data_readiness": {
+    "evidence_file": "data/2026-11-04-marketwatch-daily.json",
+    "observed_at": "2026-11-05T01:17:08Z",
+    "session_date": "2026-11-04",
+    "quote_type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE",
+    "symbols": {
+      "IWM": {
+        "fixed_url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+        "row_count": 20,
+        "first_date": "2026-10-08",
+        "last_date": "2026-11-04",
+        "average_daily_volume_20": 24303524.5,
+        "average_close_times_volume_20": "6735413119.37",
+        "quantity_cap_from_adv": 2430,
+        "daily_open": 284.17,
+        "daily_close": 284.02
+      },
+      "QQQ": {
+        "fixed_url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+        "row_count": 20,
+        "first_date": "2026-10-08",
+        "last_date": "2026-11-04",
+        "average_daily_volume_20": 43047910.15,
+        "average_close_times_volume_20": "30704631383.94",
+        "quantity_cap_from_adv": 4304,
+        "daily_open": 688.43,
+        "daily_close": 691.95
+      },
+      "GLD": {
+        "fixed_url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+        "row_count": 20,
+        "first_date": "2026-10-08",
+        "last_date": "2026-11-04",
+        "average_daily_volume_20": 8691758.9,
+        "average_close_times_volume_20": "3234946059.85",
+        "quantity_cap_from_adv": 869,
+        "daily_open": 369.58,
+        "daily_close": 372.49
+      }
+    }
+  }
 }

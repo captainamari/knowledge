@@ -1,0 +1,1093 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Read-only research evidence for prospective paper-trade data-route evaluation. No order or baseline repair.",
+  "provider": "MarketWatch",
+  "underlying_eod_provider_as_stated_in_footer": "FactSet",
+  "retrieved_at": "2026-11-05T01:17:08Z",
+  "retrieved_at_precision_note": "UTC clock observation immediately after the ordinary reread that confirmed November 4 daily rows for all three symbols; not an exact HTTP completion timestamp. QQQ rows and IWM/GLD October 8-November 3 rows were initially returned before the separate 01:16:51 UTC clock observation. No new network retrieval was performed to create this file.",
+  "created_at": "2026-11-05T01:21:19.776511+00:00",
+  "frequency": "daily",
+  "price_currency": "USD",
+  "volume_unit": "shares",
+  "row_date_timezone": "America/New_York (local exchange time, per provider footer)",
+  "window_description": "20 completed daily observations before prospective November 5 execution, including November 4; not 20 sessions strictly before November 4.",
+  "window_start": "2026-10-08",
+  "window_end": "2026-11-04",
+  "provenance": {
+    "method": "Transcription of already-read web-tool HTML daily-table text, with numeric parsing and preservation of displayed string fields. This is not an original downloaded CSV or full HTML snapshot.",
+    "initial_read_clock_observed_at": "2026-11-05T01:16:51Z",
+    "updated_rows_clock_observed_at": "2026-11-05T01:17:08Z",
+    "initial_read_result": "QQQ contained November 4; IWM and GLD daily tables stopped at November 3.",
+    "ordinary_reread_result": "The same fixed pages then returned November 4 daily rows for IWM and GLD. Earlier intraday/header values are not substituted.",
+    "csv_read_result": "The QQQ daily download link specified frequency=p1d. The web reader could not ingest the response because text/csv is unsupported; the HTML table was readable. No rate-limit or verification-gate bypass was attempted."
+  },
+  "source_limitations": [
+    "The first historical table is Daily. Weekly and Monthly tables are also exposed in the same page extraction and must not be mixed with Daily rows.",
+    "Published columns are Open, High, Low, Close, Volume. No visible Adjusted Close column or adjustment-method guarantee was verified. These are published-field values, not certified unadjusted raw prices.",
+    "The source can be stale and may later revise values. This evidence preserves values observed in the stated retrieval pass, not values verified at file creation time.",
+    "Quote headers, intraday figures, after-hours prices and header volumes are not daily-table substitutes.",
+    "StockAnalysis closes and volumes reported independently differed from MarketWatch on November 4. No alternate-provider values have been used in these rows or calculations.",
+    "An exchange-calendar check certifying every observation as a normal full session was not independently completed.",
+    "An exhaustive issuer-certified absence of splits or special distributions across this entire window was not established.",
+    "Promotion of this provider, if any, is prospective only and does not retroactively repair the old v1.1 baseline.",
+    "No November 5 Open or other future price is known or included."
+  ],
+  "symbols": {
+    "IWM": {
+      "fixed_url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "retrieved_at": "2026-11-05T01:17:08Z",
+      "retrieved_at_note": "See top-level precision/provenance notes; this is the confirming-pass clock observation, not each row's individual retrieval timestamp.",
+      "frequency": "daily",
+      "row_count": 20,
+      "rows_order": "reverse_chronological",
+      "volume_sum": 486070490,
+      "average_daily_volume_20": 24303524.5,
+      "rows": [
+        {
+          "date": "2026-11-04",
+          "open": 284.17,
+          "high": 286.17,
+          "low": 281.31,
+          "close": 284.02,
+          "volume": 34323200,
+          "displayed_fields": {
+            "Date": "11/04/2026",
+            "Open": "$284.17",
+            "High": "$286.17",
+            "Low": "$281.31",
+            "Close": "$284.02",
+            "Volume": "34,323,200"
+          },
+          "displayed_table_row": "11/04/2026 11/04/2026  | $284.17  | $286.17  | $281.31  | $284.02  | 34,323,200"
+        },
+        {
+          "date": "2026-11-03",
+          "open": 279.84,
+          "high": 282.0,
+          "low": 279.34,
+          "close": 279.79,
+          "volume": 17421250,
+          "displayed_fields": {
+            "Date": "11/03/2026",
+            "Open": "$279.84",
+            "High": "$282.00",
+            "Low": "$279.34",
+            "Close": "$279.79",
+            "Volume": "17,421,250"
+          },
+          "displayed_table_row": "11/03/2026 11/03/2026  | $279.84  | $282.00  | $279.34  | $279.79  | 17,421,250"
+        },
+        {
+          "date": "2026-11-02",
+          "open": 281.64,
+          "high": 283.19,
+          "low": 278.88,
+          "close": 279.14,
+          "volume": 24296869,
+          "displayed_fields": {
+            "Date": "11/02/2026",
+            "Open": "$281.64",
+            "High": "$283.19",
+            "Low": "$278.88",
+            "Close": "$279.14",
+            "Volume": "24,296,869"
+          },
+          "displayed_table_row": "11/02/2026 11/02/2026  | $281.64  | $283.19  | $278.88  | $279.14  | 24,296,869"
+        },
+        {
+          "date": "2026-10-30",
+          "open": 281.97,
+          "high": 282.71,
+          "low": 276.91,
+          "close": 279.33,
+          "volume": 23490881,
+          "displayed_fields": {
+            "Date": "10/30/2026",
+            "Open": "$281.97",
+            "High": "$282.71",
+            "Low": "$276.91",
+            "Close": "$279.33",
+            "Volume": "23,490,881"
+          },
+          "displayed_table_row": "10/30/2026 10/30/2026  | $281.97  | $282.71  | $276.91  | $279.33  | 23,490,881"
+        },
+        {
+          "date": "2026-10-29",
+          "open": 282.41,
+          "high": 285.26,
+          "low": 282.15,
+          "close": 284.01,
+          "volume": 21663840,
+          "displayed_fields": {
+            "Date": "10/29/2026",
+            "Open": "$282.41",
+            "High": "$285.26",
+            "Low": "$282.15",
+            "Close": "$284.01",
+            "Volume": "21,663,840"
+          },
+          "displayed_table_row": "10/29/2026 10/29/2026  | $282.41  | $285.26  | $282.15  | $284.01  | 21,663,840"
+        },
+        {
+          "date": "2026-10-28",
+          "open": 280.35,
+          "high": 281.48,
+          "low": 279.05,
+          "close": 281.29,
+          "volume": 18855189,
+          "displayed_fields": {
+            "Date": "10/28/2026",
+            "Open": "$280.35",
+            "High": "$281.48",
+            "Low": "$279.05",
+            "Close": "$281.29",
+            "Volume": "18,855,189"
+          },
+          "displayed_table_row": "10/28/2026 10/28/2026  | $280.35  | $281.48  | $279.05  | $281.29  | 18,855,189"
+        },
+        {
+          "date": "2026-10-27",
+          "open": 277.96,
+          "high": 280.4,
+          "low": 276.89,
+          "close": 280.18,
+          "volume": 18854400,
+          "displayed_fields": {
+            "Date": "10/27/2026",
+            "Open": "$277.96",
+            "High": "$280.40",
+            "Low": "$276.89",
+            "Close": "$280.18",
+            "Volume": "18,854,400"
+          },
+          "displayed_table_row": "10/27/2026 10/27/2026  | $277.96  | $280.40  | $276.89  | $280.18  | 18,854,400"
+        },
+        {
+          "date": "2026-10-26",
+          "open": 276.17,
+          "high": 278.77,
+          "low": 276.0,
+          "close": 276.99,
+          "volume": 15412160,
+          "displayed_fields": {
+            "Date": "10/26/2026",
+            "Open": "$276.17",
+            "High": "$278.77",
+            "Low": "$276.00",
+            "Close": "$276.99",
+            "Volume": "15,412,160"
+          },
+          "displayed_table_row": "10/26/2026 10/26/2026  | $276.17  | $278.77  | $276.00  | $276.99  | 15,412,160"
+        },
+        {
+          "date": "2026-10-23",
+          "open": 274.85,
+          "high": 276.24,
+          "low": 273.35,
+          "close": 275.75,
+          "volume": 20785740,
+          "displayed_fields": {
+            "Date": "10/23/2026",
+            "Open": "$274.85",
+            "High": "$276.24",
+            "Low": "$273.35",
+            "Close": "$275.75",
+            "Volume": "20,785,740"
+          },
+          "displayed_table_row": "10/23/2026 10/23/2026  | $274.85  | $276.24  | $273.35  | $275.75  | 20,785,740"
+        },
+        {
+          "date": "2026-10-22",
+          "open": 274.81,
+          "high": 277.28,
+          "low": 274.49,
+          "close": 276.67,
+          "volume": 25750439,
+          "displayed_fields": {
+            "Date": "10/22/2026",
+            "Open": "$274.81",
+            "High": "$277.28",
+            "Low": "$274.49",
+            "Close": "$276.67",
+            "Volume": "25,750,439"
+          },
+          "displayed_table_row": "10/22/2026 10/22/2026  | $274.81  | $277.28  | $274.49  | $276.67  | 25,750,439"
+        },
+        {
+          "date": "2026-10-21",
+          "open": 276.86,
+          "high": 277.7,
+          "low": 275.3,
+          "close": 276.48,
+          "volume": 15941430,
+          "displayed_fields": {
+            "Date": "10/21/2026",
+            "Open": "$276.86",
+            "High": "$277.70",
+            "Low": "$275.30",
+            "Close": "$276.48",
+            "Volume": "15,941,430"
+          },
+          "displayed_table_row": "10/21/2026 10/21/2026  | $276.86  | $277.70  | $275.30  | $276.48  | 15,941,430"
+        },
+        {
+          "date": "2026-10-20",
+          "open": 271.53,
+          "high": 276.9,
+          "low": 271.29,
+          "close": 275.78,
+          "volume": 26433570,
+          "displayed_fields": {
+            "Date": "10/20/2026",
+            "Open": "$271.53",
+            "High": "$276.90",
+            "Low": "$271.29",
+            "Close": "$275.78",
+            "Volume": "26,433,570"
+          },
+          "displayed_table_row": "10/20/2026 10/20/2026  | $271.53  | $276.90  | $271.29  | $275.78  | 26,433,570"
+        },
+        {
+          "date": "2026-10-19",
+          "open": 271.82,
+          "high": 272.66,
+          "low": 270.71,
+          "close": 271.28,
+          "volume": 19578590,
+          "displayed_fields": {
+            "Date": "10/19/2026",
+            "Open": "$271.82",
+            "High": "$272.66",
+            "Low": "$270.71",
+            "Close": "$271.28",
+            "Volume": "19,578,590"
+          },
+          "displayed_table_row": "10/19/2026 10/19/2026  | $271.82  | $272.66  | $270.71  | $271.28  | 19,578,590"
+        },
+        {
+          "date": "2026-10-16",
+          "open": 275.52,
+          "high": 275.91,
+          "low": 269.88,
+          "close": 270.44,
+          "volume": 33865031,
+          "displayed_fields": {
+            "Date": "10/16/2026",
+            "Open": "$275.52",
+            "High": "$275.91",
+            "Low": "$269.88",
+            "Close": "$270.44",
+            "Volume": "33,865,031"
+          },
+          "displayed_table_row": "10/16/2026 10/16/2026  | $275.52  | $275.91  | $269.88  | $270.44  | 33,865,031"
+        },
+        {
+          "date": "2026-10-15",
+          "open": 271.42,
+          "high": 275.19,
+          "low": 270.85,
+          "close": 275.08,
+          "volume": 32395770,
+          "displayed_fields": {
+            "Date": "10/15/2026",
+            "Open": "$271.42",
+            "High": "$275.19",
+            "Low": "$270.85",
+            "Close": "$275.08",
+            "Volume": "32,395,770"
+          },
+          "displayed_table_row": "10/15/2026 10/15/2026  | $271.42  | $275.19  | $270.85  | $275.08  | 32,395,770"
+        },
+        {
+          "date": "2026-10-14",
+          "open": 273.36,
+          "high": 274.46,
+          "low": 270.35,
+          "close": 271.37,
+          "volume": 38042141,
+          "displayed_fields": {
+            "Date": "10/14/2026",
+            "Open": "$273.36",
+            "High": "$274.46",
+            "Low": "$270.35",
+            "Close": "$271.37",
+            "Volume": "38,042,141"
+          },
+          "displayed_table_row": "10/14/2026 10/14/2026  | $273.36  | $274.46  | $270.35  | $271.37  | 38,042,141"
+        },
+        {
+          "date": "2026-10-13",
+          "open": 277.98,
+          "high": 278.7,
+          "low": 275.47,
+          "close": 276.7,
+          "volume": 27759029,
+          "displayed_fields": {
+            "Date": "10/13/2026",
+            "Open": "$277.98",
+            "High": "$278.70",
+            "Low": "$275.47",
+            "Close": "$276.70",
+            "Volume": "27,759,029"
+          },
+          "displayed_table_row": "10/13/2026 10/13/2026  | $277.98  | $278.70  | $275.47  | $276.70  | 27,759,029"
+        },
+        {
+          "date": "2026-10-12",
+          "open": 278.47,
+          "high": 279.14,
+          "low": 277.79,
+          "close": 277.9,
+          "volume": 16770641,
+          "displayed_fields": {
+            "Date": "10/12/2026",
+            "Open": "$278.47",
+            "High": "$279.14",
+            "Low": "$277.79",
+            "Close": "$277.90",
+            "Volume": "16,770,641"
+          },
+          "displayed_table_row": "10/12/2026 10/12/2026  | $278.47  | $279.14  | $277.79  | $277.90  | 16,770,641"
+        },
+        {
+          "date": "2026-10-09",
+          "open": 278.21,
+          "high": 279.88,
+          "low": 277.46,
+          "close": 278.94,
+          "volume": 18720250,
+          "displayed_fields": {
+            "Date": "10/09/2026",
+            "Open": "$278.21",
+            "High": "$279.88",
+            "Low": "$277.46",
+            "Close": "$278.94",
+            "Volume": "18,720,250"
+          },
+          "displayed_table_row": "10/09/2026 10/09/2026  | $278.21  | $279.88  | $277.46  | $278.94  | 18,720,250"
+        },
+        {
+          "date": "2026-10-08",
+          "open": 276.32,
+          "high": 277.83,
+          "low": 274.52,
+          "close": 277.57,
+          "volume": 35710070,
+          "displayed_fields": {
+            "Date": "10/08/2026",
+            "Open": "$276.32",
+            "High": "$277.83",
+            "Low": "$274.52",
+            "Close": "$277.57",
+            "Volume": "35,710,070"
+          },
+          "displayed_table_row": "10/08/2026 10/08/2026  | $276.32  | $277.83  | $274.52  | $277.57  | 35,710,070"
+        }
+      ]
+    },
+    "QQQ": {
+      "fixed_url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "retrieved_at": "2026-11-05T01:17:08Z",
+      "retrieved_at_note": "See top-level precision/provenance notes; this is the confirming-pass clock observation, not each row's individual retrieval timestamp.",
+      "frequency": "daily",
+      "row_count": 20,
+      "rows_order": "reverse_chronological",
+      "volume_sum": 860958203,
+      "average_daily_volume_20": 43047910.15,
+      "rows": [
+        {
+          "date": "2026-11-04",
+          "open": 688.43,
+          "high": 701.45,
+          "low": 687.87,
+          "close": 691.95,
+          "volume": 61783900,
+          "displayed_fields": {
+            "Date": "11/04/2026",
+            "Open": "$688.43",
+            "High": "$701.45",
+            "Low": "$687.87",
+            "Close": "$691.95",
+            "Volume": "61,783,900"
+          },
+          "displayed_table_row": "11/04/2026 11/04/2026  | $688.43  | $701.45  | $687.87  | $691.95  | 61,783,900"
+        },
+        {
+          "date": "2026-11-03",
+          "open": 684.39,
+          "high": 688.69,
+          "low": 683.18,
+          "close": 685.28,
+          "volume": 37524367,
+          "displayed_fields": {
+            "Date": "11/03/2026",
+            "Open": "$684.39",
+            "High": "$688.69",
+            "Low": "$683.18",
+            "Close": "$685.28",
+            "Volume": "37,524,367"
+          },
+          "displayed_table_row": "11/03/2026 11/03/2026  | $684.39  | $688.69  | $683.18  | $685.28  | 37,524,367"
+        },
+        {
+          "date": "2026-11-02",
+          "open": 695.32,
+          "high": 699.43,
+          "low": 680.33,
+          "close": 681.09,
+          "volume": 54743719,
+          "displayed_fields": {
+            "Date": "11/02/2026",
+            "Open": "$695.32",
+            "High": "$699.43",
+            "Low": "$680.33",
+            "Close": "$681.09",
+            "Volume": "54,743,719"
+          },
+          "displayed_table_row": "11/02/2026 11/02/2026  | $695.32  | $699.43  | $680.33  | $681.09  | 54,743,719"
+        },
+        {
+          "date": "2026-10-30",
+          "open": 697.21,
+          "high": 698.63,
+          "low": 683.45,
+          "close": 690.49,
+          "volume": 85242070,
+          "displayed_fields": {
+            "Date": "10/30/2026",
+            "Open": "$697.21",
+            "High": "$698.63",
+            "Low": "$683.45",
+            "Close": "$690.49",
+            "Volume": "85,242,070"
+          },
+          "displayed_table_row": "10/30/2026 10/30/2026  | $697.21  | $698.63  | $683.45  | $690.49  | 85,242,070"
+        },
+        {
+          "date": "2026-10-29",
+          "open": 716.54,
+          "high": 718.07,
+          "low": 711.62,
+          "close": 715.34,
+          "volume": 38251578,
+          "displayed_fields": {
+            "Date": "10/29/2026",
+            "Open": "$716.54",
+            "High": "$718.07",
+            "Low": "$711.62",
+            "Close": "$715.34",
+            "Volume": "38,251,578"
+          },
+          "displayed_table_row": "10/29/2026 10/29/2026  | $716.54  | $718.07  | $711.62  | $715.34  | 38,251,578"
+        },
+        {
+          "date": "2026-10-28",
+          "open": 724.12,
+          "high": 726.14,
+          "low": 720.3,
+          "close": 725.61,
+          "volume": 30507449,
+          "displayed_fields": {
+            "Date": "10/28/2026",
+            "Open": "$724.12",
+            "High": "$726.14",
+            "Low": "$720.30",
+            "Close": "$725.61",
+            "Volume": "30,507,449"
+          },
+          "displayed_table_row": "10/28/2026 10/28/2026  | $724.12  | $726.14  | $720.30  | $725.61  | 30,507,449"
+        },
+        {
+          "date": "2026-10-27",
+          "open": 715.12,
+          "high": 722.87,
+          "low": 713.59,
+          "close": 721.25,
+          "volume": 30942830,
+          "displayed_fields": {
+            "Date": "10/27/2026",
+            "Open": "$715.12",
+            "High": "$722.87",
+            "Low": "$713.59",
+            "Close": "$721.25",
+            "Volume": "30,942,830"
+          },
+          "displayed_table_row": "10/27/2026 10/27/2026  | $715.12  | $722.87  | $713.59  | $721.25  | 30,942,830"
+        },
+        {
+          "date": "2026-10-26",
+          "open": 707.06,
+          "high": 715.25,
+          "low": 705.58,
+          "close": 712.2,
+          "volume": 33110801,
+          "displayed_fields": {
+            "Date": "10/26/2026",
+            "Open": "$707.06",
+            "High": "$715.25",
+            "Low": "$705.58",
+            "Close": "$712.20",
+            "Volume": "33,110,801"
+          },
+          "displayed_table_row": "10/26/2026 10/26/2026  | $707.06  | $715.25  | $705.58  | $712.20  | 33,110,801"
+        },
+        {
+          "date": "2026-10-23",
+          "open": 702.2,
+          "high": 709.3,
+          "low": 701.16,
+          "close": 704.4,
+          "volume": 30224670,
+          "displayed_fields": {
+            "Date": "10/23/2026",
+            "Open": "$702.20",
+            "High": "$709.30",
+            "Low": "$701.16",
+            "Close": "$704.40",
+            "Volume": "30,224,670"
+          },
+          "displayed_table_row": "10/23/2026 10/23/2026  | $702.20  | $709.30  | $701.16  | $704.40  | 30,224,670"
+        },
+        {
+          "date": "2026-10-22",
+          "open": 713.61,
+          "high": 715.43,
+          "low": 701.9,
+          "close": 704.47,
+          "volume": 64553379,
+          "displayed_fields": {
+            "Date": "10/22/2026",
+            "Open": "$713.61",
+            "High": "$715.43",
+            "Low": "$701.90",
+            "Close": "$704.47",
+            "Volume": "64,553,379"
+          },
+          "displayed_table_row": "10/22/2026 10/22/2026  | $713.61  | $715.43  | $701.90  | $704.47  | 64,553,379"
+        },
+        {
+          "date": "2026-10-21",
+          "open": 722.22,
+          "high": 727.95,
+          "low": 719.71,
+          "close": 725.2,
+          "volume": 32476199,
+          "displayed_fields": {
+            "Date": "10/21/2026",
+            "Open": "$722.22",
+            "High": "$727.95",
+            "Low": "$719.71",
+            "Close": "$725.20",
+            "Volume": "32,476,199"
+          },
+          "displayed_table_row": "10/21/2026 10/21/2026  | $722.22  | $727.95  | $719.71  | $725.20  | 32,476,199"
+        },
+        {
+          "date": "2026-10-20",
+          "open": 715.25,
+          "high": 722.75,
+          "low": 710.39,
+          "close": 717.63,
+          "volume": 30518520,
+          "displayed_fields": {
+            "Date": "10/20/2026",
+            "Open": "$715.25",
+            "High": "$722.75",
+            "Low": "$710.39",
+            "Close": "$717.63",
+            "Volume": "30,518,520"
+          },
+          "displayed_table_row": "10/20/2026 10/20/2026  | $715.25  | $722.75  | $710.39  | $717.63  | 30,518,520"
+        },
+        {
+          "date": "2026-10-19",
+          "open": 719.61,
+          "high": 724.55,
+          "low": 716.57,
+          "close": 718.36,
+          "volume": 37196719,
+          "displayed_fields": {
+            "Date": "10/19/2026",
+            "Open": "$719.61",
+            "High": "$724.55",
+            "Low": "$716.57",
+            "Close": "$718.36",
+            "Volume": "37,196,719"
+          },
+          "displayed_table_row": "10/19/2026 10/19/2026  | $719.61  | $724.55  | $716.57  | $718.36  | 37,196,719"
+        },
+        {
+          "date": "2026-10-16",
+          "open": 725.52,
+          "high": 725.96,
+          "low": 707.23,
+          "close": 709.8,
+          "volume": 66926656,
+          "displayed_fields": {
+            "Date": "10/16/2026",
+            "Open": "$725.52",
+            "High": "$725.96",
+            "Low": "$707.23",
+            "Close": "$709.80",
+            "Volume": "66,926,656"
+          },
+          "displayed_table_row": "10/16/2026 10/16/2026  | $725.52  | $725.96  | $707.23  | $709.80  | 66,926,656"
+        },
+        {
+          "date": "2026-10-15",
+          "open": 718.55,
+          "high": 729.43,
+          "low": 715.44,
+          "close": 728.0,
+          "volume": 49828711,
+          "displayed_fields": {
+            "Date": "10/15/2026",
+            "Open": "$718.55",
+            "High": "$729.43",
+            "Low": "$715.44",
+            "Close": "$728.00",
+            "Volume": "49,828,711"
+          },
+          "displayed_table_row": "10/15/2026 10/15/2026  | $718.55  | $729.43  | $715.44  | $728.00  | 49,828,711"
+        },
+        {
+          "date": "2026-10-14",
+          "open": 737.98,
+          "high": 740.53,
+          "low": 726.39,
+          "close": 728.95,
+          "volume": 52383559,
+          "displayed_fields": {
+            "Date": "10/14/2026",
+            "Open": "$737.98",
+            "High": "$740.53",
+            "Low": "$726.39",
+            "Close": "$728.95",
+            "Volume": "52,383,559"
+          },
+          "displayed_table_row": "10/14/2026 10/14/2026  | $737.98  | $740.53  | $726.39  | $728.95  | 52,383,559"
+        },
+        {
+          "date": "2026-10-13",
+          "open": 739.52,
+          "high": 744.2,
+          "low": 738.83,
+          "close": 743.57,
+          "volume": 28738631,
+          "displayed_fields": {
+            "Date": "10/13/2026",
+            "Open": "$739.52",
+            "High": "$744.20",
+            "Low": "$738.83",
+            "Close": "$743.57",
+            "Volume": "28,738,631"
+          },
+          "displayed_table_row": "10/13/2026 10/13/2026  | $739.52  | $744.20  | $738.83  | $743.57  | 28,738,631"
+        },
+        {
+          "date": "2026-10-12",
+          "open": 749.69,
+          "high": 749.79,
+          "low": 744.85,
+          "close": 746.04,
+          "volume": 25147730,
+          "displayed_fields": {
+            "Date": "10/12/2026",
+            "Open": "$749.69",
+            "High": "$749.79",
+            "Low": "$744.85",
+            "Close": "$746.04",
+            "Volume": "25,147,730"
+          },
+          "displayed_table_row": "10/12/2026 10/12/2026  | $749.69  | $749.79  | $744.85  | $746.04  | 25,147,730"
+        },
+        {
+          "date": "2026-10-09",
+          "open": 752.55,
+          "high": 752.87,
+          "low": 748.37,
+          "close": 751.27,
+          "volume": 21161961,
+          "displayed_fields": {
+            "Date": "10/09/2026",
+            "Open": "$752.55",
+            "High": "$752.87",
+            "Low": "$748.37",
+            "Close": "$751.27",
+            "Volume": "21,161,961"
+          },
+          "displayed_table_row": "10/09/2026 10/09/2026  | $752.55  | $752.87  | $748.37  | $751.27  | 21,161,961"
+        },
+        {
+          "date": "2026-10-08",
+          "open": 753.97,
+          "high": 757.18,
+          "low": 743.23,
+          "close": 747.58,
+          "volume": 49694754,
+          "displayed_fields": {
+            "Date": "10/08/2026",
+            "Open": "$753.97",
+            "High": "$757.18",
+            "Low": "$743.23",
+            "Close": "$747.58",
+            "Volume": "49,694,754"
+          },
+          "displayed_table_row": "10/08/2026 10/08/2026  | $753.97  | $757.18  | $743.23  | $747.58  | 49,694,754"
+        }
+      ]
+    },
+    "GLD": {
+      "fixed_url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "retrieved_at": "2026-11-05T01:17:08Z",
+      "retrieved_at_note": "See top-level precision/provenance notes; this is the confirming-pass clock observation, not each row's individual retrieval timestamp.",
+      "frequency": "daily",
+      "row_count": 20,
+      "rows_order": "reverse_chronological",
+      "volume_sum": 173835178,
+      "average_daily_volume_20": 8691758.9,
+      "rows": [
+        {
+          "date": "2026-11-04",
+          "open": 369.58,
+          "high": 372.99,
+          "low": 369.22,
+          "close": 372.49,
+          "volume": 10958300,
+          "displayed_fields": {
+            "Date": "11/04/2026",
+            "Open": "$369.58",
+            "High": "$372.99",
+            "Low": "$369.22",
+            "Close": "$372.49",
+            "Volume": "10,958,300"
+          },
+          "displayed_table_row": "11/04/2026 11/04/2026  | $369.58  | $372.99  | $369.22  | $372.49  | 10,958,300"
+        },
+        {
+          "date": "2026-11-03",
+          "open": 361.33,
+          "high": 361.86,
+          "low": 358.94,
+          "close": 359.26,
+          "volume": 6155375,
+          "displayed_fields": {
+            "Date": "11/03/2026",
+            "Open": "$361.33",
+            "High": "$361.86",
+            "Low": "$358.94",
+            "Close": "$359.26",
+            "Volume": "6,155,375"
+          },
+          "displayed_table_row": "11/03/2026 11/03/2026  | $361.33  | $361.86  | $358.94  | $359.26  | 6,155,375"
+        },
+        {
+          "date": "2026-11-02",
+          "open": 361.74,
+          "high": 363.8,
+          "low": 360.8,
+          "close": 361.65,
+          "volume": 8757533,
+          "displayed_fields": {
+            "Date": "11/02/2026",
+            "Open": "$361.74",
+            "High": "$363.80",
+            "Low": "$360.80",
+            "Close": "$361.65",
+            "Volume": "8,757,533"
+          },
+          "displayed_table_row": "11/02/2026 11/02/2026  | $361.74  | $363.80  | $360.80  | $361.65  | 8,757,533"
+        },
+        {
+          "date": "2026-10-30",
+          "open": 361.45,
+          "high": 361.68,
+          "low": 354.67,
+          "close": 355.78,
+          "volume": 16265890,
+          "displayed_fields": {
+            "Date": "10/30/2026",
+            "Open": "$361.45",
+            "High": "$361.68",
+            "Low": "$354.67",
+            "Close": "$355.78",
+            "Volume": "16,265,890"
+          },
+          "displayed_table_row": "10/30/2026 10/30/2026  | $361.45  | $361.68  | $354.67  | $355.78  | 16,265,890"
+        },
+        {
+          "date": "2026-10-29",
+          "open": 368.8,
+          "high": 369.94,
+          "low": 366.97,
+          "close": 368.57,
+          "volume": 9132565,
+          "displayed_fields": {
+            "Date": "10/29/2026",
+            "Open": "$368.80",
+            "High": "$369.94",
+            "Low": "$366.97",
+            "Close": "$368.57",
+            "Volume": "9,132,565"
+          },
+          "displayed_table_row": "10/29/2026 10/29/2026  | $368.80  | $369.94  | $366.97  | $368.57  | 9,132,565"
+        },
+        {
+          "date": "2026-10-28",
+          "open": 371.29,
+          "high": 373.6,
+          "low": 368.88,
+          "close": 373.51,
+          "volume": 9013109,
+          "displayed_fields": {
+            "Date": "10/28/2026",
+            "Open": "$371.29",
+            "High": "$373.60",
+            "Low": "$368.88",
+            "Close": "$373.51",
+            "Volume": "9,013,109"
+          },
+          "displayed_table_row": "10/28/2026 10/28/2026  | $371.29  | $373.60  | $368.88  | $373.51  | 9,013,109"
+        },
+        {
+          "date": "2026-10-27",
+          "open": 368.45,
+          "high": 372.59,
+          "low": 368.45,
+          "close": 372.28,
+          "volume": 5335889,
+          "displayed_fields": {
+            "Date": "10/27/2026",
+            "Open": "$368.45",
+            "High": "$372.59",
+            "Low": "$368.45",
+            "Close": "$372.28",
+            "Volume": "5,335,889"
+          },
+          "displayed_table_row": "10/27/2026 10/27/2026  | $368.45  | $372.59  | $368.45  | $372.28  | 5,335,889"
+        },
+        {
+          "date": "2026-10-26",
+          "open": 367.3,
+          "high": 369.31,
+          "low": 365.54,
+          "close": 367.82,
+          "volume": 6548103,
+          "displayed_fields": {
+            "Date": "10/26/2026",
+            "Open": "$367.30",
+            "High": "$369.31",
+            "Low": "$365.54",
+            "Close": "$367.82",
+            "Volume": "6,548,103"
+          },
+          "displayed_table_row": "10/26/2026 10/26/2026  | $367.30  | $369.31  | $365.54  | $367.82  | 6,548,103"
+        },
+        {
+          "date": "2026-10-23",
+          "open": 368.95,
+          "high": 369.25,
+          "low": 364.33,
+          "close": 366.61,
+          "volume": 10120150,
+          "displayed_fields": {
+            "Date": "10/23/2026",
+            "Open": "$368.95",
+            "High": "$369.25",
+            "Low": "$364.33",
+            "Close": "$366.61",
+            "Volume": "10,120,150"
+          },
+          "displayed_table_row": "10/23/2026 10/23/2026  | $368.95  | $369.25  | $364.33  | $366.61  | 10,120,150"
+        },
+        {
+          "date": "2026-10-22",
+          "open": 373.54,
+          "high": 373.87,
+          "low": 368.35,
+          "close": 369.0,
+          "volume": 17543750,
+          "displayed_fields": {
+            "Date": "10/22/2026",
+            "Open": "$373.54",
+            "High": "$373.87",
+            "Low": "$368.35",
+            "Close": "$369.00",
+            "Volume": "17,543,750"
+          },
+          "displayed_table_row": "10/22/2026 10/22/2026  | $373.54  | $373.87  | $368.35  | $369.00  | 17,543,750"
+        },
+        {
+          "date": "2026-10-21",
+          "open": 379.17,
+          "high": 379.55,
+          "low": 376.2,
+          "close": 378.95,
+          "volume": 6880831,
+          "displayed_fields": {
+            "Date": "10/21/2026",
+            "Open": "$379.17",
+            "High": "$379.55",
+            "Low": "$376.20",
+            "Close": "$378.95",
+            "Volume": "6,880,831"
+          },
+          "displayed_table_row": "10/21/2026 10/21/2026  | $379.17  | $379.55  | $376.20  | $378.95  | 6,880,831"
+        },
+        {
+          "date": "2026-10-20",
+          "open": 377.91,
+          "high": 380.88,
+          "low": 377.26,
+          "close": 377.65,
+          "volume": 6038333,
+          "displayed_fields": {
+            "Date": "10/20/2026",
+            "Open": "$377.91",
+            "High": "$380.88",
+            "Low": "$377.26",
+            "Close": "$377.65",
+            "Volume": "6,038,333"
+          },
+          "displayed_table_row": "10/20/2026 10/20/2026  | $377.91  | $380.88  | $377.26  | $377.65  | 6,038,333"
+        },
+        {
+          "date": "2026-10-19",
+          "open": 381.43,
+          "high": 381.93,
+          "low": 379.12,
+          "close": 379.69,
+          "volume": 5164320,
+          "displayed_fields": {
+            "Date": "10/19/2026",
+            "Open": "$381.43",
+            "High": "$381.93",
+            "Low": "$379.12",
+            "Close": "$379.69",
+            "Volume": "5,164,320"
+          },
+          "displayed_table_row": "10/19/2026 10/19/2026  | $381.43  | $381.93  | $379.12  | $379.69  | 5,164,320"
+        },
+        {
+          "date": "2026-10-16",
+          "open": 381.34,
+          "high": 384.88,
+          "low": 380.89,
+          "close": 382.01,
+          "volume": 9071391,
+          "displayed_fields": {
+            "Date": "10/16/2026",
+            "Open": "$381.34",
+            "High": "$384.88",
+            "Low": "$380.89",
+            "Close": "$382.01",
+            "Volume": "9,071,391"
+          },
+          "displayed_table_row": "10/16/2026 10/16/2026  | $381.34  | $384.88  | $380.89  | $382.01  | 9,071,391"
+        },
+        {
+          "date": "2026-10-15",
+          "open": 380.92,
+          "high": 382.94,
+          "low": 379.72,
+          "close": 382.71,
+          "volume": 8773529,
+          "displayed_fields": {
+            "Date": "10/15/2026",
+            "Open": "$380.92",
+            "High": "$382.94",
+            "Low": "$379.72",
+            "Close": "$382.71",
+            "Volume": "8,773,529"
+          },
+          "displayed_table_row": "10/15/2026 10/15/2026  | $380.92  | $382.94  | $379.72  | $382.71  | 8,773,529"
+        },
+        {
+          "date": "2026-10-14",
+          "open": 374.91,
+          "high": 376.48,
+          "low": 373.36,
+          "close": 375.99,
+          "volume": 10311130,
+          "displayed_fields": {
+            "Date": "10/14/2026",
+            "Open": "$374.91",
+            "High": "$376.48",
+            "Low": "$373.36",
+            "Close": "$375.99",
+            "Volume": "10,311,130"
+          },
+          "displayed_table_row": "10/14/2026 10/14/2026  | $374.91  | $376.48  | $373.36  | $375.99  | 10,311,130"
+        },
+        {
+          "date": "2026-10-13",
+          "open": 383.93,
+          "high": 384.0,
+          "low": 380.09,
+          "close": 381.67,
+          "volume": 5711672,
+          "displayed_fields": {
+            "Date": "10/13/2026",
+            "Open": "$383.93",
+            "High": "$384.00",
+            "Low": "$380.09",
+            "Close": "$381.67",
+            "Volume": "5,711,672"
+          },
+          "displayed_table_row": "10/13/2026 10/13/2026  | $383.93  | $384.00  | $380.09  | $381.67  | 5,711,672"
+        },
+        {
+          "date": "2026-10-12",
+          "open": 382.61,
+          "high": 382.74,
+          "low": 381.16,
+          "close": 382.15,
+          "volume": 4874403,
+          "displayed_fields": {
+            "Date": "10/12/2026",
+            "Open": "$382.61",
+            "High": "$382.74",
+            "Low": "$381.16",
+            "Close": "$382.15",
+            "Volume": "4,874,403"
+          },
+          "displayed_table_row": "10/12/2026 10/12/2026  | $382.61  | $382.74  | $381.16  | $382.15  | 4,874,403"
+        },
+        {
+          "date": "2026-10-09",
+          "open": 383.98,
+          "high": 385.17,
+          "low": 383.26,
+          "close": 384.58,
+          "volume": 7472309,
+          "displayed_fields": {
+            "Date": "10/09/2026",
+            "Open": "$383.98",
+            "High": "$385.17",
+            "Low": "$383.26",
+            "Close": "$384.58",
+            "Volume": "7,472,309"
+          },
+          "displayed_table_row": "10/09/2026 10/09/2026  | $383.98  | $385.17  | $383.26  | $384.58  | 7,472,309"
+        },
+        {
+          "date": "2026-10-08",
+          "open": 377.85,
+          "high": 379.88,
+          "low": 376.13,
+          "close": 378.62,
+          "volume": 9706596,
+          "displayed_fields": {
+            "Date": "10/08/2026",
+            "Open": "$377.85",
+            "High": "$379.88",
+            "Low": "$376.13",
+            "Close": "$378.62",
+            "Volume": "9,706,596"
+          },
+          "displayed_table_row": "10/08/2026 10/08/2026  | $377.85  | $379.88  | $376.13  | $378.62  | 9,706,596"
+        }
+      ]
+    }
+  }
+}
