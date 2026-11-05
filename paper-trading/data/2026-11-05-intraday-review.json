@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Pure paper-account intraday research and data-quality evidence. No order or fill.",
+  "provider": "MarketWatch",
+  "observation_window_utc": {
+    "start": "2026-11-05T15:25:13Z",
+    "end": "2026-11-05T15:28:41Z"
+  },
+  "observation_precision_note": "Clock-bracketed research pass, not HTTP-completion timestamps. MarketWatch table/header pass completed before the 15:26:44 UTC clock observation; issuer read completed before 15:28:15 UTC. Page timestamps below are provider-displayed, asynchronous and sometimes stale.",
+  "currency": "USD",
+  "session_date_timezone": "America/New_York",
+  "daily_table_status": "Each of the four fixed Daily tables ends at 2026-11-04. No 2026-11-05 Daily Open row observed.",
+  "daily_rows_observed": [
+    {
+      "symbol": "SPY",
+      "source_url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "date": "2026-11-04",
+      "open": 762.99,
+      "high": 775.64,
+      "low": 762.64,
+      "close": 766.81,
+      "volume": 62126352
+    },
+    {
+      "symbol": "IWM",
+      "source_url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "date": "2026-11-04",
+      "open": 284.17,
+      "high": 286.17,
+      "low": 281.31,
+      "close": 284.02,
+      "volume": 34466809
+    },
+    {
+      "symbol": "GLD",
+      "source_url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "date": "2026-11-04",
+      "open": 369.58,
+      "high": 372.99,
+      "low": 369.22,
+      "close": 372.49,
+      "volume": 11538430
+    },
+    {
+      "symbol": "QQQ",
+      "source_url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "date": "2026-11-04",
+      "open": 688.43,
+      "high": 701.45,
+      "low": 687.87,
+      "close": 691.95,
+      "volume": 62365922
+    }
+  ],
+  "intraday_headers_research_only": [
+    {
+      "symbol": "SPY",
+      "provider_displayed_at": "2026-11-05T10:05:00-05:00",
+      "price": 751.81,
+      "previous_close": 766.81,
+      "change_pct": -1.96,
+      "provider_label": "Real time quote",
+      "accepted_as_execution_or_baseline": false
+    },
+    {
+      "symbol": "IWM",
+      "provider_displayed_at": "2026-11-05T10:26:00-05:00",
+      "price": 277.93,
+      "previous_close": 284.02,
+      "change_pct": -2.14,
+      "provider_label": "Real time quote",
+      "accepted_as_execution_or_baseline": false
+    },
+    {
+      "symbol": "GLD",
+      "provider_displayed_at": "2026-11-05T10:26:00-05:00",
+      "price": 375.92,
+      "previous_close": 372.49,
+      "change_pct": 0.92,
+      "provider_label": "Real time quote",
+      "accepted_as_execution_or_baseline": false
+    },
+    {
+      "symbol": "QQQ",
+      "provider_displayed_at": "2026-11-05T09:43:00-05:00",
+      "price": 672.01,
+      "previous_close": 691.95,
+      "change_pct": -2.88,
+      "provider_label": "Real time quote",
+      "accepted_as_execution_or_baseline": false
+    }
+  ],
+  "corrections": [
+    {
+      "correction_id": "CORR-20261105-IWM-20261104-VOLUME",
+      "symbol": "IWM",
+      "date": "2026-11-04",
+      "field": "volume",
+      "prior_evidence": "2026-11-04-marketwatch-daily.json",
+      "prior_observed_at": "2026-11-05T01:17:08Z",
+      "prior_value": 34323200,
+      "current_value": 34466809,
+      "ohlc_unchanged": true,
+      "observed_by": "2026-11-05T15:26:44Z",
+      "treatment": "Preserve original snapshot and its 20-session calculation. No existing orders, so no frozen capacity changed. Rebuild and verify all 20 rows before any future order; do not splice this row into a new claimed full sample."
+    },
+    {
+      "correction_id": "CORR-20261105-GLD-20261104-VOLUME",
+      "symbol": "GLD",
+      "date": "2026-11-04",
+      "field": "volume",
+      "prior_evidence": "2026-11-04-marketwatch-daily.json",
+      "prior_observed_at": "2026-11-05T01:17:08Z",
+      "prior_value": 10958300,
+      "current_value": 11538430,
+      "ohlc_unchanged": true,
+      "observed_by": "2026-11-05T15:26:44Z",
+      "treatment": "Preserve original snapshot and its 20-session calculation. No existing orders, so no frozen capacity changed. Rebuild and verify all 20 rows before any future order; do not splice this row into a new claimed full sample."
+    },
+    {
+      "correction_id": "CORR-20261105-QQQ-20261104-VOLUME",
+      "symbol": "QQQ",
+      "date": "2026-11-04",
+      "field": "volume",
+      "prior_evidence": "2026-11-04-marketwatch-daily.json",
+      "prior_observed_at": "2026-11-05T01:17:08Z",
+      "prior_value": 61783900,
+      "current_value": 62365922,
+      "ohlc_unchanged": true,
+      "observed_by": "2026-11-05T15:26:44Z",
+      "treatment": "Preserve original snapshot and its 20-session calculation. No existing orders, so no frozen capacity changed. Rebuild and verify all 20 rows before any future order; do not splice this row into a new claimed full sample."
+    },
+    {
+      "correction_id": "CORR-20261105-SPY-20261104-VOLUME",
+      "symbol": "SPY",
+      "date": "2026-11-04",
+      "field": "volume",
+      "prior_evidence": "../account.json review_evidence observed_at 2026-11-05T01:04:51Z",
+      "prior_value": 61087500,
+      "current_value": 62126352,
+      "ohlc_unchanged": true,
+      "treatment": "Append provider revision; no account P&L or baseline change."
+    }
+  ],
+  "official_cross_check": {
+    "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+    "observed_by": "2026-11-05T15:28:15Z",
+    "symbol": "SPY",
+    "currency": "USD",
+    "exchange": "NYSE ARCA",
+    "as_of": "2026-11-04",
+    "official_closing_price": 766.81,
+    "nav": 766.43,
+    "open_available": false,
+    "note": "Official close matches MarketWatch November 4 Close. NAV and other market fields are not target Daily Open. No claim of full intraday/high-low scope compatibility."
+  },
+  "macro": {
+    "productivity": {
+      "url": "https://www.bls.gov/news.release/prod2.nr0.htm",
+      "release_at": "2026-11-05T08:30:00-05:00",
+      "reference_period": "2026 Q3 preliminary",
+      "nonfarm_productivity_qoq_saar_pct": 3.6,
+      "nonfarm_output_qoq_saar_pct": 3.7,
+      "hours_qoq_saar_pct": 0.1,
+      "nonfarm_unit_labor_cost_qoq_saar_pct": -0.7,
+      "nonfarm_productivity_yoy_pct": 2.1,
+      "nonfarm_unit_labor_cost_yoy_pct": 2.4,
+      "note": "Preliminary data and historical revisions. Quarterly figures are seasonally adjusted annualized, not y/y. No verified consensus-surprise calculation."
+    },
+    "calendar": {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "next_employment_release": "2026-11-06T08:30:00-05:00",
+      "next_cpi_release": "2026-11-10T08:30:00-05:00",
+      "next_ppi_release": "2026-11-13T08:30:00-05:00"
+    },
+    "fomc": {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "next_regular_meeting_dates": [
+        "2026-12-08",
+        "2026-12-09"
+      ],
+      "verified_by": "2026-11-05T15:27:29Z",
+      "note": "Scheduled meeting, not a rate decision forecast."
+    }
+  },
+  "author_checks": [
+    {
+      "author": "babybusfl",
+      "url": "https://x.com/babybusfl",
+      "status": "http_403_no_post_text",
+      "verified_by": "2026-11-05T15:27:29Z",
+      "note": "Latest corrections could not be checked. This is not evidence of no new posts. No bypass or mirror used."
+    },
+    {
+      "author": "labubu_trader",
+      "url": "https://x.com/labubu_trader",
+      "status": "http_403_no_post_text",
+      "verified_by": "2026-11-05T15:27:29Z",
+      "note": "Latest corrections could not be checked. This is not evidence of no new posts. No bypass or mirror used."
+    },
+    {
+      "author": "Corsica267",
+      "url": "https://x.com/Corsica267",
+      "status": "http_403_no_post_text",
+      "verified_by": "2026-11-05T15:27:29Z",
+      "note": "Latest corrections could not be checked. This is not evidence of no new posts. No bypass or mirror used."
+    },
+    {
+      "author": "acemoney21",
+      "url": "https://x.com/acemoney21",
+      "status": "http_403_no_post_text",
+      "verified_by": "2026-11-05T15:27:29Z",
+      "note": "Latest corrections could not be checked. This is not evidence of no new posts. No bypass or mirror used."
+    }
+  ],
+  "legacy_baseline_checks": [
+    {
+      "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+      "status": "data_currently_not_available"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/SPY/history/",
+      "status": "http_429_stopped_no_bypass"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": "no_eligible_20261102_open"
+    }
+  ],
+  "limitations": [
+    "Transcribed displayed numeric fields and short paraphrases, not original CSV or complete HTML.",
+    "No November 5 Daily OHLCV snapshot exists in this pass. Headers must never be substituted for Daily Open or Close.",
+    "Asynchronous header quotes do not establish simultaneous relative returns or a current executable price.",
+    "No new 20-session capacity certification or exhaustive corporate-action clearance performed because no order is placed.",
+    "Original evidence and historical valuation snapshots remain unchanged."
+  ]
+}
