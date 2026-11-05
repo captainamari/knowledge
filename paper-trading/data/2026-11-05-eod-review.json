@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Simulation-only end-of-day reconciliation and independent cash decision. No order or fill.",
+  "session_date": "2026-11-05",
+  "currency": "USD",
+  "session_date_timezone": "America/New_York",
+  "observation_window_utc": {
+    "first_clock_check": "2026-11-05T21:23:12Z",
+    "decision_at": "2026-11-05T21:25:59Z"
+  },
+  "observation_precision_note": "Clock-bracketed research pass, not individual HTTP timestamps. Initial repository reads preceded the first clock check. External-source checks and the independent decision occurred within this interval. Provider page times may be asynchronous and stale.",
+  "repository": {
+    "branch": "main",
+    "base_head": "634bc5f5eefbe0027b4def2e3574b708b2e35e33",
+    "branch_scope": "User approval referred to the immediately preceding explicit main/paper-trading question; no branch migration or new branch inferred."
+  },
+  "market_calendar": {
+    "url": "https://www.nyse.com/markets/hours-calendars",
+    "regular_open_at": "2026-11-05T14:30:00Z",
+    "regular_close_at": "2026-11-05T21:00:00Z",
+    "normal_session": true,
+    "next_normal_sessions": [
+      "2026-11-06",
+      "2026-11-09",
+      "2026-11-10"
+    ],
+    "actual_window": "After actual regular close; 16:23-16:25 EST, within configured flexible 16:20 window."
+  },
+  "daily_table_status": "SPY/IWM/GLD/QQQ fixed Daily tables end at 2026-11-04; no November 5 Daily Open/Close row observed. One normal-session lag is not by itself a universal order ban under v2, but today's benchmark cannot be filled from a header.",
+  "daily_rows_observed": [
+    {
+      "symbol": "SPY",
+      "source_url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "date": "2026-11-04",
+      "open": 762.99,
+      "high": 775.64,
+      "low": 762.64,
+      "close": 766.81,
+      "volume": 62126352
+    },
+    {
+      "symbol": "IWM",
+      "source_url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "date": "2026-11-04",
+      "open": 284.17,
+      "high": 286.17,
+      "low": 281.31,
+      "close": 284.02,
+      "volume": 34466809
+    },
+    {
+      "symbol": "GLD",
+      "source_url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "date": "2026-11-04",
+      "open": 369.58,
+      "high": 372.99,
+      "low": 369.22,
+      "close": 372.49,
+      "volume": 11538430
+    },
+    {
+      "symbol": "QQQ",
+      "source_url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "date": "2026-11-04",
+      "open": 688.43,
+      "high": 701.45,
+      "low": 687.87,
+      "close": 691.95,
+      "volume": 62365922
+    }
+  ],
+  "headers_research_only": [
+    {
+      "symbol": "SPY",
+      "provider_header_updated_at": "2026-11-05T16:16:00-05:00",
+      "header_regular_close": 733,
+      "header_regular_change_pct": -4.41,
+      "after_hours_price": 731.9,
+      "provider_label": "After Hours; Delayed quote",
+      "accepted_as_daily_close_or_open": false
+    },
+    {
+      "symbol": "IWM",
+      "provider_displayed_at": "2026-11-05T12:44:00-05:00",
+      "price": 271.82,
+      "previous_close": 284.02,
+      "change_pct": -4.3,
+      "provider_label": "Open; Real time quote",
+      "accepted_as_daily_close_or_open": false
+    },
+    {
+      "symbol": "GLD",
+      "provider_displayed_at": "2026-11-05T10:26:00-05:00",
+      "price": 375.92,
+      "previous_close": 372.49,
+      "change_pct": 0.92,
+      "provider_label": "Open; Real time quote",
+      "accepted_as_daily_close_or_open": false
+    },
+    {
+      "symbol": "QQQ",
+      "provider_displayed_at": "2026-11-05T15:57:00-05:00",
+      "price": 647.93,
+      "previous_close": 691.95,
+      "change_pct": -6.36,
+      "provider_label": "Open; Real time quote",
+      "accepted_as_daily_close_or_open": false
+    }
+  ],
+  "source_revisions": {
+    "new_revision_detected_in_latest_daily_rows": false,
+    "note": "November 4 OHLCV matches the already recorded intraday corrected snapshot. Original November 4 capacity sample remains unchanged. No new capacity certification was performed because no trade thesis was accepted; all 20 rows must be rechecked before any future order."
+  },
+  "legacy_baseline_checks": [
+    {
+      "url": "https://www.nasdaq.com/market-activity/etf/spy/historical",
+      "status": "data_currently_not_available"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/SPY/history/",
+      "status": "http_429_stopped_no_bypass"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "status": "no_eligible_20261102_open",
+      "official_close_date": "2026-11-04",
+      "official_close": 766.81,
+      "nav": 766.43,
+      "note": "Neither field supplies the fixed baseline Open; NAV not substituted for price."
+    }
+  ],
+  "macro": {
+    "productivity": {
+      "url": "https://www.bls.gov/news.release/prod2.nr0.htm",
+      "release_at": "2026-11-05T08:30:00-05:00",
+      "reference_period": "2026 Q3 preliminary",
+      "nonfarm_productivity_qoq_saar_pct": 3.6,
+      "output_qoq_saar_pct": 3.7,
+      "hours_qoq_saar_pct": 0.1,
+      "unit_labor_cost_qoq_saar_pct": -0.7,
+      "productivity_yoy_pct": 2.1,
+      "unit_labor_cost_yoy_pct": 2.4,
+      "q2_productivity_qoq_saar_revised_pct": 2.1,
+      "q2_prior_estimate_pct": 1.4
+    },
+    "weekly_claims": {
+      "url": "https://www.dol.gov/ui/data.pdf",
+      "release_at": "2026-11-05T08:30:00-05:00",
+      "initial_claims_week_ended": "2026-10-31",
+      "initial_claims_sa": 189000,
+      "prior_week_revised": 195000,
+      "prior_week_previously_reported": 194000,
+      "four_week_average": 194750,
+      "continuing_claims_week_ended": "2026-10-24",
+      "continuing_claims_sa": 1718000,
+      "continuing_prior_revised": 1695000,
+      "continuing_prior_previously_reported": 1701000,
+      "insured_unemployment_rate_pct": 1.1
+    },
+    "employment": {
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "release_date": "2026-10-02",
+      "reference_period": "2026-09",
+      "nonfarm_payroll_change": 29000,
+      "unemployment_rate_pct": 4.2,
+      "average_hourly_earnings_mom_pct": 0.1,
+      "average_hourly_earnings_yoy_pct": 3,
+      "note": "Latest available monthly release at decision; October report remains unpublished."
+    },
+    "cpi": {
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "release_date": "2026-10-14",
+      "reference_period": "2026-09",
+      "headline_mom_sa_pct": 0.6,
+      "headline_yoy_pct": 3.7,
+      "core_mom_sa_pct": 0.3,
+      "core_yoy_pct": 2.6
+    },
+    "pce": {
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+      "release_date": "2026-10-29",
+      "reference_period": "2026-09",
+      "headline_mom_pct": 0.5,
+      "headline_yoy_pct": 3.6,
+      "core_mom_pct": 0.3,
+      "core_yoy_pct": 3.1,
+      "real_disposable_personal_income_mom_pct": -0.3
+    },
+    "fomc": {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "release_date": "2026-10-28",
+      "target_range_pct": [
+        3.75,
+        4
+      ],
+      "vote": [
+        10,
+        2
+      ],
+      "dissent": "Two members preferred a 25bp increase, not a cut."
+    },
+    "future_events": {
+      "bls_calendar_url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "employment": "2026-11-06T08:30:00-05:00",
+      "cpi": "2026-11-10T08:30:00-05:00",
+      "ppi": "2026-11-13T08:30:00-05:00",
+      "fed_calendar_url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+      "h41": "2026-11-05T16:30:00-05:00",
+      "h41_status_at_decision": "not_yet_released",
+      "note": "Fed calendar content is for 2026 but footer displayed a 2025 update date; recheck near event. Calendar is not an exhaustive all-company/all-speaker inventory."
+    },
+    "limitations": [
+      "No verified consensus-surprise calculation.",
+      "No contemporaneous Treasury yield or rate-futures series verified.",
+      "No assertion that any release caused the day's price movement."
+    ]
+  },
+  "company_disclosures": [
+    {
+      "symbol": "AMD",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results",
+      "release_date": "2026-11-03",
+      "period": "2026 Q3",
+      "revenue_usd_bn": 13.377,
+      "revenue_yoy_pct": 45,
+      "data_center_revenue_usd_bn": 8.5,
+      "data_center_yoy_pct": 97,
+      "non_gaap_gross_margin_pct": 56,
+      "q4_revenue_guidance_usd_bn": 17,
+      "q4_revenue_guidance_tolerance_pct": 3,
+      "q4_non_gaap_gross_margin_guidance_pct": 55,
+      "note": "Strong growth with guided gross margin one percentage point lower; not a stock-price or sector-bottom conclusion."
+    },
+    {
+      "symbol": "INTC",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+      "release_date": "2026-10-29",
+      "period": "2026 Q3",
+      "revenue_usd_bn": 16.5,
+      "revenue_yoy_pct": 21,
+      "non_gaap_eps": 0.52,
+      "q4_revenue_guidance_usd_bn": [
+        15,
+        16
+      ],
+      "q4_non_gaap_eps_guidance": 0.25,
+      "note": "Management described strong Xeon demand/supply constraints alongside PC weakness expected into first half 2027. Does not authorize copying any personal portfolio."
+    }
+  ],
+  "author_checks": [
+    {
+      "author": "babybusfl",
+      "url": "https://x.com/babybusfl",
+      "status": "http_403_no_post_text",
+      "note": "Latest live corrections not fully verified; stopped without bypass. Separately read existing repository source cards, which are historical research, not trade authorization."
+    },
+    {
+      "author": "labubu_trader",
+      "url": "https://x.com/labubu_trader",
+      "status": "http_403_no_post_text",
+      "note": "Latest live corrections not fully verified; stopped without bypass. Separately read existing repository source cards, which are historical research, not trade authorization."
+    },
+    {
+      "author": "Corsica267",
+      "url": "https://x.com/Corsica267",
+      "status": "http_403_no_post_text",
+      "note": "Latest live corrections not fully verified; stopped without bypass. Separately read existing repository source cards, which are historical research, not trade authorization."
+    },
+    {
+      "author": "acemoney21",
+      "url": "https://x.com/acemoney21",
+      "status": "http_403_no_post_text",
+      "note": "Latest live corrections not fully verified; stopped without bypass. Separately read existing repository source cards, which are historical research, not trade authorization."
+    }
+  ],
+  "archived_author_context": [
+    {
+      "author": "babybusfl",
+      "repository_path": "investment-strategies/babybusfl-price-trigger-and-instrument-selection.md",
+      "finding": "Price-conditioned additions and instrument selection remain incomplete; falling prices alone are not an automatic portfolio instruction."
+    },
+    {
+      "author": "labubu_trader",
+      "repository_path": "investment-strategies/labubu-trader-vix-expiry-and-range-confirmation.md",
+      "sections": [
+        40,
+        41,
+        42
+      ],
+      "archived_observation_window": "2026-11-05T20:26:56Z/2026-11-05T20:27:10Z",
+      "source_urls": [
+        "https://x.com/labubu_trader/status/2118420100105867721",
+        "https://x.com/labubu_trader/status/2118424774892540392",
+        "https://x.com/labubu_trader/status/2118433875357745317"
+      ],
+      "finding": "Archive preserves earlier stop-out/reassessment and later OPEX rebound expectation; waiting for selling to stop versus buying Monday if it does not stop is unresolved. Fund stress and vanna/charm claims are not independently verified flow evidence."
+    },
+    {
+      "author": "Corsica267",
+      "repository_path": "investment-strategies/corsica267-energy-gold-nq-reflexivity.md",
+      "finding": "Separate financing/time-horizon hypotheses and conditional rate questions; not a verified policy path or a complete order."
+    },
+    {
+      "author": "acemoney21",
+      "repository_path": "investment-strategies/acemoney21-capitulation-and-earnings-scenarios.md",
+      "sections": [
+        8,
+        9
+      ],
+      "finding": "Rate-sensitive preference coexists with warning that rebound may fail; no verified bottom, executable trigger or resolved political prerequisite."
+    }
+  ],
+  "decision": {
+    "id": "D-20261105-EOD",
+    "action": "HOLD_CASH",
+    "target_next_session": "2026-11-06",
+    "orders_submitted": false,
+    "investing_reason": "No repaired IWM/QQQ setup or new GLD risk/reward case was established; large declines can precede rebounds or further losses. Tomorrow's employment gap must be accepted before the data, and the present evidence does not establish an advantage worth that exposure.",
+    "data_reason": "Today's fixed Daily marks absent, header timestamps asynchronous; new 20-session capacity and prospective corporate-action clearance not certified. Missing benchmark alone is not a ban on all securities.",
+    "counter_scenario": "A sharp rebound or continued gold rally may leave cash behind. This opportunity cost is accepted, not retrospectively rewritten."
+  },
+  "limitations": [
+    "Numeric fields and brief paraphrases only, not original HTML/CSV/PDF copies.",
+    "No order, pending execution, holdings or settlement receivables exist.",
+    "Cash NAV is independently complete; both SPY benchmarks and relative performance remain null.",
+    "No new 20-session capacity certification, exhaustive component earnings review or prospective corporate-action clearance because no new order is placed.",
+    "Options capability gate remains closed; no real trading, broker connection or paid data."
+  ]
+}
