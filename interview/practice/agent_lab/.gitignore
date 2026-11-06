@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*-run*.json
+first-run.json
+second-run.json
+local-run-*.json

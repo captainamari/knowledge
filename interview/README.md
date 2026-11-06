@@ -25,6 +25,8 @@
 - [三数之和：算法与测试验证](topics/three-sum-and-algorithm-validation.md)
 - [AI 算法手写练习：Softmax、Attention、K-Means、Adam 与 Beam Search](topics/ai-algorithms-from-scratch.md)：原理、实现边界与待练习清单，区分作者建议与一手核验。
 
+- [我为什么要亲手做一个 Agent，以及做到哪里就够了](topics/agent-from-scratch-to-personal-product.md)：第一人称学习答案、真实项目现状、源码阅读、生活代理闭环与实施边界。
+
 ## 岗位与面试背景入口
 
 - [游戏安全后台开发：17项问题](cases/security-backend-interview.md)
@@ -58,6 +60,8 @@
 
 - [接雨水Python实现与测试](practice/trapping_rainwater.py)：9个具名案例、21,845个穷举数组、1,000个固定种子随机数组及变形检查已执行通过；[测试记录](practice/trapping-rainwater-test-report.md)。
 - [运行时实测范围与个人证据模板](practice/evidence-and-study-log.md)：区分实测、文档核验与尚未执行的练习。
+
+- [只读 Agent 标准库练习](practice/agent_lab/README.md)：假模型循环、动作校验、引用与失败路径，14 项测试已由助手执行；真实模型及个人实践待验证。
 
 ## 项目证据与胜任度自测
 
