@@ -1,0 +1,178 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "decision_at": "2026-11-16T21:20:15Z",
+  "first_clock_observed_at": "2026-11-16T21:18:21Z",
+  "research_read_window_utc": "2026-11-16 approximately 21:18–21:20; consolidation time is not individual HTTP time",
+  "session": "2026-11-16",
+  "decision": "就业与生产率韧性支持需求，PPI总体月增放缓也有利，但核心CPI/PPI仍有黏性；明日进口/出口价格与NVDA财报、管理层交接使科技风险回报难以前瞻界定。QQQ最新完整日线未显示持续改善，IWM前两次日线走弱，GLD单日微升不足抵消此前连续回落。未找到足以支付开盘滑点与跳空风险的独立入场优势，选择现金，不提交11/17开盘单；这不是断言必跌或全部证券不可交易，接受经济韧性、事件平稳和科技反弹带来的机会成本。",
+  "limitations": "固定MarketWatch四只ETF Daily最新均为11/13，11/16行尚未出现；页头Close及盘后价不替代固定Daily。未完成候选最新20日容量及公司行动的全套新单核验。SPY完整分配/拆分仍待证，正式基准总回报null，不影响无单无仓现金NAV；期权保持禁用。",
+  "market_calendar": {
+    "url": "https://www.nyse.com/trade/hours-calendars",
+    "normal_close_at": "2026-11-16T21:00:00Z",
+    "next_normal_session": "2026-11-17",
+    "note": "11/26 holiday, 11/27 early close; current and next session normal."
+  },
+  "fixed_daily": [
+    {
+      "symbol": "SPY",
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "session": "2026-11-13",
+      "field_type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE",
+      "open": 760.07,
+      "high": 760.12,
+      "low": 747.88,
+      "close": 754.37,
+      "volume": 38720039,
+      "current_session_row_available": false
+    },
+    {
+      "symbol": "QQQ",
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "session": "2026-11-13",
+      "field_type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE",
+      "open": 688.54,
+      "high": 688.75,
+      "low": 671.68,
+      "close": 679.89,
+      "volume": 42098633,
+      "current_session_row_available": false
+    },
+    {
+      "symbol": "IWM",
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "session": "2026-11-13",
+      "field_type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE",
+      "open": 278.95,
+      "high": 279.17,
+      "low": 274.67,
+      "close": 277.54,
+      "volume": 17722260,
+      "current_session_row_available": false
+    },
+    {
+      "symbol": "GLD",
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "session": "2026-11-13",
+      "field_type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE",
+      "open": 356.27,
+      "high": 357.32,
+      "low": 354.41,
+      "close": 355.45,
+      "volume": 11884330,
+      "current_session_row_available": false
+    }
+  ],
+  "excluded_headers": [
+    {
+      "symbol": "SPY",
+      "displayed_close": 739.96,
+      "afterhours": 740,
+      "header_time": "11/16 16:12 EST"
+    },
+    {
+      "symbol": "IWM",
+      "displayed_close": 272.95,
+      "afterhours": 272.79,
+      "header_time": "11/16 16:17 EST"
+    },
+    {
+      "symbol": "GLD",
+      "displayed_close": 352.9,
+      "afterhours": 352.8,
+      "header_time": "11/16 16:18 EST"
+    }
+  ],
+  "prior_close_context": {
+    "QQQ": {
+      "2026-11-12": 688.17,
+      "2026-11-11": 690.38
+    },
+    "IWM": {
+      "2026-11-12": 278.44,
+      "2026-11-11": 283.09
+    },
+    "GLD": {
+      "2026-11-12": 354.89,
+      "2026-11-11": 365.17,
+      "2026-11-10": 369.36,
+      "2026-11-09": 379.53
+    }
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
+      "finding": "Oct headline SA MoM +0.3%, Sep +1.4%, YoY +6.5%; ex food/energy/trade +0.5% MoM,+4.9% YoY. No consensus verified."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "finding": "Oct headline SA MoM +0.4%, core +0.3%; missing Oct2025 affects YoY availability."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "finding": "Oct payroll +165000, unemployment4.1%."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/prod2.nr0.htm",
+      "finding": "Q3 preliminary annualized productivity +3.6%, unit labor costs −0.7%."
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "finding": "Nov17 import/export prices08:30ET."
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "finding": "Nov12 Jensen resignation, Colette Kress interim CEO and CFO, Harvey Jones chair; Nov17 results approximately1:20pmPT/16:20ET, call2pmPT/17ET. Company disclosure not inference of stock value."
+    }
+  ],
+  "author_context": {
+    "scope": "Read latest repository method cards, not fresh original-X verification this run. Statements remain author claims, never account orders.",
+    "labubu": {
+      "path": "investment-strategies/labubu-trader-vix-expiry-and-range-confirmation.md",
+      "section": 62,
+      "source": "2122070015172386994",
+      "finding": "Conditional potential NVDA intraday short, post-ER ≤150 long/two-month181 target. Not verified fills; short prohibited here."
+    },
+    "corsica": {
+      "path": "investment-strategies/corsica267-energy-gold-nq-reflexivity.md",
+      "section": 29,
+      "source": "2122400688269561856",
+      "finding": "Nov16 argues defensive stocks vulnerable to rotation or shared recession/liquidity decline; commodity bearish policy scenarios lack precise triggers. Not verified macro facts, not automatic cancellation of gold thesis."
+    },
+    "ace": {
+      "path": "investment-strategies/acemoney21-capitulation-and-earnings-scenarios.md",
+      "section": 24,
+      "source": "2122381299503833198",
+      "finding": "Nov16 explicitly admits prior near-term upside call wrong. Do not preserve earlier optimism as unchanged forecast or infer a short fill."
+    },
+    "babybus": {
+      "path": "investment-strategies/babybusfl-price-trigger-and-instrument-selection.md",
+      "section": 9,
+      "finding": "Older SKHY self-reported reentry, no new reproducible trigger in card. Storage optimism inherited context is not freshly verified here; quoted person's 200%MU not author's own exposure."
+    }
+  },
+  "account_checks": {
+    "equity": 10000,
+    "cash": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "drawdown_pct": 0,
+    "prior_valid_eod": "2026-11-13",
+    "risk_pause": false,
+    "nav_independent_of_benchmark_missing": true
+  },
+  "benchmark": {
+    "v1": "unchanged null",
+    "v2_baseline": 765.47,
+    "current_close": null,
+    "total_return": null,
+    "note": "Nov13 price-only observation from earlier run preserved in history; complete dividends/splits unresolved. No current-period issuer action check asserted."
+  },
+  "notification": {
+    "required": false,
+    "reason": "No new order/fill/cancellation/rule or important new blocker."
+  }
+}
