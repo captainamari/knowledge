@@ -1,0 +1,128 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "decision_at": "2026-11-17T21:23:11Z",
+  "first_clock_observed_at": "2026-11-17T21:22:37Z",
+  "research_window_utc": "approximately21:22–21:23, not per-page HTTP timestamp",
+  "decision": "进口与非燃料进口成本仍上涨，不能据此认定通胀已解决；QQQ/IWM最新完整日线延续走弱，黄金也未建立独立反转依据。对科技的年末资金顺风只是作者假说，不能替代净资金流及风险收益验证。NVDA预定披露时刻刚过但本轮未取得结果正文，不猜测好坏。选择保持现金、不提交11/18开盘单，接受财报韧性、治理改善和技术修复引发反弹的机会成本；不是因缺SPY基准而一概禁交易。",
+  "data_limits": "四ETF固定Daily本轮最新11/16，11/17行未取得，未交互刷新日期；排除盘中/盘后头部。最新20日容量与公司行动新单核验未完成，期权禁用。SPY完整分配/拆分缺口不影响纯现金NAV。NVDA官网新闻、季度页和搜索未取得本次财报正文，只能标未取得，不能认定尚未发布或延迟。",
+  "market_calendar": {
+    "url": "https://www.nyse.com/trade/hours-calendars",
+    "session_close_at": "2026-11-17T21:00:00Z",
+    "next_normal_session": "2026-11-18"
+  },
+  "daily": [
+    {
+      "symbol": "SPY",
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "session": "2026-11-16",
+      "open": 749.66,
+      "high": 749.82,
+      "low": 738.07,
+      "close": 739.95,
+      "volume": 69207281,
+      "type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE"
+    },
+    {
+      "symbol": "QQQ",
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "session": "2026-11-16",
+      "open": 671.04,
+      "high": 672.15,
+      "low": 660.48,
+      "close": 661.75,
+      "volume": 43576961,
+      "type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE"
+    },
+    {
+      "symbol": "IWM",
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "session": "2026-11-16",
+      "open": 276.1,
+      "high": 276.54,
+      "low": 271.97,
+      "close": 272.94,
+      "volume": 25827480,
+      "type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE"
+    },
+    {
+      "symbol": "GLD",
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "session": "2026-11-16",
+      "open": 354.13,
+      "high": 356.29,
+      "low": 351.96,
+      "close": 352.93,
+      "volume": 9681675,
+      "type": "PROVIDER_HISTORICAL_DAILY_NOT_LIVE"
+    }
+  ],
+  "excluded_headers": [
+    {
+      "symbol": "SPY",
+      "time": "11/17 15:57EST",
+      "quote": 730.62
+    },
+    {
+      "symbol": "GLD",
+      "time": "11/17 16:22EST",
+      "afterhours": 352.91,
+      "displayed_close": 352.48
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.bls.gov/news.release/ximpim.nr0.htm",
+      "finding": "October imports+1.1%, nonfuel+0.8%, exports+1.1% MoM. Missing Oct2025 limits YoY. No consensus checked."
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+      "finding": "Scheduled Nov17 results approximately16:20ET, call17ET. Observed after scheduled results time, but no actual release obtained."
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/",
+      "finding": "Latest accessible news listed governance committee; no Q3 result body retrieved."
+    },
+    {
+      "url": "https://investor.nvidia.com/financial-info/quarterly-results/default.aspx",
+      "finding": "Selector/template, no Q3 body."
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+      "finding": "Candidate direct route inaccessible. Search returns scheduled call, not verified result. No publication delay inferred."
+    }
+  ],
+  "author_cards": {
+    "scope": "Latest repository cards reread, not new original-X check",
+    "labubu": {
+      "section": 64,
+      "id": "2122727730881925183",
+      "finding": "Conditional non-event/gradual year-end rise hypothesis and claimed CTA/vol-control/vanna-charm support; unverified flows, call emphasis not proof financial results irrelevant.150 limit nonfill self-report only."
+    },
+    "corsica": {
+      "section": 31,
+      "finding": "Growth/funding second-order effect, gold/bond distinction, conditional policy and flows not facts."
+    },
+    "ace": {
+      "section": 24,
+      "finding": "Prior upside call explicitly rejected; no automatic short."
+    },
+    "babybus": {
+      "section": 10,
+      "finding": "Rebound alone insufficient; no quantitative trade trigger."
+    }
+  },
+  "checks": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "drawdown_pct": 0,
+    "risk_pause": false,
+    "unique_eod": true
+  },
+  "notification_required": false
+}
