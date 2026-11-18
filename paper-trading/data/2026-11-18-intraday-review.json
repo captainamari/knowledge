@@ -1,0 +1,140 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "decision_at": "2026-11-18T15:20:29Z",
+  "first_clock_observed_at": "2026-11-18T15:19:33Z",
+  "research_window": "approximately15:19–15:20UTC, not exact per-page HTTP timestamps",
+  "decision": "NVDA财报确认AI基础设施收入增长与Rubin放量，但有条件云承诺、担保及应收账款增长意味着强需求不等于融资风险消失。QQQ/IWM盘中反弹尚不能确认11/17弱势已逆转；GLD盘中继续走弱，不默认是有效对冲。未建立独立可量化入场退出优势，保持现金并接受盈利韧性驱动反弹的机会成本。前晚无已承诺订单，当前盘中不能补造今日开盘单；晚间合法窗口再评估未来订单。",
+  "data_limits": "Daily最新11/17，盘中头部仅研究且带独立时间，非模型成交价；未重建最新20日容量或完成候选公司行动核验。SPY完整分配/拆分仍待证，正式总回报null但不影响纯现金净值。作者只重读最新仓库方法卡，未本轮核验X；期权继续禁用。",
+  "sources": [
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "symbol": "SPY",
+      "session": "2026-11-17",
+      "type": "PROVIDER_DAILY",
+      "open": 738.39,
+      "high": 739.76,
+      "low": 727,
+      "close": 732.44,
+      "volume": 71636289
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "symbol": "QQQ",
+      "session": "2026-11-17",
+      "type": "PROVIDER_DAILY",
+      "open": 663.05,
+      "high": 663.36,
+      "low": 646.64,
+      "close": 656.95,
+      "volume": 55693848
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "symbol": "IWM",
+      "session": "2026-11-17",
+      "type": "PROVIDER_DAILY",
+      "open": 272.03,
+      "high": 273.05,
+      "low": 267.87,
+      "close": 269.05,
+      "volume": 29111850
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "symbol": "GLD",
+      "session": "2026-11-17",
+      "type": "PROVIDER_DAILY",
+      "open": 353.87,
+      "high": 356.53,
+      "low": 352.01,
+      "close": 352.48,
+      "volume": 8021283
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "Nov17 official Close732.44 matches; midpoint732.40 excluded; primary exchange volume13357485 differs in scope, not substitute."
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "Template No results, not evidence of no distributions; full split history unresolved."
+    },
+    {
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q327/Q3FY27-CFO-Commentary.pdf",
+      "finding": "Q3 revenue115.8B/DC107.6B; Q4forecast130B±3% includes extra week, margin71–72%. Conditional neocloud commitments32B require financing/deployment/operation/acceptance. Maximum gross guarantees118B, no payments to date; DSO64 vs60. Demand growth and contingent financing exposure coexist; forecasts not outcomes, guarantees not realized losses."
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "finding": "Nov18/19 normal09:30–16ET; Nov26holiday, Nov27earlyclose."
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "finding": "Nov18 10ET workplace injuries annual; Nov20 10ET state employment and industry productivity. No new national CPI/jobs release today on this calendar."
+    }
+  ],
+  "headers_research_only": [
+    {
+      "symbol": "SPY",
+      "time": "Nov18 09:56EST",
+      "price": 731.67,
+      "note": "stale vs review"
+    },
+    {
+      "symbol": "QQQ",
+      "time": "Nov18 10:19EST",
+      "price": 660.23
+    },
+    {
+      "symbol": "IWM",
+      "time": "Nov18 10:19EST",
+      "price": 271.13
+    },
+    {
+      "symbol": "GLD",
+      "time": "Nov18 10:19EST",
+      "price": 344.14
+    }
+  ],
+  "author_cards": {
+    "scope": "Latest repository cards re-read, not fresh X verification",
+    "labubu": {
+      "section": 64,
+      "id": "2122727730881925183",
+      "finding": "Conditional yearend flow support, not measured net inflows"
+    },
+    "corsica": {
+      "section": 34,
+      "id": "2122963463207330223",
+      "finding": "Risk appetite/funding/USD feedback hypothesis, not proven flow or collapse"
+    },
+    "ace": {
+      "section": 25,
+      "id": "2122928265392218264",
+      "finding": "200d location and short-term trade vs bull narrative separated; incomplete final sentence not extrapolated; prior wrong-call retained"
+    },
+    "babybus": {
+      "section": 10,
+      "id": "2122650438839517511",
+      "finding": "Rebound alone insufficient, not blanket refusal to buy"
+    }
+  },
+  "reconciliation": {
+    "cash": 10000,
+    "equity": 10000,
+    "orders": 0,
+    "fills": 0,
+    "positions": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "drawdown_pct": 0,
+    "risk_pause": false,
+    "formal_eod_unchanged": "2026-11-17"
+  },
+  "notification_required": false,
+  "benchmark": {
+    "price_only_equity": "9568.50",
+    "price_only_return_pct": "-4.3150",
+    "formal_return": null,
+    "old_baseline_unchanged": true
+  }
+}

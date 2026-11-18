@@ -411,6 +411,21 @@
       "session_date": "2026-11-17",
       "session_close_at": "2026-11-17T21:00:00Z",
       "description": "实际16:23:11 EST盘后，现金10000，无单仓或待证成交；不提交11/18开盘单。"
+    },
+    {
+      "event_id": "INTRADAY-20261118",
+      "type": "INTRADAY_RECONCILIATION",
+      "recorded_at": "2026-11-18T15:20:29Z",
+      "session_date": "2026-11-18",
+      "description": "实际10:20:29 EST盘中，现金10000，无单仓或待证成交，正式EOD保留11/17。"
+    },
+    {
+      "event_id": "BENCHMARK-20261117-LATE-PRICE-EVIDENCE-20261118",
+      "type": "BENCHMARK_LATE_PRICE_EVIDENCE",
+      "recorded_at": "2026-11-18T15:20:29Z",
+      "valuation_session": "2026-11-17",
+      "evidence": "data/2026-11-18-intraday-review.json",
+      "details": "Daily及发行商Close732.44，完整分配/拆分未证，历史不改。"
     }
   ],
   "decisions": [
@@ -762,6 +777,19 @@
       "data_limits": "四ETF固定Daily本轮最新11/16，11/17行未取得，未交互刷新日期；排除盘中/盘后头部。最新20日容量与公司行动新单核验未完成，期权禁用。SPY完整分配/拆分缺口不影响纯现金NAV。NVDA官网新闻、季度页和搜索未取得本次财报正文，只能标未取得，不能认定尚未发布或延迟。",
       "counter_scenario": "盈利韧性、资金回流及技术修复可带来反弹，现金承担机会成本。",
       "next_review_session": "2026-11-18"
+    },
+    {
+      "decision_id": "D-20261118-INTRADAY",
+      "decision_at": "2026-11-18T15:20:29Z",
+      "protocol_version": "2.0",
+      "action": "HOLD_CASH",
+      "order_ids": [],
+      "journal": "journal/2026-11-18.md",
+      "evidence": "data/2026-11-18-intraday-review.json",
+      "reason": "NVDA财报确认AI基础设施收入增长与Rubin放量，但有条件云承诺、担保及应收账款增长意味着强需求不等于融资风险消失。QQQ/IWM盘中反弹尚不能确认11/17弱势已逆转；GLD盘中继续走弱，不默认是有效对冲。未建立独立可量化入场退出优势，保持现金并接受盈利韧性驱动反弹的机会成本。前晚无已承诺订单，当前盘中不能补造今日开盘单；晚间合法窗口再评估未来订单。",
+      "data_limits": "Daily最新11/17，盘中头部仅研究且带独立时间，非模型成交价；未重建最新20日容量或完成候选公司行动核验。SPY完整分配/拆分仍待证，正式总回报null但不影响纯现金净值。作者只重读最新仓库方法卡，未本轮核验X；期权继续禁用。",
+      "counter_scenario": "盈利韧性、资金回流及技术反弹可能持续，现金有机会成本。",
+      "next_review_session": "2026-11-18"
     }
   ],
   "nav_history": [
@@ -1009,7 +1037,7 @@
       "last_checked_at": "2026-11-06T21:49:28Z"
     },
     "v2_phase": {
-      "status": "baseline_verified_current_close_and_actions_pending_evidence",
+      "status": "baseline_and_close_verified_corporate_actions_pending_evidence",
       "baseline_session": "2026-11-05",
       "baseline_field": "MarketWatch Daily Open",
       "baseline_source": "https://www.marketwatch.com/investing/fund/spy/download-data",
@@ -1025,14 +1053,14 @@
       "phase_effective_at": "2026-11-05T01:34:56Z",
       "fees_assumption": "0.00",
       "dividend_reinvestment": false,
-      "note": "未来固定11/5正常会话Open；尚未发生，价格/收益不预填。独立v2阶段对照，不能代替10/30起全历史、11/2旧SPY基准或三个月保证。 规则生效01:34:56UTC与11/5预定14:30UTC正常Open比较起点不同；阶段正式收益从后者建立，不把生效前后现金时段混为新的日终。 2026-11-05 15:28:41UTC盘中复核：预定14:30UTC开盘已过，但固定Daily表只到11/4，11/5 Open未取得。状态前瞻更新为待同一目标字段补证；基线、单位和阶段比较收益仍null，不使用10:05头部751.81。 2026-11-05 21:23:12–21:25:59UTC日终复核：固定Daily表仍到11/4，11/5 Open/Close未出现。头部Close733.00及盘后731.90仅作研究，不能代入基线或正式标记；保持同一目标与null，不把缺基准当作全部证券禁单。 2026-11-06盘中亲自读取固定MarketWatch Daily表，11/5 Open765.47、Close733.00已出现；实际补证时间单列，不倒填11/5已知信息或旧日终。11/5开盘起买入的阶段基准仅计当日价格变化，没有期初股息权利；后续跨日分配须另核验。阶段结果不代替旧基准或全历史。 11/6 21:48–21:49UTC云浏览器Daily表结束日已显式设11/6，最新仍11/5；11/6阶段净值/收益设null，11/5已核验9575.82/-4.2418%保存在last_known_verified，不将735.29头部Close替代固定Daily。账户全现金正式净值不受缺基准影响。 2026-11-09实际15:36UTC固定Daily已补证11/6 Close735.29，发行商同日官方Close一致。原待证历史不改；价格比较为9605.73/-3.9427%，但发行商分配表截至11/2，11/5–6完整公司行动尚未排除，正式阶段总回报仍null。此非账户收益或全历史比较；last_known_verified保留原历史记录，不将旧核验口径升级为本次完整分配认证。 11/9 21:20–21:21UTC明确结束日设11/9后Daily仍最新11/6，今日Close未证。11/6价格观察移存previous_observation，今日正式及价格比较null；头部752.69不替代Daily，发行商分配仍截至11/2，完整公司行动待证。 2026-11-10盘中固定Daily已出现11/9 Close752.69，发行商同日官方Close一致；新增晚到价格记录9833.04/-1.6696%，不倒填11/9已知信息或原EOD。完整分配/拆分仍待核，正式总回报保持null。 11/10实际21:24–21:25UTC云浏览器将Daily结束日显式设11/10，最新仍11/9；头部749.92排除。今日价格和正式阶段比较null，盘中11/9已知价格另存previous_observations，旧历史不改。 11/11实际盘中取得11/10固定Daily Close749.92，发行商同日官方价一致；晚到价格比较另记，不改原日终。完整期间分配/拆分仍待核，正式总回报仍null。 11/11日终显式结束日11/11后Daily最新仍11/10；今日Close和阶段比较null，页头759.84不替代。早间价格观察存previous_observations。 11/12盘中补证11/11固定Daily Close759.81、发行商官方同值；旧页头759.84不改写。完整分配/拆分未核验，正式比较仍null，晚到价格另记。 11/12日终显式结束日11/12后Daily最新11/11，今日价格比较null；头部757.12不替代。早间9926.06/-0.7394%历史价格记录另存，正式总回报仍待分配/拆分核验。 11/13盘中取得11/12固定Daily Close757.12且发行商官方同值；晚到价格单列，原日终不倒填。分配页仍模板无结果，历史XLSX解析不支持，完整拆分未核清；正式总回报保持null。 11/13实际22:07UTC日终网页Daily仍到11/12，结束日参数URL不可访问；没有交互日期刷新。今日价格/正式比较null，早间9890.92/-1.0908%另存历史，不用头部754.37。 11/16盘中补证11/13固定Daily Close754.37，发行商官方同值；仅新增晚到价格比较，不倒填原EOD。分配页仍模板无结果，完整公司行动仍待核验。 11/16日终网页Daily仍最新11/13，未做交互日期刷新；当日Close及价格比较null，不用头部739.96。早间晚到11/13价格记录完整移存历史，正式分配/拆分核验缺口保持。 11/17盘中补证11/16固定Daily Close739.95及发行商同值；昨晚页头739.96原样保留不用于比较，完整公司行动仍待核。 11/17日终Daily仍到11/16，11/17价格及正式比较null；晨间9666.61/-3.3339%价格记录移存历史，未把15:57页头730.62作为正式Close。",
+      "note": "未来固定11/5正常会话Open；尚未发生，价格/收益不预填。独立v2阶段对照，不能代替10/30起全历史、11/2旧SPY基准或三个月保证。 规则生效01:34:56UTC与11/5预定14:30UTC正常Open比较起点不同；阶段正式收益从后者建立，不把生效前后现金时段混为新的日终。 2026-11-05 15:28:41UTC盘中复核：预定14:30UTC开盘已过，但固定Daily表只到11/4，11/5 Open未取得。状态前瞻更新为待同一目标字段补证；基线、单位和阶段比较收益仍null，不使用10:05头部751.81。 2026-11-05 21:23:12–21:25:59UTC日终复核：固定Daily表仍到11/4，11/5 Open/Close未出现。头部Close733.00及盘后731.90仅作研究，不能代入基线或正式标记；保持同一目标与null，不把缺基准当作全部证券禁单。 2026-11-06盘中亲自读取固定MarketWatch Daily表，11/5 Open765.47、Close733.00已出现；实际补证时间单列，不倒填11/5已知信息或旧日终。11/5开盘起买入的阶段基准仅计当日价格变化，没有期初股息权利；后续跨日分配须另核验。阶段结果不代替旧基准或全历史。 11/6 21:48–21:49UTC云浏览器Daily表结束日已显式设11/6，最新仍11/5；11/6阶段净值/收益设null，11/5已核验9575.82/-4.2418%保存在last_known_verified，不将735.29头部Close替代固定Daily。账户全现金正式净值不受缺基准影响。 2026-11-09实际15:36UTC固定Daily已补证11/6 Close735.29，发行商同日官方Close一致。原待证历史不改；价格比较为9605.73/-3.9427%，但发行商分配表截至11/2，11/5–6完整公司行动尚未排除，正式阶段总回报仍null。此非账户收益或全历史比较；last_known_verified保留原历史记录，不将旧核验口径升级为本次完整分配认证。 11/9 21:20–21:21UTC明确结束日设11/9后Daily仍最新11/6，今日Close未证。11/6价格观察移存previous_observation，今日正式及价格比较null；头部752.69不替代Daily，发行商分配仍截至11/2，完整公司行动待证。 2026-11-10盘中固定Daily已出现11/9 Close752.69，发行商同日官方Close一致；新增晚到价格记录9833.04/-1.6696%，不倒填11/9已知信息或原EOD。完整分配/拆分仍待核，正式总回报保持null。 11/10实际21:24–21:25UTC云浏览器将Daily结束日显式设11/10，最新仍11/9；头部749.92排除。今日价格和正式阶段比较null，盘中11/9已知价格另存previous_observations，旧历史不改。 11/11实际盘中取得11/10固定Daily Close749.92，发行商同日官方价一致；晚到价格比较另记，不改原日终。完整期间分配/拆分仍待核，正式总回报仍null。 11/11日终显式结束日11/11后Daily最新仍11/10；今日Close和阶段比较null，页头759.84不替代。早间价格观察存previous_observations。 11/12盘中补证11/11固定Daily Close759.81、发行商官方同值；旧页头759.84不改写。完整分配/拆分未核验，正式比较仍null，晚到价格另记。 11/12日终显式结束日11/12后Daily最新11/11，今日价格比较null；头部757.12不替代。早间9926.06/-0.7394%历史价格记录另存，正式总回报仍待分配/拆分核验。 11/13盘中取得11/12固定Daily Close757.12且发行商官方同值；晚到价格单列，原日终不倒填。分配页仍模板无结果，历史XLSX解析不支持，完整拆分未核清；正式总回报保持null。 11/13实际22:07UTC日终网页Daily仍到11/12，结束日参数URL不可访问；没有交互日期刷新。今日价格/正式比较null，早间9890.92/-1.0908%另存历史，不用头部754.37。 11/16盘中补证11/13固定Daily Close754.37，发行商官方同值；仅新增晚到价格比较，不倒填原EOD。分配页仍模板无结果，完整公司行动仍待核验。 11/16日终网页Daily仍最新11/13，未做交互日期刷新；当日Close及价格比较null，不用头部739.96。早间晚到11/13价格记录完整移存历史，正式分配/拆分核验缺口保持。 11/17盘中补证11/16固定Daily Close739.95及发行商同值；昨晚页头739.96原样保留不用于比较，完整公司行动仍待核。 11/17日终Daily仍到11/16，11/17价格及正式比较null；晨间9666.61/-3.3339%价格记录移存历史，未把15:57页头730.62作为正式Close。 11/18盘中补证11/17固定Daily Close732.44且发行商同值；新增晚到价格记录，不更改原日终或被排除页头。",
       "baseline_expected_open_at": "2026-11-05T14:30:00Z",
-      "last_checked_at": "2026-11-17T21:23:11Z",
+      "last_checked_at": "2026-11-18T15:20:29Z",
       "valuation_session": "2026-11-17",
-      "valuation_price": null,
+      "valuation_price": "732.44",
       "baseline_verified_at": "2026-11-06T15:40:04Z",
-      "valuation_recorded_at": "2026-11-17T21:23:11Z",
-      "evidence": "data/2026-11-17-eod-review.json",
+      "valuation_recorded_at": "2026-11-18T15:20:29Z",
+      "evidence": "data/2026-11-18-intraday-review.json",
       "last_known_verified": {
         "valuation_session": "2026-11-05",
         "valuation_price": "733.00",
@@ -1041,7 +1069,19 @@
         "recorded_at": "2026-11-06T15:40:04Z",
         "evidence": "data/2026-11-06-intraday-review.json"
       },
-      "price_only_comparison": null,
+      "price_only_comparison": {
+        "baseline_session": "2026-11-05",
+        "baseline_open": "765.47",
+        "valuation_session": "2026-11-17",
+        "close": "732.44",
+        "units": "13.063869256796",
+        "price_only_equity": "9568.50",
+        "price_only_return_pct": "-4.3150",
+        "formal_total_return": null,
+        "formal_equity": null,
+        "reason": "完整分配/拆分未核清，价格比较非总回报或账户收益。",
+        "recorded_at": "2026-11-18T15:20:29Z"
+      },
       "corporate_action_verification": {
         "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
         "observed_window_utc": "2026-11-09 approximately 15:38",
@@ -1052,9 +1092,9 @@
         "finding": "Table cutoff predates Nov5–6; cannot fully exclude subsequent corporate actions; splits not independently cleared.",
         "status": "pending_complete_period_verification",
         "latest_attempt": {
-          "observed_at": "2026-11-17T15:23:10Z",
+          "observed_at": "2026-11-18T15:20:29Z",
           "status": "unresolved_table_rendering",
-          "finding": "发行商分配页面仍模板No results，不等于无分配；完整拆分未核清。"
+          "finding": "分配页模板No results，完整公司行动仍未证。"
         }
       },
       "previous_observation": {
@@ -1244,6 +1284,14 @@
           "recorded_at": "2026-11-17T15:23:10Z",
           "evidence": "data/2026-11-17-intraday-review.json",
           "status": "baseline_and_close_verified_corporate_actions_pending_evidence"
+        },
+        {
+          "valuation_session": "2026-11-17",
+          "valuation_price": null,
+          "price_only_comparison": null,
+          "recorded_at": "2026-11-17T21:23:11Z",
+          "evidence": "data/2026-11-17-eod-review.json",
+          "status": "baseline_verified_current_close_and_actions_pending_evidence"
         }
       ]
     }
@@ -1256,8 +1304,8 @@
     "equity_execution_model": "PRECOMMITTED_MARKETWATCH_NEXT_REGULAR_SESSION_DAILY_OPEN",
     "option_execution_model": "DISABLED_PENDING_CAPABILITY_VERIFICATION",
     "equity_open_route_status": "qualified_historical_route_IWM_QQQ_GLD_future_order_gates_still_required",
-    "last_checked_at": "2026-11-17T21:23:11Z",
-    "detail": "四ETF固定Daily本轮最新11/16，11/17行未取得，未交互刷新日期；排除盘中/盘后头部。最新20日容量与公司行动新单核验未完成，期权禁用。SPY完整分配/拆分缺口不影响纯现金NAV。NVDA官网新闻、季度页和搜索未取得本次财报正文，只能标未取得，不能认定尚未发布或延迟。",
+    "last_checked_at": "2026-11-18T15:20:29Z",
+    "detail": "Daily最新11/17，盘中头部仅研究且带独立时间，非模型成交价；未重建最新20日容量或完成候选公司行动核验。SPY完整分配/拆分仍待证，正式总回报null但不影响纯现金净值。作者只重读最新仓库方法卡，未本轮核验X；期权继续禁用。",
     "options_new_orders_enabled": false,
     "fixed_provider": "MarketWatch",
     "fixed_field": "Daily Open",
@@ -1747,6 +1795,11 @@
       "url": "data/2026-11-17-eod-review.json",
       "observed_at": "2026-11-17T21:23:11Z",
       "purpose": "真实日终现金核对、候选Daily、BLS/NYSE及NVDA财报检索范围、作者新版本与独立判断。"
+    },
+    {
+      "url": "data/2026-11-18-intraday-review.json",
+      "observed_at": "2026-11-18T15:20:29Z",
+      "purpose": "NVDA CFO原始披露、NYSE/BLS日历、四作者最新卡、候选Daily与带时标页头、SPY晚到价格及现金对账。"
     }
   ],
   "next_session_plan": {
@@ -1763,7 +1816,7 @@
     ],
     "note": "当前前瞻窗口已开放，主动不下单。"
   },
-  "last_review_at": "2026-11-17T21:23:11Z",
+  "last_review_at": "2026-11-18T15:20:29Z",
   "protocol_activation": {
     "status": "active",
     "prepared_at": "2026-11-05T01:29:26Z",
@@ -1857,17 +1910,17 @@
     "next_run_time_reported": null,
     "future_trigger_verified": false,
     "old_missed_eod_root_cause": "unknown",
-    "note": "只验证返回配置，不据此推断运行正在执行、下一触发时间或外部行情可用。 本轮实际检查于11/5 10:25:13 EST开始、10:28:41形成决定，符合10:20弹性窗口；只证明本轮发生，不证明所有未来调度或旧遗漏根因。未修改调度，也未把运行观察写成调度服务返回值。 本轮首次时钟核验21:23:12UTC（不是精确任务启动时间），21:25:59UTC形成日终决定，均在16:20弹性窗口；只证明本次检查发生，不修改调度或推断未来触发可靠性。 本轮15:39:20UTC为首次时钟核验而非任务精确开始，15:40:04形成盘中决定；未修改调度或声明未来配送。 本轮首次时钟21:48:05UTC、决定21:49:28UTC，为实际盘后弹性检查，不声称21:20准时执行或未来调度已验证。 11/9首次保留时钟核验15:35:48UTC非精确开始；15:39:03UTC形成盘中决定，未修改调度、未验证未来触发。 本轮首次保留时钟21:20:29UTC（非精确开始），21:21:50决定，未改调度、不保证未来触发。 本轮首次保留时钟15:24:28UTC非精确开始，15:26:23UTC形成盘中决定；未更改调度或验证未来触发。 本轮首个保留时钟21:23:42UTC（非精确启动），实际决定21:25:36UTC；11/10正常盘后，仍处16:20弹性窗口。 11/11首次保留时钟15:18:29UTC，决定15:19:14UTC，早于计划15:20，不冒充按时启动，不更改调度。 11/11晚间首次时钟21:15:27UTC，决定21:17:58UTC，早于计划21:20但已收盘；未改调度或保证未来触发。 11/12首次时钟15:24:57，决定15:26:10UTC，为实际10:20弹性盘中检查；未改调度或保证未来配送。 11/12日终首次时钟21:23:47UTC，决定21:24:57UTC；未改调度或保证未来触发。 11/13首次时钟15:25:53，实际决定15:26:42UTC；未更改调度、未确认未来配送。 11/13日终首次时钟22:06:46UTC，决定22:07:18UTC，较计划21:20晚47分18秒；原因未核实，不改调度或保证未来触发。 11/16首次保留时钟16:00:27UTC非精确启动，决定16:00:57UTC，较10:20计划晚40分57秒；不更改调度或保证未来触发。 11/16日终首次保留时钟21:18:21UTC非精确启动，实际决定21:20:15UTC；未改调度或保证未来触发。 11/17首次保留时钟15:22:45UTC非精确启动，决定15:23:10UTC；未更改调度或保证未来触发。 11/17日终首次保留时钟21:22:37UTC非精确启动，决定21:23:11UTC；未改调度或保证未来触发。",
-    "last_observed_check_started_at": "2026-11-17T21:22:37Z",
-    "last_observed_check_decision_at": "2026-11-17T21:23:11Z",
-    "last_observed_market_window": "2026-11-17 16:23:11 EST eod",
+    "note": "只验证返回配置，不据此推断运行正在执行、下一触发时间或外部行情可用。 本轮实际检查于11/5 10:25:13 EST开始、10:28:41形成决定，符合10:20弹性窗口；只证明本轮发生，不证明所有未来调度或旧遗漏根因。未修改调度，也未把运行观察写成调度服务返回值。 本轮首次时钟核验21:23:12UTC（不是精确任务启动时间），21:25:59UTC形成日终决定，均在16:20弹性窗口；只证明本次检查发生，不修改调度或推断未来触发可靠性。 本轮15:39:20UTC为首次时钟核验而非任务精确开始，15:40:04形成盘中决定；未修改调度或声明未来配送。 本轮首次时钟21:48:05UTC、决定21:49:28UTC，为实际盘后弹性检查，不声称21:20准时执行或未来调度已验证。 11/9首次保留时钟核验15:35:48UTC非精确开始；15:39:03UTC形成盘中决定，未修改调度、未验证未来触发。 本轮首次保留时钟21:20:29UTC（非精确开始），21:21:50决定，未改调度、不保证未来触发。 本轮首次保留时钟15:24:28UTC非精确开始，15:26:23UTC形成盘中决定；未更改调度或验证未来触发。 本轮首个保留时钟21:23:42UTC（非精确启动），实际决定21:25:36UTC；11/10正常盘后，仍处16:20弹性窗口。 11/11首次保留时钟15:18:29UTC，决定15:19:14UTC，早于计划15:20，不冒充按时启动，不更改调度。 11/11晚间首次时钟21:15:27UTC，决定21:17:58UTC，早于计划21:20但已收盘；未改调度或保证未来触发。 11/12首次时钟15:24:57，决定15:26:10UTC，为实际10:20弹性盘中检查；未改调度或保证未来配送。 11/12日终首次时钟21:23:47UTC，决定21:24:57UTC；未改调度或保证未来触发。 11/13首次时钟15:25:53，实际决定15:26:42UTC；未更改调度、未确认未来配送。 11/13日终首次时钟22:06:46UTC，决定22:07:18UTC，较计划21:20晚47分18秒；原因未核实，不改调度或保证未来触发。 11/16首次保留时钟16:00:27UTC非精确启动，决定16:00:57UTC，较10:20计划晚40分57秒；不更改调度或保证未来触发。 11/16日终首次保留时钟21:18:21UTC非精确启动，实际决定21:20:15UTC；未改调度或保证未来触发。 11/17首次保留时钟15:22:45UTC非精确启动，决定15:23:10UTC；未更改调度或保证未来触发。 11/17日终首次保留时钟21:22:37UTC非精确启动，决定21:23:11UTC；未改调度或保证未来触发。 11/18首次保留时钟15:19:33UTC，早于计划10:20，决定15:20:29UTC；不修改调度或保证未来触发。",
+    "last_observed_check_started_at": "2026-11-18T15:19:33Z",
+    "last_observed_check_decision_at": "2026-11-18T15:20:29Z",
+    "last_observed_market_window": "2026-11-18 10:20:29 EST intraday",
     "actual_intraday_check_observed": true,
     "actual_eod_check_observed": true,
-    "last_observed_decision_at": "2026-11-17T21:23:11Z"
+    "last_observed_decision_at": "2026-11-18T15:20:29Z"
   },
   "intraday_reconciliation": {
-    "as_of": "2026-11-17T15:23:10Z",
-    "session_date": "2026-11-17",
+    "as_of": "2026-11-18T15:20:29Z",
+    "session_date": "2026-11-18",
     "valuation_status": "complete_cash_only",
     "equity": "10000.00",
     "settled_cash": "10000.00",
@@ -1887,6 +1940,6 @@
     "position_lots_match_fills": true,
     "fees_double_counted": false,
     "company_actions_treatment": "No holdings, orders or cash receivables, so no current entitlement/settlement action. No blanket clearance of prospective securities.",
-    "note": "盘中现金核对；正式EOD/as_of/NAV保留11/16，不新增盘中日终。"
+    "note": "盘中核对；正式EOD/as_of/NAV保留11/17，不新增盘中日终。"
   }
 }
