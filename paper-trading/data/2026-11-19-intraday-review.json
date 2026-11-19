@@ -1,0 +1,139 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "decision_at": "2026-11-19T15:20:13Z",
+  "first_clock_observed_at": "2026-11-19T15:19:47Z",
+  "research_window": "approximately15:19–15:20UTC; not exact per-page timestamps",
+  "decision": "初请20.3万小幅上升而续请176.3万增加7万，显示就业信号分化，不能单周推断衰退或政策转向。QQQ盘中页头显示反弹，但相较检查时刻已滞后，未形成可量化趋势修复与入场退出优势；NVDA盈利韧性与客户融资条件并存，人物回归猜想不作买入依据。继续现金并接受反弹机会成本。前晚无承诺订单，盘中不补造11/19开盘单，晚间合法窗口再独立评估。",
+  "data_limits": "SPY/QQQ/IWM Daily到11/18，GLD本次仍到11/17；盘中/盘前/盘后头部均有滞后，只作研究不称实时可执行报价。最新20日容量及候选公司行动未完成新单核验；期权禁用。SPY完整分配/拆分仍未核清，正式总回报null，不影响现金NAV。",
+  "sources": [
+    {
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "session": "2026-11-18",
+      "type": "PROVIDER_DAILY",
+      "open": 733.37,
+      "high": 735.06,
+      "low": 726.8,
+      "close": 730.2,
+      "volume": 51804809
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "session": "2026-11-18",
+      "type": "PROVIDER_DAILY",
+      "open": 661.03,
+      "high": 662.8,
+      "low": 653.05,
+      "close": 659.51,
+      "volume": 45145660
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "session": "2026-11-18",
+      "type": "PROVIDER_DAILY",
+      "open": 268.15,
+      "high": 272.36,
+      "low": 267.89,
+      "close": 270.12,
+      "volume": 22537570
+    },
+    {
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "session": "2026-11-17",
+      "type": "PROVIDER_DAILY",
+      "open": 353.87,
+      "high": 356.53,
+      "low": 352.01,
+      "close": 352.48,
+      "volume": 8021283
+    },
+    {
+      "url": "https://www.dol.gov/ui/data.pdf",
+      "finding": "Nov19 08:30ET release: initial203000 forweekNov14,+1000 vs revised202000;4wk197750. Continuing1763000 forweekNov7,+70000 vs revised1693000; no consensus verified."
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "Nov18 officialClose730.20 matches; midpoint730.32 not used;primaryexchangevolume8754035 different scope."
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "Template No results, not proof of no distributions or complete split clearance."
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+      "finding": "Q3revenue115.8B/DC107.6B;150Badditional buyback authorization approved September, not post-resignation response;authorization not full execution."
+    },
+    {
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/Q327/Q3FY27-CFO-Commentary.pdf",
+      "finding": "32Bneocloud obligations conditional on financing/deployment/operation/acceptance, growth does not remove credit dependence."
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "finding": "Nov19normal09:30–16ET,Nov20nextregularsession;Nov26holiday."
+    }
+  ],
+  "excluded_headers": [
+    {
+      "symbol": "SPY",
+      "time": "Nov19 09:46EST",
+      "price": 737.7
+    },
+    {
+      "symbol": "QQQ",
+      "time": "Nov19 10:06EST",
+      "price": 672.37
+    },
+    {
+      "symbol": "IWM",
+      "time": "Nov19 07:46EST",
+      "price": 272.07
+    },
+    {
+      "symbol": "GLD",
+      "time": "Nov18 16:22EST",
+      "price": 341.35
+    }
+  ],
+  "author_cards": {
+    "scope": "Latest remote cards re-read, not fresh X verification",
+    "labubu": {
+      "section": 67,
+      "id": "2123309402656760319",
+      "finding": "Conditional key-person return premise, board motives unverified; old price threshold not sufficient; no verified sale"
+    },
+    "corsica": {
+      "section": 34,
+      "id": "2122963463207330223",
+      "finding": "Funding/USD feedback hypothesis not proved"
+    },
+    "ace": {
+      "section": 26,
+      "id": "2123192581144072335",
+      "finding": "Cross-tenor IV research, incomplete text, no trade parameters"
+    },
+    "babybus": {
+      "section": 10,
+      "id": "2122650438839517511",
+      "finding": "Rebound alone insufficient, no blanket ban"
+    }
+  },
+  "reconciliation": {
+    "cash": 10000,
+    "equity": 10000,
+    "orders": 0,
+    "positions": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "drawdown_pct": 0,
+    "risk_pause": false,
+    "formal_eod_unchanged": "2026-11-18"
+  },
+  "notification_required": false,
+  "benchmark": {
+    "price_only_equity": "9539.24",
+    "price_only_return_pct": "-4.6076",
+    "formal_equity": null,
+    "formal_return": null
+  }
+}
