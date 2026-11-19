@@ -1,0 +1,163 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "session_date": "2026-11-19",
+  "scheduled_at": "2026-11-19T21:20:00Z",
+  "first_clock_observed_at": "2026-11-19T21:19:39Z",
+  "decision_at": "2026-11-19T21:20:35Z",
+  "session_close_at": "2026-11-19T21:00:00Z",
+  "retrieval_window_utc": "approximately 21:19–21:20; not per-page HTTP timestamps",
+  "next_regular_session": "2026-11-20",
+  "decision": "HOLD_CASH",
+  "reason": "地区制造业活动与订单转弱，但出货和就业走强、价格压力上升，不能据此确认全国衰退或宽松转向。QQQ近期完整日线修复未持续，晚间可见盘中页头已回落；IWM缺乏持续强势，GLD最近完整日线下跌且本日晚间页头继续弱，不把黄金默认当对冲。没有足够独立的入场与退出优势，主动保持现金，不提交11/20开盘单；不复制作者ANT流动性归因或NQ反手。",
+  "data_limits": "四ETF固定Daily本轮均最新11/18，11/19合格Daily Close未取得；页头异步且不是执行或正式估值字段。未作交互日期刷新，最新20日容量和候选公司行动未完成新单核验；旧容量不升级。期权继续禁用，SPY完整分配/拆分未核清。缺基准不是全市场禁单理由。",
+  "notification_required": false,
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "max_drawdown_pct": 0
+  },
+  "daily_rows": [
+    {
+      "symbol": "SPY",
+      "date": "2026-11-18",
+      "open": 733.37,
+      "high": 735.06,
+      "low": 726.8,
+      "close": 730.2,
+      "volume": 51804809,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data",
+      "eligible_for_current_eod": false
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-18",
+      "open": 661.03,
+      "high": 662.8,
+      "low": 653.05,
+      "close": 659.51,
+      "volume": 45145660,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data",
+      "eligible_for_current_eod": false
+    },
+    {
+      "symbol": "IWM",
+      "date": "2026-11-18",
+      "open": 268.15,
+      "high": 272.36,
+      "low": 267.89,
+      "close": 270.12,
+      "volume": 22537570,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data",
+      "eligible_for_current_eod": false
+    },
+    {
+      "symbol": "GLD",
+      "date": "2026-11-18",
+      "open": 346.31,
+      "high": 346.31,
+      "low": 340.76,
+      "close": 341.19,
+      "volume": 13476640,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data",
+      "eligible_for_current_eod": false
+    }
+  ],
+  "excluded_headers": [
+    {
+      "symbol": "SPY",
+      "time": "2026-11-19 15:53 EST",
+      "price": 717.86
+    },
+    {
+      "symbol": "QQQ",
+      "time": "2026-11-19 15:24 EST",
+      "price": 646.67
+    },
+    {
+      "symbol": "IWM",
+      "time": "2026-11-19 10:19 EST",
+      "price": 268.92
+    },
+    {
+      "symbol": "GLD",
+      "time": "2026-11-19 16:03 EST",
+      "after_hours": 335.12,
+      "header_close": 335.2
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/mbos-2026-11",
+      "released": "2026-11-19 08:30 EST",
+      "survey_dates": "Nov9–16",
+      "activity": [
+        20.9,
+        6.3
+      ],
+      "new_orders": [
+        4.3,
+        -0.4
+      ],
+      "shipments": [
+        15.3,
+        25.7
+      ],
+      "employment": [
+        9.1,
+        11.6
+      ],
+      "prices_paid": [
+        43.2,
+        58.2
+      ],
+      "prices_received": [
+        40.1,
+        47
+      ],
+      "interpretation": "地区扩散指标，混合增长和价格信号，不确认美国衰退。初次open失败，随后搜索原站并打开成功。"
+    },
+    {
+      "url": "https://www.dol.gov/ui/data.pdf",
+      "release": "2026-11-19",
+      "initial_week": "2026-11-14",
+      "initial": 203000,
+      "prior_revised": 202000,
+      "continuing_week": "2026-11-07",
+      "continuing": 1763000,
+      "prior_continuing_revised": 1693000
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "next": "Nov20 10:00ET State Employment and Unemployment; Total Factor Productivity for Major Industries. Not a full all-agency event calendar."
+    },
+    {
+      "url": "https://www.nyse.com/markets/hours-calendars",
+      "finding": "Nov19/20正常09:30–16ET；Nov26休市、Nov27早收盘。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "date": "2026-11-18",
+      "official_close": 730.2,
+      "excluded_midpoint": 730.32,
+      "finding": "同日固定Daily吻合，但不是Nov19Close。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "模板No results，不证明无分配，完整拆分仍待核。"
+    }
+  ],
+  "author_cards": {
+    "source": "fresh repository main cards, not fresh direct X verification",
+    "labubu": "§68 ANT冲击归因及跨标的条件为作者自述，未验证资金因果。",
+    "corsica": "§35 QQQ多头到NQ空头修正为作者自述，衰退定价不等于官方确认衰退。",
+    "ace": "§27逆向线索不代替跨资产判错条件，无机械阈值。",
+    "babybus": "§11回补条件与现金比较其他机会分开，未核验成交。"
+  },
+  "benchmark": "旧基准null不换源；v2今日Daily缺失，价格/正式比较null；晨间Nov18价格记录移存历史；完整公司行动仍缺。"
+}
