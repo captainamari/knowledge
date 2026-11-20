@@ -1,0 +1,156 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "scheduled_at": "2026-11-20T21:20:00Z",
+  "notification_received_at": "2026-11-20T22:03:55Z",
+  "first_clock_observed_at": "2026-11-20T22:04:08Z",
+  "decision_at": "2026-11-20T22:04:53Z",
+  "session_close_at": "2026-11-20T21:00:00Z",
+  "retrieval_window_utc": "approximately 22:04–22:05; not exact HTTP timestamps",
+  "session_date": "2026-11-20",
+  "next_regular_session": "2026-11-23",
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "max_drawdown_pct": 0
+  },
+  "decision": "HOLD_CASH",
+  "reason": "11/19四只ETF固定Daily均弱于开盘，11/20网页页头方向仍弱，但不拿页头当固定收盘。指数和黄金同时承压说明该时段的分散效果有限，不能据此推断资金来源。Anthropic融资交割增强其近期支付能力，但不证明行业信用/交付转好；CRWV联合创始人买债自述并非新增发行融资。没有独立的入场和退出优势，不为反弹、超卖或作者观点承担周末跳空风险，不提交11/23开盘单。",
+  "limits": "四只ETF固定Daily均至11/19；11/20尚无合格行，周线区块同日标签不作日线，页头Close/盘后价另存且不用于估值或成交。未做交互刷新。未为无信号候选重建20日容量和公司行动；期权仍禁用。SPY待完整分配/拆分仅影响基准总回报，不冻结其他证券。",
+  "notification_required": false,
+  "daily_rows": [
+    {
+      "ticker": "SPY",
+      "date": "2026-11-19",
+      "open": 737.46,
+      "high": 739.9,
+      "low": 715.65,
+      "close": 715.87,
+      "volume": 76702570,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+    },
+    {
+      "ticker": "QQQ",
+      "date": "2026-11-19",
+      "open": 671.09,
+      "high": 676.49,
+      "low": 644.34,
+      "close": 645.04,
+      "volume": 71465406,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data"
+    },
+    {
+      "ticker": "IWM",
+      "date": "2026-11-19",
+      "open": 271.08,
+      "high": 271.8,
+      "low": 263.74,
+      "close": 264.22,
+      "volume": 31433141,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data"
+    },
+    {
+      "ticker": "GLD",
+      "date": "2026-11-19",
+      "open": 339.88,
+      "high": 340.52,
+      "low": 335.05,
+      "close": 335.18,
+      "volume": 11232930,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data"
+    }
+  ],
+  "excluded_headers": {
+    "date": "2026-11-20",
+    "timezone": "EST",
+    "SPY": {
+      "display_time": "16:00",
+      "quote": 691.62,
+      "header_close": 690.43
+    },
+    "QQQ": {
+      "display_time": "17:04",
+      "quote": 614.15,
+      "header_close": 608.45
+    },
+    "IWM": {
+      "display_time": "17:04",
+      "quote": 258.5,
+      "header_close": 256.61
+    },
+    "GLD": {
+      "display_time": "17:04",
+      "quote": 324.18,
+      "header_close": 322.87
+    },
+    "note": "页面头部与盘后数字不是固定Daily；仅方向参考，不形成11/20执行或估值证据。"
+  },
+  "sources": [
+    {
+      "url": "https://www.nyse.com/markets/hours-calendars",
+      "finding": "11/20正常16ET收盘，11/23为下一正常股票会话；11/26休市，11/27早收13ET。无应收，不必从结算日历推导订单。"
+    },
+    {
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "finding": "11/20州就业和行业生产率；11/23无该月历列示发布，不等于无宏观事件。"
+    },
+    {
+      "url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "finding": "今日州就业报告显示10月多数州统计上稳定，不能单凭它解释卖压。"
+    },
+    {
+      "url": "https://www.anthropic.com/news/ipo-close",
+      "finding": "本日较早轮已读发行人确认IPO及并行私募交割；本轮复开失败，不将其误报成新增订单。"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+      "finding": "承诺与实际交付分开，900.9B聚合并非即时无条件债务。"
+    },
+    {
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528971230113161216/",
+      "finding": "同日较早独立核实联合创始人自述购入3000万美元面值无担保债；非公司新融资证据。"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000183/crwv-20260416.htm",
+      "finding": "既有9.75% 2031年10月1日到期票据与自述期限相符，但无其成交确认。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "发行商最新11/19官方Close715.87，非11/20。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "仍模板No results，不证明无分配。"
+    }
+  ],
+  "authors": {
+    "coverage": "重读远端四张归档最新节；此前X访问有限，本轮无新X直接核验，不声称无新帖。",
+    "labubu": "§68 要区分ANT观察代理与因果",
+    "corsica": "§35 反手是作者自述",
+    "ace": "§27 超卖不足且需反证",
+    "babybus": "§11 再买条件与现金用途独立"
+  },
+  "benchmark": {
+    "v1_status": "unchanged_null",
+    "v2_current_price": null,
+    "v2_total_return": null,
+    "prior_verified_price_preserved": {
+      "baseline_session": "2026-11-05",
+      "baseline_open": "765.47",
+      "valuation_session": "2026-11-19",
+      "close": "715.87",
+      "units": "13.063869256796",
+      "price_only_equity": "9352.03",
+      "price_only_return_pct": "-6.4797",
+      "formal_total_return": null,
+      "formal_equity": null,
+      "reason": "晚到固定Daily与发行商官方收盘一致；完整分配/拆分仍待核验，价格比较非总回报。",
+      "recorded_at": "2026-11-20T15:39:10Z"
+    }
+  }
+}
