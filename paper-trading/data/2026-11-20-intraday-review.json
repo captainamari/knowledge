@@ -1,0 +1,132 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "scheduled_at": "2026-11-20T15:20:00Z",
+  "first_clock_observed_at": "2026-11-20T15:38:18Z",
+  "decision_at": "2026-11-20T15:39:10Z",
+  "session_date": "2026-11-20",
+  "observed_window_utc": "approximately 15:38–15:39, not per-page timestamps",
+  "normal_open": "2026-11-20T14:30:00Z",
+  "normal_close": "2026-11-20T21:00:00Z",
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0
+  },
+  "decision": "HOLD_CASH",
+  "reason": "11/19固定日线确认QQQ自671.09开盘回落至645.04收盘、SPY自737.46回落至715.87，GLD也走弱；11/20异步页头指向压力延续，仅作研究，不以跌幅、超卖或黄金名义直接推导买点。Anthropic交割改善单一发行人融资可得性，未证明终端需求、项目交付或其他客户信用修复。州就业总体变化有限；没有独立确认的价格修复和入场优势，继续现金。前晚无已核验开盘单，本轮不追溯补单。",
+  "limits": "固定Daily SPY/QQQ/GLD到11/19，IWM本次快照到11/18；当日异步页头仅为研究，未核验可执行报价。最新20日容量与候选公司行动未重建；期权禁用。SPY正式总回报仍缺完整分配/拆分，不影响现金净值。",
+  "notification_required": false,
+  "daily": [
+    {
+      "symbol": "SPY",
+      "date": "2026-11-19",
+      "open": 737.46,
+      "high": 739.9,
+      "low": 715.65,
+      "close": 715.87,
+      "volume": 76702570,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-19",
+      "open": 671.09,
+      "high": 676.49,
+      "low": 644.34,
+      "close": 645.04,
+      "volume": 71465406,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data"
+    },
+    {
+      "symbol": "GLD",
+      "date": "2026-11-19",
+      "open": 339.88,
+      "high": 340.52,
+      "low": 335.05,
+      "close": 335.18,
+      "volume": 11232930,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data"
+    },
+    {
+      "symbol": "IWM",
+      "date": "2026-11-18",
+      "open": 268.15,
+      "high": 272.36,
+      "low": 267.89,
+      "close": 270.12,
+      "volume": 22537570,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data"
+    }
+  ],
+  "excluded_headers": {
+    "date": "2026-11-20",
+    "timezone": "EST",
+    "SPY": [
+      708.77,
+      "10:38"
+    ],
+    "QQQ": [
+      630.76,
+      "10:34"
+    ],
+    "IWM": [
+      262.43,
+      "10:38"
+    ],
+    "GLD": [
+      326.18,
+      "10:38"
+    ],
+    "note": "异步参考，不是固定日线或经验证的执行报价。"
+  },
+  "official": [
+    {
+      "url": "https://www.nyse.com/markets/hours-calendars",
+      "finding": "11/20正常会话，11/23下个正常会话；11/26休市、11/27 13:00ET早收盘，届时以实际收盘后检查。"
+    },
+    {
+      "url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "finding": "11/20 10:00 ET发布；10月失业率3州及DC下降、1州上升、46州稳定；非农4州增长，其余46州及DC基本不变；全国4.1%。"
+    },
+    {
+      "url": "https://www.anthropic.com/news/ipo-close",
+      "finding": "11/20公开公告证实IPO全额绿鞋、公司IPO毛额91.6B及同步Class N私募26.0B交割；119.5B含股东售股，不是公司净款。"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+      "finding": "全绿鞋公司合计预计净融资117.0B，既有算力/基建承诺900.9B含有条件安排；不等于新订单或交付。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "11/19官方收盘715.87，匹配固定Daily。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "模板无结果，不能证无分配。"
+    }
+  ],
+  "authors": {
+    "status": "远端归档已重读。已知早前X访问故障；本轮未直接验证X，不称没有新帖，也不推断故障仍存在。",
+    "labubu": "§68 ANT归因仅为假设",
+    "corsica": "§35 改判/反手仅自述",
+    "ace": "§27 逆向线索须有反证",
+    "babybus": "§11 回补与资金去向分开"
+  },
+  "benchmark": {
+    "baseline_session": "2026-11-05",
+    "baseline_open": "765.47",
+    "valuation_session": "2026-11-19",
+    "close": "715.87",
+    "units": "13.063869256796",
+    "price_only_equity": "9352.03",
+    "price_only_return_pct": "-6.4797",
+    "formal_total_return": null,
+    "formal_equity": null,
+    "reason": "晚到固定Daily与发行商官方收盘一致；完整分配/拆分仍待核验，价格比较非总回报。",
+    "recorded_at": "2026-11-20T15:39:10Z"
+  }
+}
