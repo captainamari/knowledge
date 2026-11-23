@@ -1,0 +1,141 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "session_date": "2026-11-23",
+  "scheduled_at": "2026-11-23T21:20:00Z",
+  "first_clock_observed_at": "2026-11-23T21:22:23Z",
+  "decision_at": "2026-11-23T21:22:49Z",
+  "session_close_at": "2026-11-23T21:00:00Z",
+  "observed_window_utc": "approximately 21:22; not per-page timestamps",
+  "next_regular_session": "2026-11-24",
+  "decision": "HOLD_CASH",
+  "reason": "周五固定日线显示权益和黄金共同弱势；本日页头显示反弹，QQQ页头收盘甚至高于周五高点，但未用作固定日线或趋势反转确认。黄仁勋复职降低领导更迭的不确定性，董事会独立调查仍继续，融资、交付及回款风险未被新证据解除。美国综合PMI初值54.6、低于55.9但仍处扩张区间；11/25 8:30 ET GDP/PCE有跨日跳空风险。没有形成愿追逐强反弹的独立入场与退出优势，维持现金，不提交11/24开盘单，并接受反弹持续的机会成本。",
+  "limits": "四只ETF固定Daily仍至11/20；11/23页头异步，收盘字段与盘后价仅另存，不用作正式收盘。未进行交互刷新。没有为无交易论点重建最新20日容量或候选公司行动，期权保持禁用。旧SPY基准不动；v2今天价格及正式总回报仍null。",
+  "notification_required": false,
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "max_drawdown_pct": 0
+  },
+  "daily_rows": [
+    {
+      "ticker": "SPY",
+      "date": "2026-11-20",
+      "open": 713.56,
+      "high": 718.29,
+      "low": 686.75,
+      "close": 689.81,
+      "volume": 151413297,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+    },
+    {
+      "ticker": "QQQ",
+      "date": "2026-11-20",
+      "open": 638.84,
+      "high": 643.28,
+      "low": 606.23,
+      "close": 608.45,
+      "volume": 134753500,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data"
+    },
+    {
+      "ticker": "IWM",
+      "date": "2026-11-20",
+      "open": 263.32,
+      "high": 265.85,
+      "low": 256.32,
+      "close": 256.61,
+      "volume": 57460820,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data"
+    },
+    {
+      "ticker": "GLD",
+      "date": "2026-11-20",
+      "open": 326.98,
+      "high": 328.6,
+      "low": 320.95,
+      "close": 322.87,
+      "volume": 23643350,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data"
+    }
+  ],
+  "excluded_headers": {
+    "date": "2026-11-23",
+    "timezone": "EST",
+    "SPY": {
+      "display_time": "15:51",
+      "quote": 722.31
+    },
+    "QQQ": {
+      "display_time": "16:02",
+      "after_hours": 651.9,
+      "header_close": 651.03
+    },
+    "IWM": {
+      "display_time": "15:28",
+      "quote": 265.49
+    },
+    "GLD": {
+      "display_time": "16:06",
+      "after_hours": 333.06,
+      "header_close": 333.04
+    },
+    "note": "非11/23固定Daily；仅作为反弹方向线索。"
+  },
+  "sources": [
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "finding": "11/23完整常规会话16:00收盘，11/24下一正常会话；11/26休市、11/27 13:00ET早收。"
+    },
+    {
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/11/us-flash-pmi-indicates-still-elevated-but-cooling-business-activity-growth-and-price-pressures",
+      "finding": "发布者原始分析确认11月美国综合PMI初值54.6，10月55.9，扩张趋缓而非收缩。补足盘中仅二手的证据，不更写盘中。"
+    },
+    {
+      "url": "https://www.bea.gov/news/schedule",
+      "finding": "11/25 08:30 ET GDP二次估计及企业利润、10月个人收入与支出；不预报读数。"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "finding": "复职是已知公告；独立董事会调查将继续，公司继续配合政府调查；不重复通知。"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "finding": "11/22即刻恢复总裁、CEO及董事，11/23对外披露，Kress留任CFO；未找到新的Q3 10-Q。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "11/20官方Close689.81，非11/23，与已核固定Daily一致。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "页面模板无结果，不证明期间无分配。"
+    }
+  ],
+  "authors": {
+    "status": "协调线程截至21:14 UTC核验四位作者无法读取；本轮不把旧内容当作当前证据，不声称没有新帖。"
+  },
+  "benchmark": {
+    "v1_status": "unchanged_null",
+    "current_price": null,
+    "formal_total_return": null,
+    "prior_verified_price_preserved": {
+      "baseline_session": "2026-11-05",
+      "baseline_open": "765.47",
+      "valuation_session": "2026-11-20",
+      "close": "689.81",
+      "units": "13.063869256796",
+      "price_only_equity": "9011.59",
+      "price_only_return_pct": "-9.8841",
+      "formal_total_return": null,
+      "formal_equity": null,
+      "reason": "固定Daily与同日发行商官方收盘一致；完整分配/拆分未核验，价格比较非总回报。",
+      "recorded_at": "2026-11-23T15:45:09Z"
+    }
+  }
+}
