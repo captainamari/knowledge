@@ -1,0 +1,143 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "scheduled_at": "2026-11-23T15:20:00Z",
+  "first_clock_observed_at": "2026-11-23T15:44:11Z",
+  "decision_at": "2026-11-23T15:45:09Z",
+  "session_date": "2026-11-23",
+  "observed_window_utc": "approximately 15:44–15:45; not per-page timestamps",
+  "normal_open": "2026-11-23T14:30:00Z",
+  "normal_close": "2026-11-23T21:00:00Z",
+  "decision": "HOLD_CASH",
+  "reason": "11/20固定日线显示权益和黄金同时下挫；11/23异步页头显示反弹线索，但不证明持续修复或可执行优势。NVIDIA董事会恢复黄仁勋CEO及董事职务，接班不确定性下降；董事会独立调查仍继续，且不改变对客户融资、交付或回款的核验门槛。11/25 GDP/PCE临近，不将人事消息或跌后反弹当作开仓依据。前一交易日无11/23开盘单；维持现金，本轮不回补、不建新开盘单。",
+  "limits": "固定Daily四ETF均至11/20，11/23时标不同的页头仅作研究。最新20日容量与候选公司行动未重建；期权仍禁用。SPY发布方和固定Daily同为689.81；先前被排除的690.43页头非独立合格输入，不改原日志。完整分配/拆分未核清，基准总回报null，不影响本盘现金净值。",
+  "simulation_notification_required": false,
+  "material_public_company_news": "NVIDIA reinstatement; separate from simulated trade alert.",
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "max_drawdown_pct": 0
+  },
+  "daily": [
+    {
+      "symbol": "SPY",
+      "date": "2026-11-20",
+      "open": 713.56,
+      "high": 718.29,
+      "low": 686.75,
+      "close": 689.81,
+      "volume": 151413297,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-20",
+      "open": 638.84,
+      "high": 643.28,
+      "low": 606.23,
+      "close": 608.45,
+      "volume": 134753500,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data"
+    },
+    {
+      "symbol": "IWM",
+      "date": "2026-11-20",
+      "open": 263.32,
+      "high": 265.85,
+      "low": 256.32,
+      "close": 256.61,
+      "volume": 57460820,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data"
+    },
+    {
+      "symbol": "GLD",
+      "date": "2026-11-20",
+      "open": 326.98,
+      "high": 328.6,
+      "low": 320.95,
+      "close": 322.87,
+      "volume": 23643350,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data"
+    }
+  ],
+  "excluded_headers": {
+    "date": "2026-11-23",
+    "timezone": "EST",
+    "SPY": [
+      717.26,
+      "09:52"
+    ],
+    "QQQ": [
+      650.56,
+      "10:01"
+    ],
+    "IWM": [
+      262.77,
+      "08:08 (premarket)"
+    ],
+    "GLD": [
+      336.29,
+      "09:54"
+    ],
+    "note": "异步非执行字段。"
+  },
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "finding": "董事会11/22即刻恢复Jensen Huang总裁、CEO、董事；11/23 8-K对外披露，Kress继续为CFO。"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "finding": "公司11/23公告，董事会内部调查继续，公司继续配合政府调查；将公司对国家安全风险的判断归属于董事会，不当政府结案。"
+    },
+    {
+      "url": "https://www.oracle.com/news/announcement/oracle-statement-2026-11-20/",
+      "finding": "公司称OpenAI合同所需资金含供应商融资已落实，不代表全部到账、移交或回款。"
+    },
+    {
+      "url": "https://www.pmi.spglobal.com/Public/Home/PDF/UK_Rel_Dates",
+      "finding": "原日历显示11/23 09:45 EST flash US PMI；原发布数值当轮未核验。另据Reuters 54.6对上月55.9，二手只作线索，不推导政策或成交。"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-business-activity-growth-eases-further-november-survey-shows-2026-11-23/",
+      "finding": "二手出处，说明活动增长放缓但仍扩张；非官方原稿。"
+    },
+    {
+      "url": "https://www.bea.gov/news/schedule/full",
+      "finding": "11/25 08:30 ET GDP二次估计及10月个人收入支出（含PCE），值未知。"
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "finding": "11/23正常，11/26休市、11/27股票13:00 ET早收。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "11/20官方Close689.81，固定Daily同值。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/resources/documents/etf-dividend-distributions",
+      "finding": "模板无结果不证明无分配。"
+    }
+  ],
+  "authors": {
+    "status": "11/19之后X公开访问未能核验，无当前作者观点用于判断；不据公司公告推断作者新仓位或无新帖。"
+  },
+  "benchmark": {
+    "baseline_session": "2026-11-05",
+    "baseline_open": "765.47",
+    "valuation_session": "2026-11-20",
+    "close": "689.81",
+    "units": "13.063869256796",
+    "price_only_equity": "9011.59",
+    "price_only_return_pct": "-9.8841",
+    "formal_total_return": null,
+    "formal_equity": null,
+    "reason": "固定Daily与同日发行商官方收盘一致；完整分配/拆分未核验，价格比较非总回报。",
+    "recorded_at": "2026-11-23T15:45:09Z"
+  }
+}
