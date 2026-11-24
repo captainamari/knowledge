@@ -1,0 +1,175 @@
+{
+  "mode": "SIMULATION_ONLY",
+  "session_date": "2026-11-24",
+  "scheduled_at": "2026-11-24T15:20:00Z",
+  "notification_received_at": "2026-11-24T15:15:43Z",
+  "first_clock_observed_at": "2026-11-24T15:15:57Z",
+  "decision_at": "2026-11-24T15:20:01Z",
+  "normal_open": "2026-11-24T14:30:00Z",
+  "normal_close": "2026-11-24T21:00:00Z",
+  "decision": "HOLD_CASH",
+  "reason": "11/23固定Daily确认广泛反弹（SPY +4.71%、QQQ +7.00%、IWM +3.56%、GLD +3.14%），但QQQ早盘研究报价回吐并低于昨日日内低点时，IWM在不同时间的报价微涨；不能据异步快照确认整体趋势。财政部11/23 2年/10年为4.63%/4.92%，同上个交易日；可读的ICE信用利差仅至11/20且高收益/投资级都较前一日走阔，故不把权益反弹当成信贷已经同步转好。HPE的AI系统订单和积压显示供应链需求真实且可增长，但订单尚不等于交付回款，也不能消除融资风险或确认NVIDIA订单；Williams原稿仍强调通胀压力，11/25 GDP/PCE公布在明日开盘前。尚无充分的独立入场/退出优势，接受后续反弹的机会成本。前一交易日无有效11/24开盘单，本轮不补单、不建新单。",
+  "limits": "11/24固定Daily当日完整行尚未出现，11/23已取得四只ETF固定历史行。页头研究报价异步、GLD为盘前，不做成交或收盘。不为无订单重建容量和公司行动，应收无变化，期权继续禁用。SPY 11/23晚到价格较对照可用，正式总回报仍待完整实际分配和拆分覆盖；不影响纯现金账户。",
+  "simulation_notification_required": false,
+  "account": {
+    "cash": 10000,
+    "equity": 10000,
+    "positions": 0,
+    "orders": 0,
+    "fills": 0,
+    "fees": 0,
+    "receivables": 0,
+    "return_pct": 0,
+    "max_drawdown_pct": 0
+  },
+  "daily": [
+    {
+      "symbol": "SPY",
+      "date": "2026-11-23",
+      "open": 724.33,
+      "high": 727.98,
+      "low": 713.53,
+      "close": 722.29,
+      "volume": 88283773,
+      "url": "https://www.marketwatch.com/investing/fund/spy/download-data"
+    },
+    {
+      "symbol": "QQQ",
+      "date": "2026-11-23",
+      "open": 655.98,
+      "high": 657.53,
+      "low": 641.95,
+      "close": 651.03,
+      "volume": 85330828,
+      "url": "https://www.marketwatch.com/investing/fund/qqq/download-data"
+    },
+    {
+      "symbol": "IWM",
+      "date": "2026-11-23",
+      "open": 266.04,
+      "high": 266.08,
+      "low": 262.86,
+      "close": 265.74,
+      "volume": 30118600,
+      "url": "https://www.marketwatch.com/investing/fund/iwm/download-data"
+    },
+    {
+      "symbol": "GLD",
+      "date": "2026-11-23",
+      "open": 337.98,
+      "high": 338,
+      "low": 332.52,
+      "close": 333.02,
+      "volume": 12319470,
+      "url": "https://www.marketwatch.com/investing/fund/gld/download-data"
+    }
+  ],
+  "excluded_headers": {
+    "date": "2026-11-24",
+    "timezone": "EST",
+    "SPY": [
+      718.38,
+      "10:16"
+    ],
+    "QQQ": [
+      636.29,
+      "09:39"
+    ],
+    "IWM": [
+      267.04,
+      "10:01"
+    ],
+    "GLD": [
+      331.6,
+      "09:18 premarket"
+    ],
+    "note": "不同网页时标，不是11/24固定字段或同步广度。GLD 11/23 Daily本轮取得333.02，昨日排除的异步页头333.04仍存原证据，不能替换固定字段。"
+  },
+  "sources": [
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "finding": "11/24、11/25正常；11/26休市、11/27股票13:00 EST早收。"
+    },
+    {
+      "url": "https://www.bea.gov/news/schedule",
+      "finding": "11/25 08:30 EST GDP二次估计及企业利润、10月个人收入支出（含PCE）；只核验日程。"
+    },
+    {
+      "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123",
+      "finding": "Williams 11/23个人讲话：增长和就业有韧性，通胀仍偏高，AI需求部分品类供给不足；后续AI建设快慢与物价影响有两面性，不是FOMC新决策。"
+    },
+    {
+      "url": "https://press.spglobal.com/2026-11-24-S-P-Cotality-Case-Shiller-Index-Reports-Annual-Gain-in-September-2026",
+      "finding": "09:00 EST发布，9月全国房价同比+2.1%与8月持平；季调环比+0.2%，非季调-0.3%，不能互换或代替明日PCE。"
+    },
+    {
+      "url": "https://www.conference-board.org/topics/consumer-confidence/",
+      "finding": "官网原发布仅能读取10月及11/24 10:00 EST日程，本轮未核验11月官方读数，不把二手报道纳入信号。"
+    },
+    {
+      "url": "https://www.richmondfed.org/region_communities/regional_data_analysis/business_surveys/manufacturing",
+      "finding": "发布日程为11/24，主网页及档案暂未提供可复核11月新读数；不以日历预测或旧值代替。"
+    },
+    {
+      "url": "https://www.federalreserve.gov/DataDownload/Choose.aspx?rel=G17",
+      "finding": "G.17年度修订定于11/24 12:00 EST，盘中检查时尚未到点。"
+    },
+    {
+      "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/11/hpe-reports-fiscal-2026-fourth-quarter-results.html",
+      "finding": "11/23财报：Cloud & AI分部营收113亿美元、同比+68.6%，营业利润率18.4%对上年9.3%；分部包括非AI收入。"
+    },
+    {
+      "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q4-2026/q4-2026-earnings-presentation.pdf",
+      "finding": "AI Systems当季订单45亿美元，期末积压88亿美元（同比超80%）。包括产品及服务，受取消、重订及履约调整；不是已实现营收或终端回款。"
+    },
+    {
+      "url": "https://investors.delltechnologies.com/news-events/press-releases/detail/1661/dell-technologies-to-hold-conference-call-nov-24-to-discuss-third-quarter-fiscal-2027-financial-results",
+      "finding": "Dell Q3 FY27电话会议11/24 16:30 EST，财报将在会议前发布，盘中未把未发布数字纳入。"
+    },
+    {
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001045810",
+      "finding": "本轮未看到新的FY27 Q3 10-Q或足以改写此前已报告复职/调查状态的公司披露。"
+    },
+    {
+      "url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "finding": "发行商11/23上市交易所官方收盘722.29，固定Daily同值；不以中间价722.46或不同口径成交量代替。"
+    },
+    {
+      "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/distribution/SPDR_Dividend_Distribution_Schedule.pdf",
+      "finding": "发行商11/17版年度日程PDF第3页，SPY上次计划除息9/18、下次12/18，潜在额外12/31。说明比较窗口内没有计划常规除息，不能单以日程证明全部实际分配或单位变更。"
+    },
+    {
+      "url": "https://www.nyse.com/trade/corporate-actions",
+      "finding": "历史日期字段可见但本次读取未取得11/5–11/23 SPY完整实际事件历史，不宣称拆分已验证。"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+      "finding": "美国财政部日终拟合曲线：11/23 2年4.63%、10年4.92%，同11/20；非盘中利率或实际成交。"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+      "finding": "ICE高收益OAS最新可核日期11/20，较11/19走阔，11/23本轮尚未核见。"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+      "finding": "ICE投资级OAS最新可核日期11/20，较11/19走阔，11/23本轮尚未核见。"
+    }
+  ],
+  "authors": {
+    "status": "未取得四位作者新的可核验当前材料，不能断言无新帖；没有使用旧卡片或推断个人持仓。"
+  },
+  "benchmark": {
+    "baseline_session": "2026-11-05",
+    "baseline_open": "765.47",
+    "valuation_session": "2026-11-23",
+    "close": "722.29",
+    "units": "13.063869256796",
+    "price_only_equity": "9435.90",
+    "price_only_return_pct": "-5.6410",
+    "formal_total_return": null,
+    "formal_equity": null,
+    "reason": "晚到固定Daily与同日发行商收盘一致；实际分配/拆分仍待完整确认。价格观察不是总回报或账户收益。",
+    "recorded_at": "2026-11-24T15:20:01Z"
+  },
+  "observed_window_utc": "约15:16至15:20 UTC；报价本身异步。"
+}
